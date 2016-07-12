@@ -18,6 +18,7 @@
 		7D415C871D34F55B004E5E22 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C861D34F55B004E5E22 /* BaseRequest.m */; };
 		7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C891D34F612004E5E22 /* ZCTabBar.m */; };
 		7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C8C1D34F81E004E5E22 /* RootViewController.m */; };
+		7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C951D35123B004E5E22 /* CZRequestHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,11 @@
 		7D415C891D34F612004E5E22 /* ZCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTabBar.m; sourceTree = "<group>"; };
 		7D415C8B1D34F81E004E5E22 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		7D415C8C1D34F81E004E5E22 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		7D415C8E1D350E97004E5E22 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7D415C8F1D350EC7004E5E22 /* RequestUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestUrl.h; sourceTree = "<group>"; };
+		7D415C901D350EC7004E5E22 /* CommonString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonString.h; sourceTree = "<group>"; };
+		7D415C941D35123B004E5E22 /* CZRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRequestHelper.h; sourceTree = "<group>"; };
+		7D415C951D35123B004E5E22 /* CZRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRequestHelper.m; sourceTree = "<group>"; };
 		A0474E7ABB2ABC50A760EBC0 /* Pods-ZCProject0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.release.xcconfig"; sourceTree = "<group>"; };
 		CD0F71700DC7A2B658662DB2 /* Pods-ZCProject0.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +175,7 @@
 				7D415C471D34D2BA004E5E22 /* AppDelegate */,
 				7D415C3E1D34D2A7004E5E22 /* LaunchScreen.storyboard */,
 				7D415C411D34D2A7004E5E22 /* Info.plist */,
+				7D415C8E1D350E97004E5E22 /* PrefixHeader.pch */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -217,6 +224,8 @@
 		7D415C521D34D4E0004E5E22 /* RequestHlper */ = {
 			isa = PBXGroup;
 			children = (
+				7D415C941D35123B004E5E22 /* CZRequestHelper.h */,
+				7D415C951D35123B004E5E22 /* CZRequestHelper.m */,
 			);
 			name = RequestHlper;
 			sourceTree = "<group>";
@@ -224,6 +233,7 @@
 		7D415C541D34D5C7004E5E22 /* Macros */ = {
 			isa = PBXGroup;
 			children = (
+				7D415C901D350EC7004E5E22 /* CommonString.h */,
 			);
 			name = Macros;
 			sourceTree = "<group>";
@@ -231,6 +241,7 @@
 		7D415C551D34D5E1004E5E22 /* Const */ = {
 			isa = PBXGroup;
 			children = (
+				7D415C8F1D350EC7004E5E22 /* RequestUrl.h */,
 			);
 			name = Const;
 			sourceTree = "<group>";
@@ -504,6 +515,7 @@
 			files = (
 				7D415C351D34D2A7004E5E22 /* AppDelegate.m in Sources */,
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
+				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
 				7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */,
 				7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */,
 				7D415C321D34D2A7004E5E22 /* main.m in Sources */,
@@ -612,6 +624,7 @@
 			baseConfigurationReference = CD0F71700DC7A2B658662DB2 /* Pods-ZCProject0.1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/TANGXU/ZCProject0.1/ZCProject0.1/ZCProject0.1/PrefixHeader.pch;
 				INFOPLIST_FILE = ZCProject0.1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TangXu.ZCProject0-1";
@@ -624,6 +637,7 @@
 			baseConfigurationReference = A0474E7ABB2ABC50A760EBC0 /* Pods-ZCProject0.1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/TANGXU/ZCProject0.1/ZCProject0.1/ZCProject0.1/PrefixHeader.pch;
 				INFOPLIST_FILE = ZCProject0.1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TangXu.ZCProject0-1";
