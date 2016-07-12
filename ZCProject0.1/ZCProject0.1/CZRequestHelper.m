@@ -35,6 +35,32 @@
     
 }
 
+- (void)getRequestWithUrl:(NSString *)url
+               parameters:(NSDictionary *)parametersDic
+          successResponse:(SuccessResponse)success
+          failureResponse:(FailureResponse) failure{
+    
+    AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+    
+    //添加数据模式类型
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    
+    [manager GET:url parameters:parametersDic progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        success(responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        failure(error);
+        
+    }];
+    
+}
+
 
 - (void)postRequestWithUrl:(NSString *)url
              parameters:(NSDictionary *)parametersDic

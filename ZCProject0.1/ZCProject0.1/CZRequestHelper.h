@@ -36,6 +36,20 @@ typedef void(^FailureResponse)(NSError * error);
           failureResponse:(FailureResponse) failure;
 
 /**
+ *  网络Get请求（参数形式）
+ *
+ *  @param url           地址
+ *  @param parametersDic 参数
+ *  @param success       成功回调
+ *  @param failure       报错回调
+ */
+- (void)getRequestWithUrl:(NSString *)url
+               parameters:(NSDictionary *)parametersDic
+          successResponse:(SuccessResponse)success
+          failureResponse:(FailureResponse) failure;
+
+
+/**
  *  网络Post请求（带参）
  *
  *  @param url           地址
