@@ -16,14 +16,14 @@
 @property(nonatomic, strong)UITextField *userRegiisterPassword;
 //注册的按钮
 @property(nonatomic, strong)UIButton *registerBtn;
-  @end
+@end
 
 @implementation RegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.userRegisterName = [[UITextField alloc]initWithFrame:CGRectMake(WindowWidth - 100, WindowHight - 200, 200, 50)];
-    [self.view addSubview:self.userRegisterName]; 
+    [self.view addSubview:self.userRegisterName];
     self.userRegiisterPassword = [[UITextField alloc]initWithFrame:CGRectMake(WindowWidth - 100, WindowHight - 300, 200, 50)];
     [self.view addSubview:self.userRegiisterPassword];
     self.registerBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -34,10 +34,11 @@
 //注册的事件
 -(void)registerBtnClicked:(UIButton *)sender
 {
-
-
-
+    
+    
+    
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
