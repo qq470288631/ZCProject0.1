@@ -10,6 +10,18 @@
 
 @implementation CZRequestHelper
 
+
+static CZRequestHelper * requestHelper = nil;
++ (CZRequestHelper *)sharedRequestHelper{
+
+    if (requestHelper == nil) {
+        requestHelper = [CZRequestHelper new];
+    }
+    return requestHelper;
+    
+}
+
+
 - (void)getRequestWithUrl:(NSString *)url
        successResponse:(SuccessResponse)success
        failureResponse:(FailureResponse) failure{
@@ -18,7 +30,7 @@
     
     //添加数据模式类型
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    
+    //以GET方式 通过AFNetworking 发送请求
     [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
         
@@ -44,7 +56,7 @@
     
     //添加数据模式类型
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    
+    //以GET方式 通过AFNetworking 发送请求
     [manager GET:url parameters:parametersDic progress:^(NSProgress * _Nonnull downloadProgress) {
         
         
@@ -71,6 +83,7 @@
     
     //添加数据模式类型
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    //以POST方式 通过AFNetworking 发送请求
     [manager POST:url parameters:parametersDic progress:^(NSProgress * _Nonnull uploadProgress) {
         
         

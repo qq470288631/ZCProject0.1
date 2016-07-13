@@ -25,6 +25,11 @@ typedef void(^FailureResponse)(NSError * error);
 @interface CZRequestHelper : BaseRequest
 
 /**
+ *  请求帮助类单例
+ */
++ (CZRequestHelper *)sharedRequestHelper;
+
+/**
  *  网络Get请求（无参）
  *
  *  @param url           地址
