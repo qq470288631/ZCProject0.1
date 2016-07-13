@@ -1,5 +1,5 @@
 //
-//  MemorialDayTableViewController.h
+//  AddMemorailViewController.h
 //  ZCProject0.1
 //
 //  Created by lanou3g on 16/7/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MemorialDayTableViewController : UITableViewController
+@interface AddMemorailViewController : UIViewController
 
 @end

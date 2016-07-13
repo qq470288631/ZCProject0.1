@@ -24,7 +24,14 @@
 		7DB744BD1D35D27C004C534C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB744BC1D35D27C004C534C /* libsqlite3.tbd */; };
 		C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037B1D35279F00AA2F97 /* LoginViewController.m */; };
 		C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037E1D3527DE00AA2F97 /* RegisterViewController.m */; };
-		C2F2CD8D1D35CFCC009AC284 /* MemorialDayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F2CD8C1D35CFCC009AC284 /* MemorialDayTableViewController.m */; };
+		C293EB621D363DAA00A59101 /* LoverHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB571D363DAA00A59101 /* LoverHomePageViewController.m */; };
+		C293EB631D363DAA00A59101 /* AddLoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB591D363DAA00A59101 /* AddLoverViewController.m */; };
+		C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB5B1D363DAA00A59101 /* ChatViewController.m */; };
+		C293EB651D363DAA00A59101 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB5D1D363DAA00A59101 /* MapViewController.m */; };
+		C293EB661D363DAA00A59101 /* MemorailDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB5F1D363DAA00A59101 /* MemorailDayViewController.m */; };
+		C293EB671D363DAA00A59101 /* AddMemorailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB611D363DAA00A59101 /* AddMemorailViewController.m */; };
+		C293EB6B1D363DB200A59101 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C293EB681D363DB200A59101 /* 1.jpg */; };
+		C293EB6C1D363DB200A59101 /* AddLoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB6A1D363DB200A59101 /* AddLoverTableViewCell.m */; };
 		D69405F11D35D65300DC35C7 /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69405F01D35D65300DC35C7 /* GoodsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +71,21 @@
 		C263037B1D35279F00AA2F97 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C263037D1D3527DE00AA2F97 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		C263037E1D3527DE00AA2F97 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		C2F2CD8B1D35CFCC009AC284 /* MemorialDayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemorialDayTableViewController.h; sourceTree = "<group>"; };
-		C2F2CD8C1D35CFCC009AC284 /* MemorialDayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemorialDayTableViewController.m; sourceTree = "<group>"; };
+		C293EB561D363DAA00A59101 /* LoverHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoverHomePageViewController.h; sourceTree = "<group>"; };
+		C293EB571D363DAA00A59101 /* LoverHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoverHomePageViewController.m; sourceTree = "<group>"; };
+		C293EB581D363DAA00A59101 /* AddLoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLoverViewController.h; sourceTree = "<group>"; };
+		C293EB591D363DAA00A59101 /* AddLoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLoverViewController.m; sourceTree = "<group>"; };
+		C293EB5A1D363DAA00A59101 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		C293EB5B1D363DAA00A59101 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		C293EB5C1D363DAA00A59101 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		C293EB5D1D363DAA00A59101 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		C293EB5E1D363DAA00A59101 /* MemorailDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemorailDayViewController.h; sourceTree = "<group>"; };
+		C293EB5F1D363DAA00A59101 /* MemorailDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemorailDayViewController.m; sourceTree = "<group>"; };
+		C293EB601D363DAA00A59101 /* AddMemorailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMemorailViewController.h; sourceTree = "<group>"; };
+		C293EB611D363DAA00A59101 /* AddMemorailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMemorailViewController.m; sourceTree = "<group>"; };
+		C293EB681D363DB200A59101 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		C293EB691D363DB200A59101 /* AddLoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLoverTableViewCell.h; sourceTree = "<group>"; };
+		C293EB6A1D363DB200A59101 /* AddLoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLoverTableViewCell.m; sourceTree = "<group>"; };
 		CD0F71700DC7A2B658662DB2 /* Pods-ZCProject0.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.debug.xcconfig"; sourceTree = "<group>"; };
 		D69405EF1D35D65300DC35C7 /* GoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsViewController.h; sourceTree = "<group>"; };
 		D69405F01D35D65300DC35C7 /* GoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
@@ -341,8 +361,18 @@
 				C263037B1D35279F00AA2F97 /* LoginViewController.m */,
 				C263037D1D3527DE00AA2F97 /* RegisterViewController.h */,
 				C263037E1D3527DE00AA2F97 /* RegisterViewController.m */,
-				C2F2CD8B1D35CFCC009AC284 /* MemorialDayTableViewController.h */,
-				C2F2CD8C1D35CFCC009AC284 /* MemorialDayTableViewController.m */,
+				C293EB561D363DAA00A59101 /* LoverHomePageViewController.h */,
+				C293EB571D363DAA00A59101 /* LoverHomePageViewController.m */,
+				C293EB581D363DAA00A59101 /* AddLoverViewController.h */,
+				C293EB591D363DAA00A59101 /* AddLoverViewController.m */,
+				C293EB5A1D363DAA00A59101 /* ChatViewController.h */,
+				C293EB5B1D363DAA00A59101 /* ChatViewController.m */,
+				C293EB5C1D363DAA00A59101 /* MapViewController.h */,
+				C293EB5D1D363DAA00A59101 /* MapViewController.m */,
+				C293EB5E1D363DAA00A59101 /* MemorailDayViewController.h */,
+				C293EB5F1D363DAA00A59101 /* MemorailDayViewController.m */,
+				C293EB601D363DAA00A59101 /* AddMemorailViewController.h */,
+				C293EB611D363DAA00A59101 /* AddMemorailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -350,6 +380,9 @@
 		7D415C601D34D65A004E5E22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C293EB681D363DB200A59101 /* 1.jpg */,
+				C293EB691D363DB200A59101 /* AddLoverTableViewCell.h */,
+				C293EB6A1D363DB200A59101 /* AddLoverTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -487,6 +520,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C293EB6B1D363DB200A59101 /* 1.jpg in Resources */,
 				7D415C401D34D2A7004E5E22 /* LaunchScreen.storyboard in Resources */,
 				7D415C3D1D34D2A7004E5E22 /* Assets.xcassets in Resources */,
 			);
@@ -550,16 +584,22 @@
 				C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */,
 				D69405F11D35D65300DC35C7 /* GoodsViewController.m in Sources */,
 				7D415C351D34D2A7004E5E22 /* AppDelegate.m in Sources */,
+				C293EB651D363DAA00A59101 /* MapViewController.m in Sources */,
+				C293EB671D363DAA00A59101 /* AddMemorailViewController.m in Sources */,
+				C293EB631D363DAA00A59101 /* AddLoverViewController.m in Sources */,
 				7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */,
+				C293EB621D363DAA00A59101 /* LoverHomePageViewController.m in Sources */,
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
 				7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */,
 				C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */,
 				7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */,
+				C293EB6C1D363DB200A59101 /* AddLoverTableViewCell.m in Sources */,
 				7D415C321D34D2A7004E5E22 /* main.m in Sources */,
 				7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */,
-				C2F2CD8D1D35CFCC009AC284 /* MemorialDayTableViewController.m in Sources */,
 				7D415C841D34F53A004E5E22 /* BaseModel.m in Sources */,
+				C293EB661D363DAA00A59101 /* MemorailDayViewController.m in Sources */,
+				C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */,
 				7D415C871D34F55B004E5E22 /* BaseRequest.m in Sources */,
 				7D415C811D34F529004E5E22 /* BaseView.m in Sources */,
 			);
