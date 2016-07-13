@@ -46,7 +46,7 @@ static SqliteHelper * helper = nil;
     }
 }
 
-- (FMResultSet *)executeQbuery:(NSString *)sqlString{
+- (FMResultSet *)executeQuery:(NSString *)sqlString{
 
     if ([_database open]) {
         
