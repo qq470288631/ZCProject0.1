@@ -22,8 +22,8 @@
 		7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744B71D35CFD4004C534C /* BaseSqlite.m */; };
 		7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744BA1D35CFE7004C534C /* SqliteHelper.m */; };
 		7DB744BD1D35D27C004C534C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB744BC1D35D27C004C534C /* libsqlite3.tbd */; };
-		C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037B1D35279F00AA2F97 /* LoginViewController.m */; };
-		C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037E1D3527DE00AA2F97 /* RegisterViewController.m */; };
+		7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF257791D36657B0022FC37 /* ZCLoginViewController.m */; };
+		7DF2577D1D3665870022FC37 /* CZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */; };
 		C293EB621D363DAA00A59101 /* LoverHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB571D363DAA00A59101 /* LoverHomePageViewController.m */; };
 		C293EB631D363DAA00A59101 /* AddLoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB591D363DAA00A59101 /* AddLoverViewController.m */; };
 		C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB5B1D363DAA00A59101 /* ChatViewController.m */; };
@@ -36,6 +36,8 @@
 		C293EB771D366EDE00A59101 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293EB761D366EDE00A59101 /* MapKit.framework */; };
 		C293EB791D366F0200A59101 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293EB781D366F0200A59101 /* CoreLocation.framework */; };
 		D69405F11D35D65300DC35C7 /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69405F01D35D65300DC35C7 /* GoodsViewController.m */; };
+		D69405F41D35EC1E00DC35C7 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D69405F31D35EC1E00DC35C7 /* MainTableViewCell.m */; };
+		D69406141D3641BE00DC35C7 /* GoodsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D69406131D3641BE00DC35C7 /* GoodsRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,11 +71,11 @@
 		7DB744B91D35CFE7004C534C /* SqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteHelper.h; sourceTree = "<group>"; };
 		7DB744BA1D35CFE7004C534C /* SqliteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteHelper.m; sourceTree = "<group>"; };
 		7DB744BC1D35D27C004C534C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		7DF257781D36657B0022FC37 /* ZCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLoginViewController.h; sourceTree = "<group>"; };
+		7DF257791D36657B0022FC37 /* ZCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLoginViewController.m; sourceTree = "<group>"; };
+		7DF2577B1D3665870022FC37 /* CZRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRegisterViewController.h; sourceTree = "<group>"; };
+		7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRegisterViewController.m; sourceTree = "<group>"; };
 		A0474E7ABB2ABC50A760EBC0 /* Pods-ZCProject0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.release.xcconfig"; sourceTree = "<group>"; };
-		C263037A1D35279F00AA2F97 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		C263037B1D35279F00AA2F97 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		C263037D1D3527DE00AA2F97 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		C263037E1D3527DE00AA2F97 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		C293EB561D363DAA00A59101 /* LoverHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoverHomePageViewController.h; sourceTree = "<group>"; };
 		C293EB571D363DAA00A59101 /* LoverHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoverHomePageViewController.m; sourceTree = "<group>"; };
 		C293EB581D363DAA00A59101 /* AddLoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLoverViewController.h; sourceTree = "<group>"; };
@@ -96,6 +98,10 @@
 		CD0F71700DC7A2B658662DB2 /* Pods-ZCProject0.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.debug.xcconfig"; sourceTree = "<group>"; };
 		D69405EF1D35D65300DC35C7 /* GoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsViewController.h; sourceTree = "<group>"; };
 		D69405F01D35D65300DC35C7 /* GoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
+		D69405F21D35EC1E00DC35C7 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		D69405F31D35EC1E00DC35C7 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
+		D69406121D3641BE00DC35C7 /* GoodsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsRequest.h; sourceTree = "<group>"; };
+		D69406131D3641BE00DC35C7 /* GoodsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,7 @@
 		7D415C491D34D3D6004E5E22 /* Goods */ = {
 			isa = PBXGroup;
 			children = (
+				D69405F91D36302B00DC35C7 /* Request */,
 				7D415C5D1D34D649004E5E22 /* Model */,
 				7D415C5C1D34D644004E5E22 /* View */,
 				7D415C5B1D34D63F004E5E22 /* Controller */,
@@ -221,6 +228,7 @@
 		7D415C4C1D34D453004E5E22 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				7DF257711D365E2D0022FC37 /* ZCUser */,
 				7D415C791D34F4B1004E5E22 /* ZCTabBarController */,
 				7D415C471D34D2BA004E5E22 /* AppDelegate */,
 				7D415C3E1D34D2A7004E5E22 /* LaunchScreen.storyboard */,
@@ -345,6 +353,8 @@
 		7D415C5C1D34D644004E5E22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D69405F21D35EC1E00DC35C7 /* MainTableViewCell.h */,
+				D69405F31D35EC1E00DC35C7 /* MainTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -366,10 +376,6 @@
 		7D415C5F1D34D655004E5E22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C263037A1D35279F00AA2F97 /* LoginViewController.h */,
-				C263037B1D35279F00AA2F97 /* LoginViewController.m */,
-				C263037D1D3527DE00AA2F97 /* RegisterViewController.h */,
-				C263037E1D3527DE00AA2F97 /* RegisterViewController.m */,
 				C293EB561D363DAA00A59101 /* LoverHomePageViewController.h */,
 				C293EB571D363DAA00A59101 /* LoverHomePageViewController.m */,
 				C293EB581D363DAA00A59101 /* AddLoverViewController.h */,
@@ -461,6 +467,17 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		7DF257711D365E2D0022FC37 /* ZCUser */ = {
+			isa = PBXGroup;
+			children = (
+				7DF257781D36657B0022FC37 /* ZCLoginViewController.h */,
+				7DF257791D36657B0022FC37 /* ZCLoginViewController.m */,
+				7DF2577B1D3665870022FC37 /* CZRegisterViewController.h */,
+				7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */,
+			);
+			name = ZCUser;
+			sourceTree = "<group>";
+		};
 		8D98B616EC061626A051913D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +487,15 @@
 				649348D8C8F9355D9E347586 /* libPods-ZCProject0.1.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D69405F91D36302B00DC35C7 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D69406121D3641BE00DC35C7 /* GoodsRequest.h */,
+				D69406131D3641BE00DC35C7 /* GoodsRequest.m */,
+			);
+			name = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,19 +620,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */,
 				D69405F11D35D65300DC35C7 /* GoodsViewController.m in Sources */,
+				D69405F41D35EC1E00DC35C7 /* MainTableViewCell.m in Sources */,
 				7D415C351D34D2A7004E5E22 /* AppDelegate.m in Sources */,
 				C293EB651D363DAA00A59101 /* MapViewController.m in Sources */,
+<<<<<<< HEAD
+=======
+				C293EB671D363DAA00A59101 /* AddMemorailViewController.m in Sources */,
+				7DF2577D1D3665870022FC37 /* CZRegisterViewController.m in Sources */,
+				7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */,
+>>>>>>> 4ddca77dc0b04b74db305eafbfe0441342b2a929
 				C293EB631D363DAA00A59101 /* AddLoverViewController.m in Sources */,
 				7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */,
 				C293EB751D365A6B00A59101 /* AddMemorailViewController.m in Sources */,
 				C293EB621D363DAA00A59101 /* LoverHomePageViewController.m in Sources */,
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
+				D69406141D3641BE00DC35C7 /* GoodsRequest.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
 				7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */,
+<<<<<<< HEAD
 				C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */,
 				C293EB721D36441300A59101 /* MemorailDayTableViewCell.m in Sources */,
+=======
+>>>>>>> 4ddca77dc0b04b74db305eafbfe0441342b2a929
 				7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */,
 				C293EB6C1D363DB200A59101 /* AddLoverTableViewCell.m in Sources */,
 				7D415C321D34D2A7004E5E22 /* main.m in Sources */,
