@@ -19,6 +19,8 @@
 		7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C891D34F612004E5E22 /* ZCTabBar.m */; };
 		7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C8C1D34F81E004E5E22 /* RootViewController.m */; };
 		7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C951D35123B004E5E22 /* CZRequestHelper.m */; };
+		7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744B71D35CFD4004C534C /* BaseSqlite.m */; };
+		7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744BA1D35CFE7004C534C /* SqliteHelper.m */; };
 		C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037B1D35279F00AA2F97 /* LoginViewController.m */; };
 		C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037E1D3527DE00AA2F97 /* RegisterViewController.m */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,10 @@
 		7D415C901D350EC7004E5E22 /* CommonString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonString.h; sourceTree = "<group>"; };
 		7D415C941D35123B004E5E22 /* CZRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRequestHelper.h; sourceTree = "<group>"; };
 		7D415C951D35123B004E5E22 /* CZRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRequestHelper.m; sourceTree = "<group>"; };
+		7DB744B61D35CFD4004C534C /* BaseSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSqlite.h; sourceTree = "<group>"; };
+		7DB744B71D35CFD4004C534C /* BaseSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSqlite.m; sourceTree = "<group>"; };
+		7DB744B91D35CFE7004C534C /* SqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteHelper.h; sourceTree = "<group>"; };
+		7DB744BA1D35CFE7004C534C /* SqliteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteHelper.m; sourceTree = "<group>"; };
 		A0474E7ABB2ABC50A760EBC0 /* Pods-ZCProject0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.release.xcconfig"; sourceTree = "<group>"; };
 		C263037A1D35279F00AA2F97 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C263037B1D35279F00AA2F97 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -223,6 +229,8 @@
 		7D415C511D34D4CF004E5E22 /* DBHlper */ = {
 			isa = PBXGroup;
 			children = (
+				7DB744B91D35CFE7004C534C /* SqliteHelper.h */,
+				7DB744BA1D35CFE7004C534C /* SqliteHelper.m */,
 			);
 			name = DBHlper;
 			sourceTree = "<group>";
@@ -390,6 +398,8 @@
 				7D415C831D34F53A004E5E22 /* BaseModel.m */,
 				7D415C851D34F55B004E5E22 /* BaseRequest.h */,
 				7D415C861D34F55B004E5E22 /* BaseRequest.m */,
+				7DB744B61D35CFD4004C534C /* BaseSqlite.h */,
+				7DB744B71D35CFD4004C534C /* BaseSqlite.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -525,12 +535,14 @@
 			files = (
 				C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */,
 				7D415C351D34D2A7004E5E22 /* AppDelegate.m in Sources */,
+				7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */,
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
 				7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */,
 				C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */,
 				7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */,
 				7D415C321D34D2A7004E5E22 /* main.m in Sources */,
+				7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */,
 				7D415C841D34F53A004E5E22 /* BaseModel.m in Sources */,
 				7D415C871D34F55B004E5E22 /* BaseRequest.m in Sources */,
 				7D415C811D34F529004E5E22 /* BaseView.m in Sources */,
