@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 #import "ZCTabBar.h"
-
+#import "GoodsViewController.h"
 @interface RootViewController ()
 
 
@@ -68,8 +68,10 @@
     UIViewController * v1 = [UIViewController new];
     v1.view.backgroundColor = [UIColor redColor];
     
-    UIViewController * v2 = [UIViewController new];
-    v2.view.backgroundColor = [UIColor yellowColor];
+    GoodsViewController * Goods = [[GoodsViewController alloc]init];
+    UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:Goods];
+    
+    Goods.view.backgroundColor = [UIColor yellowColor];
     
     UIViewController * v3 = [UIViewController new];
     v3.view.backgroundColor = [UIColor cyanColor];
@@ -77,7 +79,7 @@
     UIViewController * v4 = [UIViewController new];
     v4.view.backgroundColor = [UIColor blueColor];
     
-    self.viewControllers = @[v1,v2,v3,v4];
+    self.viewControllers = @[v1,nav2,v3,v4];
     
 }
 
