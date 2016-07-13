@@ -33,6 +33,8 @@
 		C293EB6C1D363DB200A59101 /* AddLoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB6A1D363DB200A59101 /* AddLoverTableViewCell.m */; };
 		C293EB721D36441300A59101 /* MemorailDayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB711D36441300A59101 /* MemorailDayTableViewCell.m */; };
 		C293EB751D365A6B00A59101 /* AddMemorailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB741D365A6B00A59101 /* AddMemorailViewController.m */; };
+		C293EB771D366EDE00A59101 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293EB761D366EDE00A59101 /* MapKit.framework */; };
+		C293EB791D366F0200A59101 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293EB781D366F0200A59101 /* CoreLocation.framework */; };
 		D69405F11D35D65300DC35C7 /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69405F01D35D65300DC35C7 /* GoodsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		C293EB711D36441300A59101 /* MemorailDayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemorailDayTableViewCell.m; sourceTree = "<group>"; };
 		C293EB731D365A6B00A59101 /* AddMemorailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMemorailViewController.h; sourceTree = "<group>"; };
 		C293EB741D365A6B00A59101 /* AddMemorailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMemorailViewController.m; sourceTree = "<group>"; };
+		C293EB761D366EDE00A59101 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C293EB781D366F0200A59101 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CD0F71700DC7A2B658662DB2 /* Pods-ZCProject0.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.debug.xcconfig"; sourceTree = "<group>"; };
 		D69405EF1D35D65300DC35C7 /* GoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsViewController.h; sourceTree = "<group>"; };
 		D69405F01D35D65300DC35C7 /* GoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C293EB791D366F0200A59101 /* CoreLocation.framework in Frameworks */,
+				C293EB771D366EDE00A59101 /* MapKit.framework in Frameworks */,
 				7DB744BD1D35D27C004C534C /* libsqlite3.tbd in Frameworks */,
 				7419A024872539F1D1B6158C /* libPods-ZCProject0.1.a in Frameworks */,
 			);
@@ -458,6 +464,8 @@
 		8D98B616EC061626A051913D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C293EB781D366F0200A59101 /* CoreLocation.framework */,
+				C293EB761D366EDE00A59101 /* MapKit.framework */,
 				7DB744BC1D35D27C004C534C /* libsqlite3.tbd */,
 				649348D8C8F9355D9E347586 /* libPods-ZCProject0.1.a */,
 			);
