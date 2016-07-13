@@ -19,6 +19,8 @@
 		7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C891D34F612004E5E22 /* ZCTabBar.m */; };
 		7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C8C1D34F81E004E5E22 /* RootViewController.m */; };
 		7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C951D35123B004E5E22 /* CZRequestHelper.m */; };
+		C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037B1D35279F00AA2F97 /* LoginViewController.m */; };
+		C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037E1D3527DE00AA2F97 /* RegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,10 @@
 		7D415C941D35123B004E5E22 /* CZRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRequestHelper.h; sourceTree = "<group>"; };
 		7D415C951D35123B004E5E22 /* CZRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRequestHelper.m; sourceTree = "<group>"; };
 		A0474E7ABB2ABC50A760EBC0 /* Pods-ZCProject0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.release.xcconfig"; sourceTree = "<group>"; };
+		C263037A1D35279F00AA2F97 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C263037B1D35279F00AA2F97 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C263037D1D3527DE00AA2F97 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		C263037E1D3527DE00AA2F97 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		CD0F71700DC7A2B658662DB2 /* Pods-ZCProject0.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -312,6 +318,10 @@
 		7D415C5F1D34D655004E5E22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C263037A1D35279F00AA2F97 /* LoginViewController.h */,
+				C263037B1D35279F00AA2F97 /* LoginViewController.m */,
+				C263037D1D3527DE00AA2F97 /* RegisterViewController.h */,
+				C263037E1D3527DE00AA2F97 /* RegisterViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -513,10 +523,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */,
 				7D415C351D34D2A7004E5E22 /* AppDelegate.m in Sources */,
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
 				7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */,
+				C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */,
 				7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */,
 				7D415C321D34D2A7004E5E22 /* main.m in Sources */,
 				7D415C841D34F53A004E5E22 /* BaseModel.m in Sources */,
@@ -624,7 +636,7 @@
 			baseConfigurationReference = CD0F71700DC7A2B658662DB2 /* Pods-ZCProject0.1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/TANGXU/ZCProject0.1/ZCProject0.1/ZCProject0.1/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(ROOTSRC)ZCProject0.1/PrefixHeader.pch";
 				INFOPLIST_FILE = ZCProject0.1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TangXu.ZCProject0-1";
@@ -637,7 +649,7 @@
 			baseConfigurationReference = A0474E7ABB2ABC50A760EBC0 /* Pods-ZCProject0.1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/TANGXU/ZCProject0.1/ZCProject0.1/ZCProject0.1/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(ROOTSRC)ZCProject0.1/PrefixHeader.pch";
 				INFOPLIST_FILE = ZCProject0.1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TangXu.ZCProject0-1";
