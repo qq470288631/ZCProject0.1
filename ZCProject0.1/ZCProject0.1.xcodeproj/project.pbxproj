@@ -23,6 +23,7 @@
 		7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744BA1D35CFE7004C534C /* SqliteHelper.m */; };
 		C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037B1D35279F00AA2F97 /* LoginViewController.m */; };
 		C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037E1D3527DE00AA2F97 /* RegisterViewController.m */; };
+		C2F2CD8D1D35CFCC009AC284 /* MemorialDayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F2CD8C1D35CFCC009AC284 /* MemorialDayTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		C263037B1D35279F00AA2F97 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C263037D1D3527DE00AA2F97 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		C263037E1D3527DE00AA2F97 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		C2F2CD8B1D35CFCC009AC284 /* MemorialDayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemorialDayTableViewController.h; sourceTree = "<group>"; };
+		C2F2CD8C1D35CFCC009AC284 /* MemorialDayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemorialDayTableViewController.m; sourceTree = "<group>"; };
 		CD0F71700DC7A2B658662DB2 /* Pods-ZCProject0.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -330,6 +333,8 @@
 				C263037B1D35279F00AA2F97 /* LoginViewController.m */,
 				C263037D1D3527DE00AA2F97 /* RegisterViewController.h */,
 				C263037E1D3527DE00AA2F97 /* RegisterViewController.m */,
+				C2F2CD8B1D35CFCC009AC284 /* MemorialDayTableViewController.h */,
+				C2F2CD8C1D35CFCC009AC284 /* MemorialDayTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -543,6 +548,7 @@
 				7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */,
 				7D415C321D34D2A7004E5E22 /* main.m in Sources */,
 				7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */,
+				C2F2CD8D1D35CFCC009AC284 /* MemorialDayTableViewController.m in Sources */,
 				7D415C841D34F53A004E5E22 /* BaseModel.m in Sources */,
 				7D415C871D34F55B004E5E22 /* BaseRequest.m in Sources */,
 				7D415C811D34F529004E5E22 /* BaseView.m in Sources */,
