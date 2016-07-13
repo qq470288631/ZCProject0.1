@@ -21,6 +21,7 @@
 		7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C951D35123B004E5E22 /* CZRequestHelper.m */; };
 		7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744B71D35CFD4004C534C /* BaseSqlite.m */; };
 		7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744BA1D35CFE7004C534C /* SqliteHelper.m */; };
+		7DB744BD1D35D27C004C534C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB744BC1D35D27C004C534C /* libsqlite3.tbd */; };
 		C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037B1D35279F00AA2F97 /* LoginViewController.m */; };
 		C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037E1D3527DE00AA2F97 /* RegisterViewController.m */; };
 		C2F2CD8D1D35CFCC009AC284 /* MemorialDayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F2CD8C1D35CFCC009AC284 /* MemorialDayTableViewController.m */; };
@@ -56,6 +57,7 @@
 		7DB744B71D35CFD4004C534C /* BaseSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSqlite.m; sourceTree = "<group>"; };
 		7DB744B91D35CFE7004C534C /* SqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteHelper.h; sourceTree = "<group>"; };
 		7DB744BA1D35CFE7004C534C /* SqliteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteHelper.m; sourceTree = "<group>"; };
+		7DB744BC1D35D27C004C534C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A0474E7ABB2ABC50A760EBC0 /* Pods-ZCProject0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.release.xcconfig"; sourceTree = "<group>"; };
 		C263037A1D35279F00AA2F97 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C263037B1D35279F00AA2F97 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB744BD1D35D27C004C534C /* libsqlite3.tbd in Frameworks */,
 				7419A024872539F1D1B6158C /* libPods-ZCProject0.1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +415,7 @@
 		8D98B616EC061626A051913D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DB744BC1D35D27C004C534C /* libsqlite3.tbd */,
 				649348D8C8F9355D9E347586 /* libPods-ZCProject0.1.a */,
 			);
 			name = Frameworks;

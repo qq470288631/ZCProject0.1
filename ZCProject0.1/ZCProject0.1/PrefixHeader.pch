@@ -15,6 +15,11 @@
 #import <AFNetworking.h>
 
 /**
+ *  引用数据库
+ */
+#import <sqlite3.h>
+
+/**
  *  图片加载
  */
 #import <UIImageView+AFNetworking.h>
