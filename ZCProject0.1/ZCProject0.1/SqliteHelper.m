@@ -10,12 +10,11 @@
 
 //单例存储静态变量
 static SqliteHelper * helper = nil;
-//数据库对象
-static sqlite3 * db = nil;
+
 
 @interface SqliteHelper ()
 
-@property(nonatomic,strong)NSString * databasePath;
+@property(nonatomic,strong)FMDatabase * database;
 
 @end
 
@@ -25,40 +24,41 @@ static sqlite3 * db = nil;
 +(SqliteHelper *)shareSqliteHelper{
     if(nil == helper){
         helper = [SqliteHelper new];
+        
+        NSString * personPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)firstObject];
+        NSString * dbPath = [personPath stringByAppendingPathComponent:@"zcDatabase.sqlite"];
+        
+        helper.database = [FMDatabase databaseWithPath:dbPath];
     }
     return helper;
 }
 
--(NSString *)databasePath{
-    if (_databasePath == nil) {
+
+- (BOOL)executeUpdate:(NSString *)sqlString{
+    if ([_database open]) {
         
-        NSString * personPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)firstObject];
-        NSString * dbPath = [personPath stringByAppendingPathComponent:@"zcDatabase.sqlite"];
-        _databasePath = dbPath;
-        
+        BOOL result =  [self.database executeUpdate:sqlString];
+        [_database close];
+        return result;
+    }else{
+        [_database close];
+        return NO;
     }
-    return _databasePath;
 }
 
-//OpenDataBase
--(void)OpenDataBase{
-    int result = sqlite3_open(self.databasePath.UTF8String, &db);
-    if (result == SQLITE_OK) {
-        NSLog(@"Open Done!");
+- (FMResultSet *)executeQbuery:(NSString *)sqlString{
+
+    if ([_database open]) {
+        
+        FMResultSet * resultSet = [self.database executeQuery:sqlString];
+         [_database close];
+        return resultSet;
     }else{
-        NSLog(@"Open Error!");
-    }
-    
-}
-//CloseDataBase
--(void)CloseDataBase{
-    
-    int result = sqlite3_close(db);
-    if (result == SQLITE_OK) {
-        NSLog(@"Close Done!");
-    }else{
-        NSLog(@"Close Error!");
+        [_database close];
+        return nil;
     }
 }
+
+
 
 @end
