@@ -7,6 +7,7 @@
 //
 
 #import "GoodsViewController.h"
+#import "GoodsRequest.h"
 
 @interface GoodsViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -21,6 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    GoodsRequest * request = [GoodsRequest new];
+    [request requestHomeList];
+    
     
     _MaintableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:(UITableViewStylePlain)];
     

@@ -34,6 +34,7 @@
 		C293EB6C1D363DB200A59101 /* AddLoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB6A1D363DB200A59101 /* AddLoverTableViewCell.m */; };
 		D69405F11D35D65300DC35C7 /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69405F01D35D65300DC35C7 /* GoodsViewController.m */; };
 		D69405F41D35EC1E00DC35C7 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D69405F31D35EC1E00DC35C7 /* MainTableViewCell.m */; };
+		D69406141D3641BE00DC35C7 /* GoodsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D69406131D3641BE00DC35C7 /* GoodsRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,8 @@
 		D69405F01D35D65300DC35C7 /* GoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
 		D69405F21D35EC1E00DC35C7 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		D69405F31D35EC1E00DC35C7 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
+		D69406121D3641BE00DC35C7 /* GoodsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsRequest.h; sourceTree = "<group>"; };
+		D69406131D3641BE00DC35C7 /* GoodsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,6 +471,8 @@
 		D69405F91D36302B00DC35C7 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				D69406121D3641BE00DC35C7 /* GoodsRequest.h */,
+				D69406131D3641BE00DC35C7 /* GoodsRequest.m */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -604,6 +609,7 @@
 				7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */,
 				C293EB621D363DAA00A59101 /* LoverHomePageViewController.m in Sources */,
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
+				D69406141D3641BE00DC35C7 /* GoodsRequest.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
 				7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */,
 				C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */,
