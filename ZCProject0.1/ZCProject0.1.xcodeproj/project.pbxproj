@@ -23,6 +23,7 @@
 		C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C263037E1D3527DE00AA2F97 /* RegisterViewController.m */; };
 		C2F2CD8D1D35CFCC009AC284 /* MemorialDayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F2CD8C1D35CFCC009AC284 /* MemorialDayTableViewController.m */; };
 		D69405F11D35D65300DC35C7 /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69405F01D35D65300DC35C7 /* GoodsViewController.m */; };
+		D69405F41D35EC1E00DC35C7 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D69405F31D35EC1E00DC35C7 /* MainTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		CD0F71700DC7A2B658662DB2 /* Pods-ZCProject0.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.debug.xcconfig"; sourceTree = "<group>"; };
 		D69405EF1D35D65300DC35C7 /* GoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsViewController.h; sourceTree = "<group>"; };
 		D69405F01D35D65300DC35C7 /* GoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
+		D69405F21D35EC1E00DC35C7 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		D69405F31D35EC1E00DC35C7 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,7 @@
 		7D415C491D34D3D6004E5E22 /* Goods */ = {
 			isa = PBXGroup;
 			children = (
+				D69405F91D36302B00DC35C7 /* Request */,
 				7D415C5D1D34D649004E5E22 /* Model */,
 				7D415C5C1D34D644004E5E22 /* View */,
 				7D415C5B1D34D63F004E5E22 /* Controller */,
@@ -305,6 +309,8 @@
 		7D415C5C1D34D644004E5E22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D69405F21D35EC1E00DC35C7 /* MainTableViewCell.h */,
+				D69405F31D35EC1E00DC35C7 /* MainTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -410,6 +416,13 @@
 				649348D8C8F9355D9E347586 /* libPods-ZCProject0.1.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D69405F91D36302B00DC35C7 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,6 +548,7 @@
 			files = (
 				C263037F1D3527DE00AA2F97 /* RegisterViewController.m in Sources */,
 				D69405F11D35D65300DC35C7 /* GoodsViewController.m in Sources */,
+				D69405F41D35EC1E00DC35C7 /* MainTableViewCell.m in Sources */,
 				7D415C351D34D2A7004E5E22 /* AppDelegate.m in Sources */,
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
