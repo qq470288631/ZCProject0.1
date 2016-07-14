@@ -7,6 +7,7 @@
 //
 
 #import "MemorailDayViewController.h"
+#import "MemorailDayTableViewCell.h"
 #import "AddMemorailViewController.h"
 @interface MemorailDayViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong)UITableView *memorailTableView;
@@ -20,26 +21,37 @@
     self.title = @"纪念日";
     self.view.backgroundColor = [UIColor whiteColor];
     self.dataArray = [[NSMutableArray alloc]init];
-    self.memorailTableView = [[UITableView alloc]initWithFrame:self.view.frame];
+    self.memorailTableView                                                                                                                                                                                                  = [[UITableView alloc]initWithFrame:self.view.frame];
     self.memorailTableView.delegate = self;
     self.memorailTableView.dataSource = self;
-    [self.memorailTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CELL"];
+//    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"1.jpg"]];
+//    [self.memorailTableView setBackgroundView:imageView];
+//    //去掉cell的下划线
+//    self.memorailTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //隐藏掉多余的cell
+//     self.memorailTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:_memorailTableView];
+    [self.memorailTableView registerClass:[MemorailDayTableViewCell class] forCellReuseIdentifier:@"CELL"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(addMemorial:)];
+    
 }
 -(void)addMemorial:(UITabBarItem *)sender
 {
-
     AddMemorailViewController *addVC = [[AddMemorailViewController alloc]init];
     [self.navigationController pushViewController:addVC animated:YES];
-
-}
+   }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return 100;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
-
+    MemorailDayTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
+//    cell.backgroundColor = [UIColor clearColor];
+    
     return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    return 100;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

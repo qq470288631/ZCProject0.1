@@ -29,9 +29,12 @@
 		C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB5B1D363DAA00A59101 /* ChatViewController.m */; };
 		C293EB651D363DAA00A59101 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB5D1D363DAA00A59101 /* MapViewController.m */; };
 		C293EB661D363DAA00A59101 /* MemorailDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB5F1D363DAA00A59101 /* MemorailDayViewController.m */; };
-		C293EB671D363DAA00A59101 /* AddMemorailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB611D363DAA00A59101 /* AddMemorailViewController.m */; };
 		C293EB6B1D363DB200A59101 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C293EB681D363DB200A59101 /* 1.jpg */; };
 		C293EB6C1D363DB200A59101 /* AddLoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB6A1D363DB200A59101 /* AddLoverTableViewCell.m */; };
+		C293EB721D36441300A59101 /* MemorailDayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB711D36441300A59101 /* MemorailDayTableViewCell.m */; };
+		C293EB751D365A6B00A59101 /* AddMemorailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB741D365A6B00A59101 /* AddMemorailViewController.m */; };
+		C293EB771D366EDE00A59101 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293EB761D366EDE00A59101 /* MapKit.framework */; };
+		C293EB791D366F0200A59101 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293EB781D366F0200A59101 /* CoreLocation.framework */; };
 		D69405F11D35D65300DC35C7 /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69405F01D35D65300DC35C7 /* GoodsViewController.m */; };
 		D69405F41D35EC1E00DC35C7 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D69405F31D35EC1E00DC35C7 /* MainTableViewCell.m */; };
 		D69406141D3641BE00DC35C7 /* GoodsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D69406131D3641BE00DC35C7 /* GoodsRequest.m */; };
@@ -83,11 +86,15 @@
 		C293EB5D1D363DAA00A59101 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		C293EB5E1D363DAA00A59101 /* MemorailDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemorailDayViewController.h; sourceTree = "<group>"; };
 		C293EB5F1D363DAA00A59101 /* MemorailDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemorailDayViewController.m; sourceTree = "<group>"; };
-		C293EB601D363DAA00A59101 /* AddMemorailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMemorailViewController.h; sourceTree = "<group>"; };
-		C293EB611D363DAA00A59101 /* AddMemorailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMemorailViewController.m; sourceTree = "<group>"; };
 		C293EB681D363DB200A59101 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		C293EB691D363DB200A59101 /* AddLoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLoverTableViewCell.h; sourceTree = "<group>"; };
 		C293EB6A1D363DB200A59101 /* AddLoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLoverTableViewCell.m; sourceTree = "<group>"; };
+		C293EB701D36441300A59101 /* MemorailDayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemorailDayTableViewCell.h; sourceTree = "<group>"; };
+		C293EB711D36441300A59101 /* MemorailDayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemorailDayTableViewCell.m; sourceTree = "<group>"; };
+		C293EB731D365A6B00A59101 /* AddMemorailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMemorailViewController.h; sourceTree = "<group>"; };
+		C293EB741D365A6B00A59101 /* AddMemorailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMemorailViewController.m; sourceTree = "<group>"; };
+		C293EB761D366EDE00A59101 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C293EB781D366F0200A59101 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CD0F71700DC7A2B658662DB2 /* Pods-ZCProject0.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.debug.xcconfig"; sourceTree = "<group>"; };
 		D69405EF1D35D65300DC35C7 /* GoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsViewController.h; sourceTree = "<group>"; };
 		D69405F01D35D65300DC35C7 /* GoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
@@ -102,6 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C293EB791D366F0200A59101 /* CoreLocation.framework in Frameworks */,
+				C293EB771D366EDE00A59101 /* MapKit.framework in Frameworks */,
 				7DB744BD1D35D27C004C534C /* libsqlite3.tbd in Frameworks */,
 				7419A024872539F1D1B6158C /* libPods-ZCProject0.1.a in Frameworks */,
 			);
@@ -377,8 +386,8 @@
 				C293EB5D1D363DAA00A59101 /* MapViewController.m */,
 				C293EB5E1D363DAA00A59101 /* MemorailDayViewController.h */,
 				C293EB5F1D363DAA00A59101 /* MemorailDayViewController.m */,
-				C293EB601D363DAA00A59101 /* AddMemorailViewController.h */,
-				C293EB611D363DAA00A59101 /* AddMemorailViewController.m */,
+				C293EB731D365A6B00A59101 /* AddMemorailViewController.h */,
+				C293EB741D365A6B00A59101 /* AddMemorailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -389,6 +398,8 @@
 				C293EB681D363DB200A59101 /* 1.jpg */,
 				C293EB691D363DB200A59101 /* AddLoverTableViewCell.h */,
 				C293EB6A1D363DB200A59101 /* AddLoverTableViewCell.m */,
+				C293EB701D36441300A59101 /* MemorailDayTableViewCell.h */,
+				C293EB711D36441300A59101 /* MemorailDayTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -470,6 +481,8 @@
 		8D98B616EC061626A051913D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C293EB781D366F0200A59101 /* CoreLocation.framework */,
+				C293EB761D366EDE00A59101 /* MapKit.framework */,
 				7DB744BC1D35D27C004C534C /* libsqlite3.tbd */,
 				649348D8C8F9355D9E347586 /* libPods-ZCProject0.1.a */,
 			);
@@ -611,16 +624,25 @@
 				D69405F41D35EC1E00DC35C7 /* MainTableViewCell.m in Sources */,
 				7D415C351D34D2A7004E5E22 /* AppDelegate.m in Sources */,
 				C293EB651D363DAA00A59101 /* MapViewController.m in Sources */,
+<<<<<<< HEAD
+=======
 				C293EB671D363DAA00A59101 /* AddMemorailViewController.m in Sources */,
 				7DF2577D1D3665870022FC37 /* CZRegisterViewController.m in Sources */,
 				7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */,
+>>>>>>> 4ddca77dc0b04b74db305eafbfe0441342b2a929
 				C293EB631D363DAA00A59101 /* AddLoverViewController.m in Sources */,
 				7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */,
+				C293EB751D365A6B00A59101 /* AddMemorailViewController.m in Sources */,
 				C293EB621D363DAA00A59101 /* LoverHomePageViewController.m in Sources */,
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
 				D69406141D3641BE00DC35C7 /* GoodsRequest.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
 				7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */,
+<<<<<<< HEAD
+				C263037C1D35279F00AA2F97 /* LoginViewController.m in Sources */,
+				C293EB721D36441300A59101 /* MemorailDayTableViewCell.m in Sources */,
+=======
+>>>>>>> 4ddca77dc0b04b74db305eafbfe0441342b2a929
 				7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */,
 				C293EB6C1D363DB200A59101 /* AddLoverTableViewCell.m in Sources */,
 				7D415C321D34D2A7004E5E22 /* main.m in Sources */,

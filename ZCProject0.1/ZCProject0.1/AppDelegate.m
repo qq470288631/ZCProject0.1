@@ -10,7 +10,7 @@
 #import "RootViewController.h"
 
 #import "EMSDK.h"
-
+#import "AddLoverViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -22,7 +22,10 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [RootViewController new];
+    AddLoverViewController *addVC = [[AddLoverViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:addVC];
+    self.window.rootViewController = nav;
+//    self.window.rootViewController = [RootViewController new];
     [self.window makeKeyAndVisible];
     
     
