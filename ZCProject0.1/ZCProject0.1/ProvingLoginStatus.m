@@ -8,6 +8,24 @@
 
 #import "ProvingLoginStatus.h"
 
+//单例存储静态变量
+static ProvingLoginStatus * provingLoginStatus = nil;
+
 @implementation ProvingLoginStatus
+
+
++(ProvingLoginStatus *)shareProvingLoginStatus{
+    if(nil == provingLoginStatus){
+        provingLoginStatus = [ProvingLoginStatus new];
+    }
+    return provingLoginStatus;
+}
+
+- (BOOL)checkoutLoginStatus{
+    
+    BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
+    return isAutoLogin;
+    
+}
 
 @end

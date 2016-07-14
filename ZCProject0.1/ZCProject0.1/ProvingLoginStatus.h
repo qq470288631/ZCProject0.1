@@ -10,4 +10,11 @@
 
 @interface ProvingLoginStatus : NSObject
 
+/**
+ *  获取登录验证单例实例
+ *
+ *  @return 唯一实例
+ */
++(ProvingLoginStatus *)shareProvingLoginStatus;
+
 @end
