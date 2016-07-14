@@ -10,4 +10,30 @@
 
 @interface SqliteHelper : BaseSqlite
 
+/**
+ *  获取帮助类单例实例
+ *
+ *  @return 实例
+ */
++(SqliteHelper *)shareSqliteHelper;
+
+/**
+ *  执行Sql语句（返回BOOL） 适用于 Create Update Delete 等
+ *
+ *  @param sqlString Sql语句
+ *
+ *  @return 执行结果
+ */
+- (BOOL)executeUpdate:(NSString *)sqlString;
+
+
+/**
+ *  执行Sql语句（返回结果集） 适用于 Select 等
+ *
+ *  @param sqlString Sql语句
+ *
+ *  @return 返回执行结果
+ */
+- (FMResultSet *)executeQuery:(NSString *)sqlString;
+
 @end
