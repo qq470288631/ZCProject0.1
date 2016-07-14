@@ -8,7 +8,8 @@
 
 #import "LoverHomePageViewController.h"
 
-@interface LoverHomePageViewController ()
+@interface LoverHomePageViewController ()<UITableViewDataSource, UITableViewDelegate>
+@property(nonatomic, strong)UITableView *friendsListTableView;
 
 @end
 
@@ -16,7 +17,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
+    self.friendsListTableView = [[UITableView alloc]initWithFrame:self.view.frame];
+    self.friendsListTableView.backgroundColor = [UIColor orangeColor];
+    self.friendsListTableView.dataSource = self;
+    self.friendsListTableView.delegate = self;
+    [self.view addSubview:_friendsListTableView];
+    
+    [self.friendsListTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CEll"];
+    
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CEll"];
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {
