@@ -11,7 +11,7 @@
 #import "ChatViewController.h"
 #import "MapViewController.h"
 #import "MemorailDayViewController.h"
-@interface AddLoverViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface AddLoverViewController ()<UITableViewDataSource, UITableViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 //UIView视图
 @property(nonatomic, strong)UIView *inviteView;
 //视图上的图片
@@ -33,11 +33,52 @@
     [self.view addSubview:self.backgroundTableView];
     self.inviteView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
     self.inviteView.backgroundColor = [UIColor grayColor];
+    self.backgroundImage = [[UIImageView alloc]initWithFrame:self.inviteView.frame];
     self.inviteView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"1.jpg"]];
+    [self.inviteView addSubview:_backgroundImage];
     self.backgroundTableView .tableHeaderView = self.inviteView;
+    //给背景图添加轻拍手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doImageAddTap)];
+    //允许用户交互
+    self.backgroundImage.userInteractionEnabled = YES;
+    [self.backgroundImage addGestureRecognizer:tap];
+    
     [self.backgroundTableView registerClass:[AddLoverTableViewCell class] forCellReuseIdentifier:@"cell"];
     //去掉cell的下划线
     self.backgroundTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
+//点击图片进入相册
+-(void)doImageAddTap
+{   UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"从相册中选取" message:nil preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"好的" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+        //设置图片来源
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        imagePicker.delegate = self;
+        imagePicker.allowsEditing = YES;
+        //进入系统相册
+        [self presentViewController:imagePicker animated:YES completion:nil];
+        
+    }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        
+        
+    }];
+    [alertController addAction:action2];
+    [alertController addAction:action1];
+    [self presentViewController:alertController animated:YES completion:nil];
+
+}
+//实现代理方法
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    [picker dismissViewControllerAnimated:YES completion:^{}];
+    //选取裁剪后的图片
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+   _backgroundImage.image = image;
+    
+
+
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

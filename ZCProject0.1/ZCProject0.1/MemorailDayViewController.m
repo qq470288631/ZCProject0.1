@@ -38,6 +38,7 @@
 -(void)addMemorial:(UITabBarItem *)sender
 {
     AddMemorailViewController *addVC = [[AddMemorailViewController alloc]init];
+   
     [self.navigationController pushViewController:addVC animated:YES];
    }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -45,10 +46,10 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MemorailDayTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
-//    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     return 100;

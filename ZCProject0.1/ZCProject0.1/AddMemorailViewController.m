@@ -10,7 +10,10 @@
 
 @interface AddMemorailViewController ()
 @property(nonatomic, strong)UITextField *titleTextField;
-@property(nonatomic, strong)UIPickerView *datePickerView;
+//显示天数
+@property(nonatomic, strong)UILabel *dateLable;
+//时间轴
+@property(nonatomic, strong)UIDatePicker *datePickerView;
 @end
 
 @implementation AddMemorailViewController
@@ -22,7 +25,38 @@
     self.titleTextField.backgroundColor = [UIColor whiteColor];
     self.titleTextField.placeholder = @"请输入标题";
     [self.view addSubview:_titleTextField];
+    _dateLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 100, self.view.frame.size.width - 20, 100)];
+    _dateLable.textAlignment = 1;
+    _dateLable.text = @"0天";
+    _dateLable.font = [UIFont systemFontOfSize:50];
+    _dateLable.textColor = [UIColor blackColor];
+    [self.view addSubview:_dateLable];
+    _datePickerView = [[UIDatePicker alloc]initWithFrame:CGRectMake(10, self.view.frame.size.height - 200, self.view.frame.size.width - 20, 150)];
+    _datePickerView.datePickerMode = UIDatePickerModeDate;
+    _datePickerView.backgroundColor = [UIColor whiteColor];
+    [_datePickerView addTarget:self action:@selector(dateClicked:) forControlEvents:(UIControlEventValueChanged)];
+    
+    [self.view addSubview:_datePickerView];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"保存" style:(UIBarButtonItemStylePlain) target:self action:@selector(saveClicked:)];
+    
 
+}
+-(void)saveClicked:(UIBarButtonItem *)sender
+{
+   
+}
+-(void)dateClicked:(UIDatePicker *)picker
+{
+  
+    
+       //    当前日期为结束日期
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"YYYY-MM-dd"];
+    //日历类型为公历
+    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *dayComponents = [calendar components:NSCalendarUnitDay fromDate:picker.date toDate:date options:0];
+    _dateLable.text = [NSString stringWithFormat:@"%ld天",dayComponents.day];
 
 }
 
