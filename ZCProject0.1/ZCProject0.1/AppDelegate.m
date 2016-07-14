@@ -32,6 +32,8 @@
     options.apnsCertName = @"istore_dev";
     [[EMClient sharedClient] initializeSDKWithOptions:options];
     
+    ProvingLoginStatus * proving = [ProvingLoginStatus shareProvingLoginStatus];
+    [proving checkoutLoginStatusShowLoginViewONController:self.window.rootViewController];
     
     return YES;
 }
