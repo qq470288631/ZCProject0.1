@@ -25,6 +25,7 @@
 		7DE7E6991D373B9500127B17 /* ProvingLoginStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7E6981D373B9500127B17 /* ProvingLoginStatus.m */; };
 		7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF257791D36657B0022FC37 /* ZCLoginViewController.m */; };
 		7DF2577D1D3665870022FC37 /* CZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */; };
+		C2939C951D378B3400817651 /* FriendListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2939C941D378B3400817651 /* FriendListTableViewCell.m */; };
 		C293EB621D363DAA00A59101 /* LoverHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB571D363DAA00A59101 /* LoverHomePageViewController.m */; };
 		C293EB631D363DAA00A59101 /* AddLoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB591D363DAA00A59101 /* AddLoverViewController.m */; };
 		C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB5B1D363DAA00A59101 /* ChatViewController.m */; };
@@ -79,6 +80,8 @@
 		7DF2577B1D3665870022FC37 /* CZRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRegisterViewController.h; sourceTree = "<group>"; };
 		7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRegisterViewController.m; sourceTree = "<group>"; };
 		A0474E7ABB2ABC50A760EBC0 /* Pods-ZCProject0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.release.xcconfig"; sourceTree = "<group>"; };
+		C2939C931D378B3400817651 /* FriendListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListTableViewCell.h; sourceTree = "<group>"; };
+		C2939C941D378B3400817651 /* FriendListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewCell.m; sourceTree = "<group>"; };
 		C293EB561D363DAA00A59101 /* LoverHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoverHomePageViewController.h; sourceTree = "<group>"; };
 		C293EB571D363DAA00A59101 /* LoverHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoverHomePageViewController.m; sourceTree = "<group>"; };
 		C293EB581D363DAA00A59101 /* AddLoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLoverViewController.h; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 				C293EB6A1D363DB200A59101 /* AddLoverTableViewCell.m */,
 				C293EB701D36441300A59101 /* MemorailDayTableViewCell.h */,
 				C293EB711D36441300A59101 /* MemorailDayTableViewCell.m */,
+				C2939C931D378B3400817651 /* FriendListTableViewCell.h */,
+				C2939C941D378B3400817651 /* FriendListTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -638,6 +643,7 @@
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
 				D69406141D3641BE00DC35C7 /* GoodsRequest.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
+				C2939C951D378B3400817651 /* FriendListTableViewCell.m in Sources */,
 				7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */,
 				C293EB721D36441300A59101 /* MemorailDayTableViewCell.m in Sources */,
 				7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */,
