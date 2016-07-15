@@ -8,6 +8,8 @@
 
 #import "ProvingLoginStatus.h"
 
+#import "ZCLoginViewController.h"
+
 //单例存储静态变量
 static ProvingLoginStatus * provingLoginStatus = nil;
 
@@ -26,6 +28,20 @@ static ProvingLoginStatus * provingLoginStatus = nil;
     BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
     return isAutoLogin;
     
+}
+
+- (void)checkoutLoginStatusShowLoginViewONController:(UIViewController *)controller{
+    if (![self checkoutLoginStatus]) {
+        
+        ZCLoginViewController * loginViewController = [ZCLoginViewController new];
+        [controller presentViewController:loginViewController animated:YES completion:^{
+            
+            
+        }];
+        
+    }else{
+        return;
+    }
 }
 
 @end

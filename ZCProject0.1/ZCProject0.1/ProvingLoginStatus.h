@@ -17,4 +17,20 @@
  */
 +(ProvingLoginStatus *)shareProvingLoginStatus;
 
+
+/**
+ *  检测登录状态
+ *
+ *  @return 是否登录
+ */
+- (BOOL)checkoutLoginStatus;
+
+/**
+ *  检测未登录模态登录界面
+ *
+ *  @param controller 视图控制器
+ */
+- (void)checkoutLoginStatusShowLoginViewONController:(UIViewController *)controller;
+
+
 @end
