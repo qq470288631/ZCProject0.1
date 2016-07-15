@@ -35,6 +35,8 @@
     ProvingLoginStatus * proving = [ProvingLoginStatus shareProvingLoginStatus];
     [proving checkoutLoginStatusShowLoginViewONController:self.window.rootViewController];
     
+    [[EMClient sharedClient].options setIsAutoLogin:NO];
+    
     return YES;
 }
 

@@ -32,5 +32,11 @@
  */
 - (void)checkoutLoginStatusShowLoginViewONController:(UIViewController *)controller;
 
+/**
+ *  在控制器上模态登录页面
+ *
+ *  @param controller 视图控制器
+ */
+- (void)showLoginViewOnController:(UIViewController *)controller;
 
 @end
