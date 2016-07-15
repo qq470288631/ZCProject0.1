@@ -24,12 +24,12 @@
     self.memorailTableView                                                                                                                                                                                                  = [[UITableView alloc]initWithFrame:self.view.frame];
     self.memorailTableView.delegate = self;
     self.memorailTableView.dataSource = self;
-//    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"1.jpg"]];
-//    [self.memorailTableView setBackgroundView:imageView];
-//    //去掉cell的下划线
-//    self.memorailTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"1.jpg"]];
+    //    [self.memorailTableView setBackgroundView:imageView];
+    //    //去掉cell的下划线
+    //    self.memorailTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     //隐藏掉多余的cell
-//     self.memorailTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    //     self.memorailTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:_memorailTableView];
     [self.memorailTableView registerClass:[MemorailDayTableViewCell class] forCellReuseIdentifier:@"CELL"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(addMemorial:)];
@@ -38,21 +38,23 @@
 -(void)addMemorial:(UITabBarItem *)sender
 {
     AddMemorailViewController *addVC = [[AddMemorailViewController alloc]init];
-   
+    
     [self.navigationController pushViewController:addVC animated:YES];
-   }
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 100;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MemorailDayTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
-    
+    cell.titleLable.text = @"主题";
+    cell.dateLable.text = @"2016-07-15";
+    cell.dayLable.text = @"365天";
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-
-    return 100;
+    
+    return 80;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -60,13 +62,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
