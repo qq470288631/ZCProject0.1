@@ -33,6 +33,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     tableViews = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, WindownWidth, WindowHeight-60) style:UITableViewStylePlain];
+    tableViews.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"11.png"]];
     tableViews.delegate = self;
     tableViews.dataSource = self;
     tableViews.tableFooterView = [[UIView alloc]init];
@@ -45,12 +46,14 @@
     [self.view addSubview:inputView];
     
     chatTextField = [[UITextField alloc]initWithFrame:CGRectMake(10, 3, WindownWidth - 60, 50)];
+    chatTextField.borderStyle =  UITextBorderStyleRoundedRect;
     chatTextField.delegate = self;
     chatTextField.returnKeyType = UIReturnKeyDefault;
     [inputView addSubview:chatTextField];
     
     rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(WindownWidth - 50-5, 3, WindownWidth - chatTextField.frame.size.width, 50);
+    rightBtn.backgroundColor = [UIColor grayColor];
     [rightBtn setTitle:@"发送" forState:UIControlStateNormal];
     [rightBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -199,6 +202,13 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [chatTextField resignFirstResponder];
+    return YES;
+}
+//textField的边框设置
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    chatTextField.layer.borderColor = [[UIColor grayColor]CGColor];
+    chatTextField.layer.borderWidth = 2.0f;
     return YES;
 }
 - (void)didReceiveMemoryWarning {
