@@ -185,7 +185,7 @@
     BOOL result = [loginHelper loginWithUsername:self.usernameTextField.text password:self.passwordTextField.text];
     
     if (result) {
-        
+        [STTextHudTool showSuccessText:@"登录成功" withSecond:1];
         [self dismissViewControllerAnimated:YES completion:^{
             
             //成功回调
