@@ -19,6 +19,7 @@
 		7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C891D34F612004E5E22 /* ZCTabBar.m */; };
 		7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C8C1D34F81E004E5E22 /* RootViewController.m */; };
 		7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C951D35123B004E5E22 /* CZRequestHelper.m */; };
+		7D93DCCA1D388B3F00F5542A /* ZCLoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D93DCC91D388B3F00F5542A /* ZCLoginHelper.m */; };
 		7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744B71D35CFD4004C534C /* BaseSqlite.m */; };
 		7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744BA1D35CFE7004C534C /* SqliteHelper.m */; };
 		7DB744BD1D35D27C004C534C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB744BC1D35D27C004C534C /* libsqlite3.tbd */; };
@@ -90,6 +91,8 @@
 		7D415C901D350EC7004E5E22 /* CommonString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonString.h; sourceTree = "<group>"; };
 		7D415C941D35123B004E5E22 /* CZRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRequestHelper.h; sourceTree = "<group>"; };
 		7D415C951D35123B004E5E22 /* CZRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRequestHelper.m; sourceTree = "<group>"; };
+		7D93DCC81D388B3F00F5542A /* ZCLoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLoginHelper.h; sourceTree = "<group>"; };
+		7D93DCC91D388B3F00F5542A /* ZCLoginHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLoginHelper.m; sourceTree = "<group>"; };
 		7DB744B61D35CFD4004C534C /* BaseSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSqlite.h; sourceTree = "<group>"; };
 		7DB744B71D35CFD4004C534C /* BaseSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSqlite.m; sourceTree = "<group>"; };
 		7DB744B91D35CFE7004C534C /* SqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteHelper.h; sourceTree = "<group>"; };
@@ -570,6 +573,8 @@
 				7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */,
 				7DE7E6971D373B9500127B17 /* ProvingLoginStatus.h */,
 				7DE7E6981D373B9500127B17 /* ProvingLoginStatus.m */,
+				7D93DCC81D388B3F00F5542A /* ZCLoginHelper.h */,
+				7D93DCC91D388B3F00F5542A /* ZCLoginHelper.m */,
 			);
 			name = ZCUser;
 			sourceTree = "<group>";
@@ -764,6 +769,7 @@
 				C25598261D3883FF00A7ADED /* LoverTableViewCell.m in Sources */,
 				C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */,
 				7D415C871D34F55B004E5E22 /* BaseRequest.m in Sources */,
+				7D93DCCA1D388B3F00F5542A /* ZCLoginHelper.m in Sources */,
 				7D415C811D34F529004E5E22 /* BaseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

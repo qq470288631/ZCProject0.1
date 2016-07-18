@@ -44,4 +44,14 @@ static ProvingLoginStatus * provingLoginStatus = nil;
     }
 }
 
+- (void)showLoginViewOnController:(UIViewController *)controller{
+
+    ZCLoginViewController * loginViewController = [ZCLoginViewController new];
+    [controller presentViewController:loginViewController animated:YES completion:^{
+        
+        
+    }];
+    
+}
+
 @end
