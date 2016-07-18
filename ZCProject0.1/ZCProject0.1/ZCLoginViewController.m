@@ -188,6 +188,8 @@
         [STTextHudTool showSuccessText:@"登录成功" withSecond:1];
         [self dismissViewControllerAnimated:YES completion:^{
             
+            //存入本地
+            [loginHelper setNSUserDefaultsWithUsername:self.usernameTextField.text];
             //成功回调
             [self.delegeta LoginDone];
             
@@ -219,35 +221,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (void)userTest{
-    
-    //    EMError *error = [[EMClient sharedClient] registerWithUsername:@"admin" password:@"admin"];
-    //    if (error==nil) {
-    //        NSLog(@"注册成功");
-    //    }
-    
-    //    BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
-    //    if (!isAutoLogin) {
-    //        EMError *error = [[EMClient sharedClient] loginWithUsername:@"admin" password:@"admin"];
-    //        if (!error)
-    //        {
-    //            NSLog(@"1");
-    //            [[EMClient sharedClient].options setIsAutoLogin:YES];
-    //        }
-    //    }else{
-    //        NSLog(@"2");
-    //    }
-    
-    
-    //    EMError *error1 = [[EMClient sharedClient] logout:YES];
-    //    if (!error1) {
-    //        NSLog(@"退出成功");
-    //    }else{
-    //        NSLog(@"%@",error1);
-    //    }
-    
-}
 
 /*
 #pragma mark - Navigation

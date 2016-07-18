@@ -27,6 +27,8 @@
 		7D84386E1D3C7A7200AF2875 /* STTextHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8438651D3C7A7200AF2875 /* STTextHud.m */; };
 		7D84386F1D3C7A7200AF2875 /* STTextHud.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8438661D3C7A7200AF2875 /* STTextHud.xib */; };
 		7D8438701D3C7A7200AF2875 /* STTextHudTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8438681D3C7A7200AF2875 /* STTextHudTool.m */; };
+		7D8438731D3CB91700AF2875 /* ZCMemorialDayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8438721D3CB91700AF2875 /* ZCMemorialDayManager.m */; };
+		7D8438761D3CCD5F00AF2875 /* ZCMemorialDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8438751D3CCD5F00AF2875 /* ZCMemorialDayModel.m */; };
 		7D93DCCA1D388B3F00F5542A /* ZCLoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D93DCC91D388B3F00F5542A /* ZCLoginHelper.m */; };
 		7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744B71D35CFD4004C534C /* BaseSqlite.m */; };
 		7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744BA1D35CFE7004C534C /* SqliteHelper.m */; };
@@ -107,6 +109,10 @@
 		7D8438661D3C7A7200AF2875 /* STTextHud.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STTextHud.xib; sourceTree = "<group>"; };
 		7D8438671D3C7A7200AF2875 /* STTextHudTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTextHudTool.h; sourceTree = "<group>"; };
 		7D8438681D3C7A7200AF2875 /* STTextHudTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTextHudTool.m; sourceTree = "<group>"; };
+		7D8438711D3CB91700AF2875 /* ZCMemorialDayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCMemorialDayManager.h; sourceTree = "<group>"; };
+		7D8438721D3CB91700AF2875 /* ZCMemorialDayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMemorialDayManager.m; sourceTree = "<group>"; };
+		7D8438741D3CCD5F00AF2875 /* ZCMemorialDayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCMemorialDayModel.h; sourceTree = "<group>"; };
+		7D8438751D3CCD5F00AF2875 /* ZCMemorialDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMemorialDayModel.m; sourceTree = "<group>"; };
 		7D93DCC81D388B3F00F5542A /* ZCLoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLoginHelper.h; sourceTree = "<group>"; };
 		7D93DCC91D388B3F00F5542A /* ZCLoginHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLoginHelper.m; sourceTree = "<group>"; };
 		7DB744B61D35CFD4004C534C /* BaseSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSqlite.h; sourceTree = "<group>"; };
@@ -323,6 +329,7 @@
 		7D415C4E1D34D48B004E5E22 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				7D84385C1D3C7A7200AF2875 /* STTextHud */,
 			);
 			name = Vender;
 			sourceTree = "<group>";
@@ -330,7 +337,6 @@
 		7D415C4F1D34D49F004E5E22 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				7D84385C1D3C7A7200AF2875 /* STTextHud */,
 				7D415C501D34D4AF004E5E22 /* Images */,
 			);
 			name = Resource;
@@ -442,6 +448,8 @@
 		7D415C5E1D34D64D004E5E22 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				7D8438711D3CB91700AF2875 /* ZCMemorialDayManager.h */,
+				7D8438721D3CB91700AF2875 /* ZCMemorialDayManager.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -505,6 +513,8 @@
 			children = (
 				C25598561D391E9C00A7ADED /* MessageObj.h */,
 				C25598571D391E9C00A7ADED /* MessageObj.m */,
+				7D8438741D3CCD5F00AF2875 /* ZCMemorialDayModel.h */,
+				7D8438751D3CCD5F00AF2875 /* ZCMemorialDayModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -769,6 +779,7 @@
 				C25598341D389EE100A7ADED /* ChatTableViewCell.m in Sources */,
 				C25598581D391E9C00A7ADED /* MessageObj.m in Sources */,
 				7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */,
+				7D8438761D3CCD5F00AF2875 /* ZCMemorialDayModel.m in Sources */,
 				7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */,
 				C293EB751D365A6B00A59101 /* AddMemorailViewController.m in Sources */,
 				C25598481D38BF0100A7ADED /* AddLoverViewController.m in Sources */,
@@ -789,6 +800,7 @@
 				7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */,
 				7D415C841D34F53A004E5E22 /* BaseModel.m in Sources */,
 				C293EB661D363DAA00A59101 /* MemorailDayViewController.m in Sources */,
+				7D8438731D3CB91700AF2875 /* ZCMemorialDayManager.m in Sources */,
 				C25598261D3883FF00A7ADED /* LoverTableViewCell.m in Sources */,
 				C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */,
 				7D415C871D34F55B004E5E22 /* BaseRequest.m in Sources */,

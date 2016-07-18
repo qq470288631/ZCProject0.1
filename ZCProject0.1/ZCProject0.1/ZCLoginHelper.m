@@ -51,4 +51,15 @@ static ZCLoginHelper * loginHelper = nil;
     }
 }
 
+- (void)setNSUserDefaultsWithUsername:(NSString *)username{
+
+    [[NSUserDefaults standardUserDefaults] setObject:username forKey:@"username"];
+    
+}
+
+-(NSString *)getNSUserDefaultsUsername{
+    NSString * username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    return username;
+}
+
 @end
