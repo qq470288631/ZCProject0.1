@@ -10,4 +10,7 @@
 
 @interface FriendListTableViewCell : UITableViewCell
 
+@property(nonatomic, strong)UILabel *friendsLable;
+//好友头像
+@property(nonatomic, strong)UIImageView *friendsImage;
 @end

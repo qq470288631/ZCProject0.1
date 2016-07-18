@@ -15,13 +15,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.titleLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width - 100, 40)];
-        self.titleLable.backgroundColor = [UIColor greenColor];
         [self.contentView addSubview:_titleLable];
-        self.dateLable = [[UILabel alloc]initWithFrame:CGRectMake(0, self.titleLable.frame.size.height, 50, 30)];
-        self.dateLable.backgroundColor = [UIColor yellowColor];
+        self.dateLable = [[UILabel alloc]initWithFrame:CGRectMake(0, self.titleLable.frame.size.height, 100, 30)];
         [self.contentView addSubview:_dateLable];
         self.dayLable = [[UILabel alloc]initWithFrame:CGRectMake(self.frame.size.width - 10, 0, 100, 50)];
-        self.dayLable.backgroundColor = [UIColor blueColor];
         [self.contentView addSubview:_dayLable];
         
         

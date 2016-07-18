@@ -7,10 +7,14 @@
 //
 
 #import "AddLoverViewController.h"
-#import "AddLoverTableViewCell.h"
+//#import "AddLoverTableViewCell.h"
 #import "ChatViewController.h"
 #import "MapViewController.h"
 #import "MemorailDayViewController.h"
+#import "LoverZoneHeaderTableViewCell.h"
+#import "ChatTableViewCell.h"
+#import "MapTableViewCell.h"
+#import "MemorailTableViewCell.h"
 @interface AddLoverViewController ()<UITableViewDataSource, UITableViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 //UIView视图
 @property(nonatomic, strong)UIView *inviteView;
@@ -25,48 +29,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"情侣空间";
+    self.view.backgroundColor = [UIColor whiteColor];
     self.backgroundTableView = [[UITableView alloc]initWithFrame:self.view.frame];
     self.backgroundTableView.dataSource = self;
     self.backgroundTableView.delegate = self;
-    self.backgroundTableView.backgroundColor = [UIColor whiteColor];
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.backgroundTableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.backgroundTableView];
-    self.inviteView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
-    self.inviteView.backgroundColor = [UIColor grayColor];
-    self.backgroundImage = [[UIImageView alloc]initWithFrame:self.inviteView.frame];
-    self.inviteView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"1.jpg"]];
-    [self.inviteView addSubview:_backgroundImage];
-    self.backgroundTableView .tableHeaderView = self.inviteView;
-    //给背景图添加轻拍手势
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doImageAddTap)];
-    //允许用户交互
-    self.backgroundImage.userInteractionEnabled = YES;
-    [self.backgroundImage addGestureRecognizer:tap];
+    self.backgroundImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, WindownWidth, 364)];
     
-    [self.backgroundTableView registerClass:[AddLoverTableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.view addSubview:_backgroundImage];
+    //header注册
+    [self.backgroundTableView registerClass:[LoverZoneHeaderTableViewCell class] forCellReuseIdentifier:@"cell"];
+    //other cell
+//    [self.backgroundTableView registerClass:[AddLoverTableViewCell class] forCellReuseIdentifier:@"cell"];
+    //聊天cell注册
+    [self.backgroundTableView registerClass:[ChatTableViewCell class] forCellReuseIdentifier:@"cell"];
+    //定位cell注册
+    [self.backgroundTableView registerClass:[MapTableViewCell class] forCellReuseIdentifier:@"cell"];
+    //纪念日cell注册
+    [self.backgroundTableView registerClass:[MemorailTableViewCell class] forCellReuseIdentifier:@"cell"];
     //去掉cell的下划线
     self.backgroundTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-}
-//点击图片进入相册
--(void)doImageAddTap
-{   UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"从相册中选取" message:nil preferredStyle:(UIAlertControllerStyleAlert)];
-    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"好的" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-        UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
-        //设置图片来源
-        imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-        imagePicker.delegate = self;
-        imagePicker.allowsEditing = YES;
-        //进入系统相册
-        [self presentViewController:imagePicker animated:YES completion:nil];
-        
-    }];
-    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-        
-        
-    }];
-    [alertController addAction:action2];
-    [alertController addAction:action1];
-    [self presentViewController:alertController animated:YES completion:nil];
 
 }
 //实现代理方法
@@ -76,52 +59,84 @@
     //选取裁剪后的图片
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
    _backgroundImage.image = image;
-    
-
-
-}
+ }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 3;
+    return 4;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    AddLoverTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+   
+    if (indexPath.row == 0) {
+        LoverZoneHeaderTableViewCell *cell = [[LoverZoneHeaderTableViewCell alloc]init];
+        cell.visiteLable.text = @"访问人数:1000";
+        cell.visiteImage.image = [UIImage imageNamed:@"eye.png"];
+        cell.backgroundColor = [UIColor colorWithPatternImage:_backgroundImage.image];
+        
+        return cell;
+        
+    }else if (indexPath.row == 1){
+        ChatTableViewCell *cell = [[ChatTableViewCell alloc]init];
+        cell.chatLable.text = @"聊天";
+        cell.chatImage.image = [UIImage imageNamed:@"chat.png"];
+        cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
+        return cell;
     
-    switch (indexPath.row) {
-        case 0:
-            cell.clickedLable.text = @"聊天";
-            break;
-        case 1:
-            cell.clickedLable.text = @"定位";
-            break;
-        case 2:
-            cell.clickedLable.text = @"纪念日";
-            break;
-
-        default:
-            break;
-    }
+    }else if (indexPath.row == 2){
+        MapTableViewCell *cell = [[MapTableViewCell alloc]init];
+        cell.mapLable.text = @"定位";
+        cell.mapImage.image = [UIImage imageNamed:@"map.png"];
+        return cell;
     
-    return cell;
+    }else if(indexPath.row == 3){
+        MemorailTableViewCell *cell = [[MemorailTableViewCell alloc]init];
+        cell.memorailLable.text = @"纪念日";
+        cell.memorailImage.image = [UIImage imageNamed:@"memorail.png"];
+        return cell;
+        }
+    
+       return nil;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.row) {
         case 0:
+        {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"从相册中选取" message:nil preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"好的" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+                UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+                //设置图片来源
+                imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+                imagePicker.delegate = self;
+                imagePicker.allowsEditing = YES;
+                //进入系统相册
+                [self presentViewController:imagePicker animated:YES completion:nil];
+                
+            }];
+            UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+                
+                
+            }];
+            [alertController addAction:action2];
+            [alertController addAction:action1];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+            break;
+ 
+        case 1:
         {
             ChatViewController *chatVC = [[ChatViewController alloc]init];
             [self.navigationController pushViewController:chatVC animated:YES];
         
         }
         break;
-        case 1:
+        case 2:
         {
             MapViewController *mapVC = [[MapViewController alloc]init];
             [self.navigationController pushViewController:mapVC animated:YES];
             
         }
             break;
-        case 2:
+        case 3:
         {
             MemorailDayViewController *memorailVC = [[MemorailDayViewController alloc]init];
             [self.navigationController pushViewController:memorailVC animated:YES];
@@ -136,7 +151,12 @@
 
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+    if (indexPath.row == 0) {
+        return 300;
+    }else
+        
+        return 100;
+        
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
