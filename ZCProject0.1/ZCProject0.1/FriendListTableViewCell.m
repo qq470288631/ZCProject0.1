@@ -20,6 +20,7 @@
         self.friendsImage.layer.cornerRadius = self.friendsImage.frame.size.width / 2;
         [self.contentView addSubview:_friendsImage];
         
+        
     }
 
     return self;
