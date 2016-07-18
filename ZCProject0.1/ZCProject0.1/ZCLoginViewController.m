@@ -6,13 +6,6 @@
 //  Copyright © 2016年 唐旭. All rights reserved.
 //
 
-@protocol ZCLoginViewControllerDelegate <NSObject>
-
-
-- (void)LoginDone;
-
-
-@end
 
 #import "ZCLoginViewController.h"
 #import "CZRegisterViewController.h"

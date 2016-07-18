@@ -6,10 +6,19 @@
 //  Copyright © 2016年 唐旭. All rights reserved.
 //
 
+
+@protocol ZCLoginViewControllerDelegate <NSObject>
+
+
+- (void)LoginDone;
+
+
+@end
+
 #import "BaseViewController.h"
 
 @interface ZCLoginViewController : BaseViewController
 
-@property(nonatomic,copy)id<ZCLoginViewControllerDelegate> delegeta;
+@property(nonatomic,weak)id<ZCLoginViewControllerDelegate> delegeta;
 
 @end
