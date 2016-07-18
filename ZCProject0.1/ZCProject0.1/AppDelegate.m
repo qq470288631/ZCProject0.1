@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 
+#import "LoverHomePageViewController.h"
 
 @interface AppDelegate ()
 
