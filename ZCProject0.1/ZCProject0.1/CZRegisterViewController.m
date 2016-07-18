@@ -11,6 +11,9 @@
 @interface CZRegisterViewController ()
 
 
+@property(nonatomic,strong)UITextField * usernameTextField;
+
+@property(nonatomic,strong)UITextField * passwordTextField;
 
 @end
 
@@ -101,11 +104,28 @@
     UIButton * registerButton = [[UIButton alloc] initWithFrame:CGRectMake(50, CGRectGetMaxY(aginPasswordTextFeild.frame) + 20, 320, 60)];
     [registerButton setBackgroundImage:[UIImage imageNamed:@"RegisterButton.png"] forState:(UIControlStateNormal)];
     
-//    [registerButton addTarget:self action:@selector(loginButtonClicked:) forControlEvents:(UIControlEventTouchUpInside)];
+    [registerButton addTarget:self action:@selector(registerButtonClicked:) forControlEvents:(UIControlEventTouchUpInside)];
     
     
 //    self.loginButton = loginButton;
     [self.view addSubview:registerButton];
+    
+}
+
+- (void)registerButtonClicked:(UIButton *)sender{
+    
+    BOOL result = [[ZCLoginHelper shareZCLoginHelper] registerWithUsername:self.usernameTextField.text password:self.passwordTextField.text];
+    if (result) {
+        
+        [STTextHudTool showSuccessText:@"提交成功" withSecond:1];
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+            
+        }];
+        
+    }else{
+        [STTextHudTool showErrorText:@"请尝试从新注册" withSecond:1];
+    }
     
 }
 

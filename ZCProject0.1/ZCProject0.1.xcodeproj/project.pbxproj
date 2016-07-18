@@ -19,6 +19,14 @@
 		7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C891D34F612004E5E22 /* ZCTabBar.m */; };
 		7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C8C1D34F81E004E5E22 /* RootViewController.m */; };
 		7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D415C951D35123B004E5E22 /* CZRequestHelper.m */; };
+		7D8438691D3C7A7200AF2875 /* angle-mask@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D84385D1D3C7A7200AF2875 /* angle-mask@3x.png */; };
+		7D84386A1D3C7A7200AF2875 /* GCLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D84385F1D3C7A7200AF2875 /* GCLoadingView.m */; };
+		7D84386B1D3C7A7200AF2875 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8438611D3C7A7200AF2875 /* NSString+Size.m */; };
+		7D84386C1D3C7A7200AF2875 /* STError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D8438621D3C7A7200AF2875 /* STError@2x.png */; };
+		7D84386D1D3C7A7200AF2875 /* STSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D8438631D3C7A7200AF2875 /* STSuccess@2x.png */; };
+		7D84386E1D3C7A7200AF2875 /* STTextHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8438651D3C7A7200AF2875 /* STTextHud.m */; };
+		7D84386F1D3C7A7200AF2875 /* STTextHud.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8438661D3C7A7200AF2875 /* STTextHud.xib */; };
+		7D8438701D3C7A7200AF2875 /* STTextHudTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8438681D3C7A7200AF2875 /* STTextHudTool.m */; };
 		7D93DCCA1D388B3F00F5542A /* ZCLoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D93DCC91D388B3F00F5542A /* ZCLoginHelper.m */; };
 		7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744B71D35CFD4004C534C /* BaseSqlite.m */; };
 		7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744BA1D35CFE7004C534C /* SqliteHelper.m */; };
@@ -87,6 +95,18 @@
 		7D415C901D350EC7004E5E22 /* CommonString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonString.h; sourceTree = "<group>"; };
 		7D415C941D35123B004E5E22 /* CZRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRequestHelper.h; sourceTree = "<group>"; };
 		7D415C951D35123B004E5E22 /* CZRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRequestHelper.m; sourceTree = "<group>"; };
+		7D84385D1D3C7A7200AF2875 /* angle-mask@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask@3x.png"; sourceTree = "<group>"; };
+		7D84385E1D3C7A7200AF2875 /* GCLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCLoadingView.h; sourceTree = "<group>"; };
+		7D84385F1D3C7A7200AF2875 /* GCLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCLoadingView.m; sourceTree = "<group>"; };
+		7D8438601D3C7A7200AF2875 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		7D8438611D3C7A7200AF2875 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		7D8438621D3C7A7200AF2875 /* STError@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STError@2x.png"; sourceTree = "<group>"; };
+		7D8438631D3C7A7200AF2875 /* STSuccess@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSuccess@2x.png"; sourceTree = "<group>"; };
+		7D8438641D3C7A7200AF2875 /* STTextHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTextHud.h; sourceTree = "<group>"; };
+		7D8438651D3C7A7200AF2875 /* STTextHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTextHud.m; sourceTree = "<group>"; };
+		7D8438661D3C7A7200AF2875 /* STTextHud.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STTextHud.xib; sourceTree = "<group>"; };
+		7D8438671D3C7A7200AF2875 /* STTextHudTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTextHudTool.h; sourceTree = "<group>"; };
+		7D8438681D3C7A7200AF2875 /* STTextHudTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTextHudTool.m; sourceTree = "<group>"; };
 		7D93DCC81D388B3F00F5542A /* ZCLoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLoginHelper.h; sourceTree = "<group>"; };
 		7D93DCC91D388B3F00F5542A /* ZCLoginHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLoginHelper.m; sourceTree = "<group>"; };
 		7DB744B61D35CFD4004C534C /* BaseSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSqlite.h; sourceTree = "<group>"; };
@@ -310,6 +330,7 @@
 		7D415C4F1D34D49F004E5E22 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7D84385C1D3C7A7200AF2875 /* STTextHud */,
 				7D415C501D34D4AF004E5E22 /* Images */,
 			);
 			name = Resource;
@@ -544,6 +565,25 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		7D84385C1D3C7A7200AF2875 /* STTextHud */ = {
+			isa = PBXGroup;
+			children = (
+				7D84385D1D3C7A7200AF2875 /* angle-mask@3x.png */,
+				7D84385E1D3C7A7200AF2875 /* GCLoadingView.h */,
+				7D84385F1D3C7A7200AF2875 /* GCLoadingView.m */,
+				7D8438601D3C7A7200AF2875 /* NSString+Size.h */,
+				7D8438611D3C7A7200AF2875 /* NSString+Size.m */,
+				7D8438621D3C7A7200AF2875 /* STError@2x.png */,
+				7D8438631D3C7A7200AF2875 /* STSuccess@2x.png */,
+				7D8438641D3C7A7200AF2875 /* STTextHud.h */,
+				7D8438651D3C7A7200AF2875 /* STTextHud.m */,
+				7D8438661D3C7A7200AF2875 /* STTextHud.xib */,
+				7D8438671D3C7A7200AF2875 /* STTextHudTool.h */,
+				7D8438681D3C7A7200AF2875 /* STTextHudTool.m */,
+			);
+			path = STTextHud;
+			sourceTree = "<group>";
+		};
 		7DF257711D365E2D0022FC37 /* ZCUser */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,14 +688,18 @@
 				C25598281D38903100A7ADED /* 11.png in Resources */,
 				C255982E1D3890A200A7ADED /* 13.png in Resources */,
 				C255984A1D38BF4B00A7ADED /* memorail.png in Resources */,
+				7D84386D1D3C7A7200AF2875 /* STSuccess@2x.png in Resources */,
 				C255982A1D38903400A7ADED /* 12.png in Resources */,
 				C293EB6B1D363DB200A59101 /* 1.jpg in Resources */,
+				7D84386C1D3C7A7200AF2875 /* STError@2x.png in Resources */,
 				7DE7E69D1D37812100127B17 /* backgroundImage.png in Resources */,
 				7D415C401D34D2A7004E5E22 /* LaunchScreen.storyboard in Resources */,
 				C255982C1D38904300A7ADED /* 14.png in Resources */,
 				C255985A1D39220300A7ADED /* bubbleSelf.png in Resources */,
 				7D415C3D1D34D2A7004E5E22 /* Assets.xcassets in Resources */,
 				C25598501D38CCDD00A7ADED /* eye.png in Resources */,
+				7D8438691D3C7A7200AF2875 /* angle-mask@3x.png in Resources */,
+				7D84386F1D3C7A7200AF2875 /* STTextHud.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,8 +762,10 @@
 				D69405F11D35D65300DC35C7 /* GoodsViewController.m in Sources */,
 				D69405F41D35EC1E00DC35C7 /* MainTableViewCell.m in Sources */,
 				7D415C351D34D2A7004E5E22 /* AppDelegate.m in Sources */,
+				7D84386B1D3C7A7200AF2875 /* NSString+Size.m in Sources */,
 				C293EB651D363DAA00A59101 /* MapViewController.m in Sources */,
 				7DF2577D1D3665870022FC37 /* CZRegisterViewController.m in Sources */,
+				7D84386E1D3C7A7200AF2875 /* STTextHud.m in Sources */,
 				C25598341D389EE100A7ADED /* ChatTableViewCell.m in Sources */,
 				C25598581D391E9C00A7ADED /* MessageObj.m in Sources */,
 				7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */,
@@ -735,6 +781,7 @@
 				C2939C951D378B3400817651 /* FriendListTableViewCell.m in Sources */,
 				7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */,
 				C255983A1D389F1E00A7ADED /* MemorailTableViewCell.m in Sources */,
+				7D84386A1D3C7A7200AF2875 /* GCLoadingView.m in Sources */,
 				C293EB721D36441300A59101 /* MemorailDayTableViewCell.m in Sources */,
 				7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */,
 				7DE7E6991D373B9500127B17 /* ProvingLoginStatus.m in Sources */,
@@ -745,6 +792,7 @@
 				C25598261D3883FF00A7ADED /* LoverTableViewCell.m in Sources */,
 				C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */,
 				7D415C871D34F55B004E5E22 /* BaseRequest.m in Sources */,
+				7D8438701D3C7A7200AF2875 /* STTextHudTool.m in Sources */,
 				7D93DCCA1D388B3F00F5542A /* ZCLoginHelper.m in Sources */,
 				7D415C811D34F529004E5E22 /* BaseView.m in Sources */,
 			);

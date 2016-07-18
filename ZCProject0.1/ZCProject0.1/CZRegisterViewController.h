@@ -10,8 +10,5 @@
 
 @interface CZRegisterViewController : BaseViewController
 
-@property(nonatomic,strong)UITextField * usernameTextField;
-
-@property(nonatomic,strong)UITextField * passwordTextField;
 
 @end

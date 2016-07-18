@@ -29,6 +29,16 @@
 - (BOOL)loginWithUsername:(NSString *)username password:(NSString *)aPassword;
 
 /**
+ *  注册
+ *
+ *  @param username  用户名
+ *  @param aPassword 密码
+ *
+ *  @return 注册结果
+ */
+- (BOOL)registerWithUsername:(NSString *)username password:(NSString *)aPassword;
+
+/**
  *  登出
  *
  *  @return 登出结果
