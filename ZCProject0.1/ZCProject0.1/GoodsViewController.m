@@ -11,7 +11,7 @@
 #import "ShopingViewController.h"
 #import "GoodsModel.h"
 #import "MainTableViewCell.h"
-
+#import "CXCarouselView.h"
 
 static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?";
 @interface GoodsViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -21,6 +21,8 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
 
 @property(strong,nonatomic)NSMutableArray *dataArray;
 
+@property(strong,nonatomic)CXCarouselView *carousel;
+
 @end
 
 
@@ -29,6 +31,8 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"搜索" style:(UIBarButtonItemStylePlain) target:self action:@selector(sousuo)];
     
     
     self.dataArray = [[NSMutableArray alloc]init];
@@ -44,18 +48,41 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
     
     [request getRequestWithUrl:kHomeDataPath parameters:parameters successResponse:^(NSDictionary *dic) {
         
-       
+//        NSLog(@"%@",dic);
          NSMutableDictionary *dataDIC = [dic objectForKey:@"data"];
         
+        
+        
+        NSMutableArray *mutaArray = [NSMutableArray array];
+
+        
         for (NSDictionary *dict in dataDIC[@"topic"]) {
+            
+           
 
             GoodsModel *GDmodel = [[GoodsModel alloc]init];
             
+            
             [GDmodel setValuesForKeysWithDictionary:dict];
             
+            
+            
             [weakSelf.dataArray addObject:GDmodel];
-
         }
+        
+        [mutaArray addObject:[self.dataArray[0] pic]];
+        [mutaArray addObject:[self.dataArray[1] pic]];
+        [mutaArray addObject:[self.dataArray[2] pic]];
+        [mutaArray addObject:[self.dataArray[3] pic]];
+        
+
+        // 创建轮播图
+        self.carousel = [CXCarouselView initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height*0.3) hasTimer:YES interval:3 placeHolder:nil];
+        
+        self.MaintableView.tableHeaderView = self.carousel;
+        
+        [self.carousel setupWithArray:mutaArray];
+
         dispatch_async(dispatch_get_main_queue(), ^{
             //刷新UI
             [weakSelf.MaintableView reloadData];
@@ -85,11 +112,25 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
     
     [self.view addSubview:_MaintableView];
     
+
     
     
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+-(void)sousuo{
     
 }
 
@@ -144,6 +185,8 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
     
     cell.ComImageV.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.pic]]];
     
+    
+    
     return cell;
     
     
@@ -156,8 +199,11 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     ShopingViewController *shopingVC = [[ShopingViewController alloc]init];
-    GoodsModel *goodsModel = [[GoodsModel alloc]init];
-    shopingVC.ID = goodsModel.Id;
+    
+    GoodsModel *medol = self.dataArray[indexPath.row];
+    
+    
+    shopingVC.ID = medol.Id;
     
     [self.navigationController pushViewController:shopingVC animated:YES];
     

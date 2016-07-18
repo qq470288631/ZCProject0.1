@@ -63,6 +63,7 @@
 		D64B79B31D39C1E70075ADE0 /* ShopingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B79B11D39C1E70075ADE0 /* ShopingViewController.m */; };
 		D64B79B61D3A17110075ADE0 /* ShopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B79B51D3A17110075ADE0 /* ShopTableViewCell.m */; };
 		D64B79B91D3A51560075ADE0 /* ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B79B81D3A51560075ADE0 /* ShopModel.m */; };
+		D6861E421D3C6B39004DED70 /* CXCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6861E411D3C6B39004DED70 /* CXCarouselView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,6 +166,8 @@
 		D64B79B51D3A17110075ADE0 /* ShopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTableViewCell.m; sourceTree = "<group>"; };
 		D64B79B71D3A51560075ADE0 /* ShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopModel.h; sourceTree = "<group>"; };
 		D64B79B81D3A51560075ADE0 /* ShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopModel.m; sourceTree = "<group>"; };
+		D6861E401D3C6B39004DED70 /* CXCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCarouselView.h; sourceTree = "<group>"; };
+		D6861E411D3C6B39004DED70 /* CXCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXCarouselView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,6 +424,8 @@
 			children = (
 				D64B79AB1D39C1DB0075ADE0 /* MainTableViewCell.h */,
 				D64B79AC1D39C1DB0075ADE0 /* MainTableViewCell.m */,
+				D6861E401D3C6B39004DED70 /* CXCarouselView.h */,
+				D6861E411D3C6B39004DED70 /* CXCarouselView.m */,
 				D64B79B41D3A17110075ADE0 /* ShopTableViewCell.h */,
 				D64B79B51D3A17110075ADE0 /* ShopTableViewCell.m */,
 			);
@@ -769,6 +774,7 @@
 				C25598261D3883FF00A7ADED /* LoverTableViewCell.m in Sources */,
 				C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */,
 				7D415C871D34F55B004E5E22 /* BaseRequest.m in Sources */,
+				D6861E421D3C6B39004DED70 /* CXCarouselView.m in Sources */,
 				7D93DCCA1D388B3F00F5542A /* ZCLoginHelper.m in Sources */,
 				7D415C811D34F529004E5E22 /* BaseView.m in Sources */,
 			);

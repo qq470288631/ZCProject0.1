@@ -12,40 +12,6 @@
 @implementation GoodsRequest
 
 
-//-(void)requestHomeList{
-//    CZRequestHelper * request = [CZRequestHelper sharedRequestHelper];
-//    
-//    NSMutableDictionary *parameters =[self commonParameters].mutableCopy;
-//    parameters[@"page"] = @1;
-//    parameters[@"pagesize"] = @(20);
-//    
-//    
-//    [request getRequestWithUrl:kHomeDataPath parameters:parameters successResponse:^(NSDictionary *dic) {
-//       
-//        NSMutableArray *array = [NSMutableArray array];
-//        
-//        array = [dic objectForKey:@"data"];
-//        
-//        for (NSDictionary *dict in array) {
-//            GoodsModel *GDmodel = [GoodsModel new];
-//            
-//            [GDmodel setValuesForKeysWithDictionary:dict];
-//            
-//            
-//        }
-//
-//        
-//        
-//        
-//        
-//    } failureResponse:^(NSError *error) {
-//        
-//        
-//        
-//        
-//        
-//    }];
-//}
 
 
 
@@ -60,11 +26,8 @@
     //添加数据模式类型
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     //以GET方式 通过AFNetworking 发送请求
-    [manager GET:url parameters:parametersDic progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-       
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:url parameters:parametersDic progress:nil
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         success(responseObject);
         

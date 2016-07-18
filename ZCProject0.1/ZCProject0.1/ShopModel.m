@@ -12,7 +12,16 @@
 
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
+    if ([key isEqualToString:@"id"]) {
+        _ID = value;
+    }
+    
 }
 
+
+//- (NSString *)description
+//{
+//    return [NSString stringWithFormat:@"title = %@, updateTime = %@", _title,_updateTime];
+//}
 
 @end

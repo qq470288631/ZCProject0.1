@@ -40,19 +40,38 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     
     NSMutableDictionary *parameter = [self commonParameters].mutableCopy;
     
-    NSInteger ID;
+
     
-    parameter[@"id"] = @(ID);
+    parameter[@"id"] = self.ID;
     
    
     
     [request getRequestWithUrl:kNewInfoPath parameters:parameter successResponse:^(NSDictionary *dic) {
         
-//        NSLog(@"%@",dic);
-        
-        ShopModel *model = [[ShopModel alloc]init];
+        NSLog(@"%@",dic);
         
         
+        
+        
+//        for (NSDictionary *mutabelDic in dic[@"data"]) {
+//            
+//            ShopModel *model = [[ShopModel alloc]init];
+//            
+//            [model setValuesForKeysWithDictionary:mutabelDic];
+//            
+//            [self.mutaArray addObject:model];
+//            
+//            NSLog(@"%@",model);
+//            
+//        }
+        
+        
+        
+        
+       
+        
+        
+
         
         
         
@@ -64,6 +83,9 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     } failureResponse:^(NSError *error) {
         
     }];
+    
+    
+    
     
 }
 

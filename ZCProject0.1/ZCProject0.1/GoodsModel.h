@@ -23,6 +23,8 @@
 
 @property (strong,nonatomic)NSString *likes;
 
+@property(strong,nonatomic)NSString *subtitle;
+
 @property(strong,nonatomic)GoodsModel *GoodsModels;
 
 @end
