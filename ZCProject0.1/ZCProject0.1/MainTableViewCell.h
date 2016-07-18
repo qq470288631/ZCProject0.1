@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GoodsModel.h"
 @interface MainTableViewCell : UITableViewCell
 
 @property(strong,nonatomic)UILabel *explaLabel;
@@ -15,6 +15,7 @@
 @property(strong,nonatomic)UILabel *loveLabel;
 
 @property(strong,nonatomic)UIImageView *ComImageV;
+
 
 
 

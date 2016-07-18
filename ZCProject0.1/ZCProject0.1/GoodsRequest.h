@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CZRequestHelper.h"
 @interface GoodsRequest : BaseRequest
 
 
--(void)requestHomeList;
+//-(void)requestHomeList;
+
+- (void)getRequestWithUrl:(NSString *)url
+               parameters:(NSDictionary *)parametersDic
+          successResponse:(SuccessResponse)success
+          failureResponse:(FailureResponse) failure;
 
 @end
