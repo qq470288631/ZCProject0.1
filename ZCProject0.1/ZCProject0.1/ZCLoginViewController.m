@@ -6,9 +6,22 @@
 //  Copyright © 2016年 唐旭. All rights reserved.
 //
 
+
 #import "ZCLoginViewController.h"
+#import "CZRegisterViewController.h"
 
 @interface ZCLoginViewController ()
+
+@property(nonatomic,strong)UIActivityIndicatorView * loginActivityIndicatorView;
+
+@property(nonatomic,strong)UIImageView * warningImageView;
+
+@property(nonatomic,strong)UIButton * loginButton;
+
+@property(nonatomic,strong)UITextField * usernameTextField;
+
+@property(nonatomic,strong)UITextField * passwordTextField;
+
 
 @end
 
@@ -50,6 +63,7 @@
     //placeholder
     usernameTextFeild.placeholder = @"请输入用户名";
     
+    self.usernameTextField = usernameTextFeild;
     [self.view addSubview:usernameTextFeild];
     
     
@@ -76,6 +90,7 @@
     //placeholder
     passwordTextFeild.placeholder = @"请输入用密码";
     
+    self.passwordTextField = passwordTextFeild;
     [self.view addSubview:passwordTextFeild];
     
     
@@ -83,9 +98,13 @@
     /**
      *  登录按钮
      */
-    UIButton * loginButton = [[UIButton alloc] initWithFrame:CGRectMake(50, CGRectGetMaxY(passwordTextFeild.frame) + 40, 320, 60)];
+    UIButton * loginButton = [[UIButton alloc] initWithFrame:CGRectMake(50, CGRectGetMaxY(passwordTextFeild.frame) + 20, 320, 60)];
     [loginButton setBackgroundImage:[UIImage imageNamed:@"LoginButton.png"] forState:(UIControlStateNormal)];
     
+    [loginButton addTarget:self action:@selector(loginButtonClicked:) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    
+    self.loginButton = loginButton;
     [self.view addSubview:loginButton];
     
     
@@ -96,9 +115,103 @@
     loginActivityIndicatorView.backgroundColor = [UIColor redColor];
     [loginActivityIndicatorView startAnimating];
     
-    [loginButton addSubview:loginActivityIndicatorView];
+    self.loginActivityIndicatorView = loginActivityIndicatorView;
+    
+//    [loginButton addSubview:loginActivityIndicatorView];
     
     
+    /**
+     *  报错框
+     */
+    
+    UIImageView * warningImageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, CGRectGetMaxY(passwordTextFeild.frame) + 20, 320, 60)];
+    warningImageView.image = [UIImage imageNamed:@"Woring Message.png"];
+    warningImageView.hidden = YES;
+    
+    self.warningImageView = warningImageView;
+    [self.view addSubview:warningImageView];
+    
+    
+    
+    UIButton * registerButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(usernameTextFeild.frame) - 100, self.view.frame.size.height-70, 100, 30)];
+    [registerButton setTitle:@"去注册" forState:(UIControlStateNormal)];
+    [registerButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+    [registerButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
+    [registerButton addTarget:self action:@selector(registerButtonClicked:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:registerButton];
+    
+}
+
+- (void)registerButtonClicked:(UIButton *)sender{
+
+    CZRegisterViewController * registerViewController = [CZRegisterViewController new];
+    [self presentViewController:registerViewController animated:YES completion:^{
+        
+        
+    }];
+
+}
+
+
+- (void)loginButtonClicked:(UIButton *)sender{
+
+    
+    if (!self.warningImageView.hidden) {
+        
+        [UIView transitionWithView:self.warningImageView duration:0.3 options:(UIViewAnimationOptionTransitionFlipFromBottom) animations:^{
+            
+            self.warningImageView.hidden = YES;
+            
+        } completion:nil];
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            
+            self.loginButton.frame = CGRectMake(self.loginButton.frame.origin.x,
+                                                self.loginButton.frame.origin.y-80,
+                                                self.loginButton.frame.size.width,
+                                                self.loginButton.frame.size.height);
+            
+        }];
+    }
+
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        [self.loginActivityIndicatorView startAnimating];
+        
+    }];
+    
+    ZCLoginHelper * loginHelper = [ZCLoginHelper shareZCLoginHelper];
+    
+    BOOL result = [loginHelper loginWithUsername:self.usernameTextField.text password:self.passwordTextField.text];
+    
+    if (result) {
+        
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+            //成功回调
+            [self.delegeta LoginDone];
+            
+        }];
+        
+        
+    }else{
+        
+        [UIView transitionWithView:self.warningImageView duration:0.3 options:(UIViewAnimationOptionTransitionFlipFromBottom) animations:^{
+            
+            self.warningImageView.hidden = NO;
+            
+        } completion:nil];
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            
+            self.loginButton.frame = CGRectMake(self.loginButton.frame.origin.x,
+                                                self.loginButton.frame.origin.y+80,
+                                                self.loginButton.frame.size.width,
+                                                self.loginButton.frame.size.height);
+            
+        }];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
