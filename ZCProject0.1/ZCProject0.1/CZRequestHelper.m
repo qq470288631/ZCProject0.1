@@ -29,7 +29,7 @@ static CZRequestHelper * requestHelper = nil;
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     
     //添加数据模式类型
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript",@"text/plain", nil];
     //以GET方式 通过AFNetworking 发送请求
     [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -55,7 +55,7 @@ static CZRequestHelper * requestHelper = nil;
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     
     //添加数据模式类型
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript",@"text/plain", nil];
     //以GET方式 通过AFNetworking 发送请求
     [manager GET:url parameters:parametersDic progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -82,7 +82,7 @@ static CZRequestHelper * requestHelper = nil;
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     
     //添加数据模式类型
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript",@"text/plain", nil];
     //以POST方式 通过AFNetworking 发送请求
     [manager POST:url parameters:parametersDic progress:^(NSProgress * _Nonnull uploadProgress) {
         

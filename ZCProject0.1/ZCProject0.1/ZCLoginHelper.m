@@ -31,6 +31,16 @@ static ZCLoginHelper * loginHelper = nil;
     }
 }
 
+- (BOOL)registerWithUsername:(NSString *)username password:(NSString *)aPassword{
+    EMError *error = [[EMClient sharedClient] registerWithUsername:username password:aPassword];
+    if (!error)
+    {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
 - (BOOL)logout{
     EMError *error1 = [[EMClient sharedClient] logout:YES];
     if (!error1) {
@@ -39,6 +49,17 @@ static ZCLoginHelper * loginHelper = nil;
     }else{
         return NO;
     }
+}
+
+- (void)setNSUserDefaultsWithUsername:(NSString *)username{
+
+    [[NSUserDefaults standardUserDefaults] setObject:username forKey:@"username"];
+    
+}
+
+-(NSString *)getNSUserDefaultsUsername{
+    NSString * username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    return username;
 }
 
 @end
