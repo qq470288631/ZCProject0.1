@@ -10,4 +10,6 @@
 
 @interface ZCLoginViewController : BaseViewController
 
+@property(nonatomic,copy)id<ZCLoginViewControllerDelegate> delegeta;
+
 @end

@@ -6,6 +6,14 @@
 //  Copyright © 2016年 唐旭. All rights reserved.
 //
 
+@protocol ZCLoginViewControllerDelegate <NSObject>
+
+
+- (void)LoginDone;
+
+
+@end
+
 #import "ZCLoginViewController.h"
 #import "CZRegisterViewController.h"
 
@@ -187,8 +195,11 @@
         
         [self dismissViewControllerAnimated:YES completion:^{
             
+            //成功回调
+            [self.delegeta LoginDone];
             
         }];
+        
         
     }else{
         
