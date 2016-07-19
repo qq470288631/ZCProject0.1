@@ -35,7 +35,6 @@
     [[EMClient sharedClient] initializeSDKWithOptions:options];
     
     ProvingLoginStatus * proving = [ProvingLoginStatus shareProvingLoginStatus];
-    [proving checkoutLoginStatusShowLoginViewONController:self.window.rootViewController];
     
     [[EMClient sharedClient].options setIsAutoLogin:NO];
     

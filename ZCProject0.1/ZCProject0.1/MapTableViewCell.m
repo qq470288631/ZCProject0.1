@@ -14,10 +14,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        self.mapLable = [[UILabel alloc]initWithFrame:CGRectMake(110, 0, 100, 80)];
+        self.mapLable = [[UILabel alloc]initWithFrame:CGRectMake(50, 0, 100, 80)];
         self.mapLable.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:_mapLable];
-        self.mapImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 64, 64)];
+        self.mapImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, 40, 40)];
         [self.contentView addSubview:_mapImage];
         
     }

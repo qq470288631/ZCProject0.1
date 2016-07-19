@@ -14,10 +14,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        self.memorailLable = [[UILabel alloc]initWithFrame:CGRectMake(110, 0, 100, 80)];
+        self.memorailLable = [[UILabel alloc]initWithFrame:CGRectMake(50, 0, 100, 80)];
         self.memorailLable.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:_memorailLable];
-        self.memorailImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 64, 64)];
+        self.memorailImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, 40, 40)];
         [self.contentView addSubview:_memorailImage];
         
     }

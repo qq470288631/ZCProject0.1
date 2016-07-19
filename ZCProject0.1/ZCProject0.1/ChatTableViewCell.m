@@ -14,10 +14,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        self.chatLable = [[UILabel alloc]initWithFrame:CGRectMake(110, 0, 100, 80)];
+        self.chatLable = [[UILabel alloc]initWithFrame:CGRectMake(50, 0, 100, 80)];
         self.chatLable.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:_chatLable];
-        self.chatImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 64, 64)];
+        self.chatImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, 40, 40)];
         [self.contentView addSubview:_chatImage];
         
     }
