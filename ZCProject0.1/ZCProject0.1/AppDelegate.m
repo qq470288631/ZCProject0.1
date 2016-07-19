@@ -32,13 +32,12 @@
     options.apnsCertName = @"istore_dev";
     [[EMClient sharedClient] initializeSDKWithOptions:options];
     
-<<<<<<< HEAD
+
     ProvingLoginStatus * proving = [ProvingLoginStatus shareProvingLoginStatus];
-    
+    //    [proving checkoutLoginStatusShowLoginViewONController:self.window.rootViewController];
     [[EMClient sharedClient].options setIsAutoLogin:NO];
     
-=======
->>>>>>> 148083fa740dcf5c108134a167e822e753e1af9e
+
     return YES;
 }
 
