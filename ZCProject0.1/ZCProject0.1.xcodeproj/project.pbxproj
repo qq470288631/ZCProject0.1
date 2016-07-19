@@ -839,11 +839,8 @@
 				C25598261D3883FF00A7ADED /* LoverTableViewCell.m in Sources */,
 				C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */,
 				7D415C871D34F55B004E5E22 /* BaseRequest.m in Sources */,
-<<<<<<< HEAD
 				D6861E421D3C6B39004DED70 /* CXCarouselView.m in Sources */,
-=======
 				7D8438701D3C7A7200AF2875 /* STTextHudTool.m in Sources */,
->>>>>>> eacef7e07230cc3172bc66296a23f598246dcc5a
 				7D93DCCA1D388B3F00F5542A /* ZCLoginHelper.m in Sources */,
 				7D415C811D34F529004E5E22 /* BaseView.m in Sources */,
 			);
