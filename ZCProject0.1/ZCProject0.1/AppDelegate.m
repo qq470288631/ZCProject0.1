@@ -9,8 +9,6 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 
-#import "LoverHomePageViewController.h"
-
 @interface AppDelegate ()
 
 @end
@@ -34,10 +32,13 @@
     options.apnsCertName = @"istore_dev";
     [[EMClient sharedClient] initializeSDKWithOptions:options];
     
+<<<<<<< HEAD
     ProvingLoginStatus * proving = [ProvingLoginStatus shareProvingLoginStatus];
     
     [[EMClient sharedClient].options setIsAutoLogin:NO];
     
+=======
+>>>>>>> 148083fa740dcf5c108134a167e822e753e1af9e
     return YES;
 }
 
