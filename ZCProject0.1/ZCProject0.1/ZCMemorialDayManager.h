@@ -24,4 +24,7 @@
 
 //根据纪念日标题更新纪念日
 - (BOOL)updateMemorialDayWithTitle:(NSString *)title forDate:(NSString *)date;
+
+//读取全部纪念日
+- (NSMutableArray *)getAllMemorialDay;
 @end

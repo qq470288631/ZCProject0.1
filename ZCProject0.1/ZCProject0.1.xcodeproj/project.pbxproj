@@ -36,6 +36,7 @@
 		7DE3F9091D3DBD4C0038D2C0 /* ZCMeHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F9081D3DBD4C0038D2C0 /* ZCMeHomeViewController.m */; };
 		7DE7E6991D373B9500127B17 /* ProvingLoginStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7E6981D373B9500127B17 /* ProvingLoginStatus.m */; };
 		7DE7E69D1D37812100127B17 /* backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE7E69C1D37812100127B17 /* backgroundImage.png */; };
+		7DE80C311D3F0F1F00D4171C /* tools.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE80C301D3F0F1F00D4171C /* tools.png */; };
 		7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF257791D36657B0022FC37 /* ZCLoginViewController.m */; };
 		7DF2577D1D3665870022FC37 /* CZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */; };
 		C2431EF21D3CD63B0033A8C5 /* KeyboardStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EF11D3CD63B0033A8C5 /* KeyboardStyle.m */; };
@@ -135,6 +136,7 @@
 		7DE7E6971D373B9500127B17 /* ProvingLoginStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvingLoginStatus.h; sourceTree = "<group>"; };
 		7DE7E6981D373B9500127B17 /* ProvingLoginStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvingLoginStatus.m; sourceTree = "<group>"; };
 		7DE7E69C1D37812100127B17 /* backgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundImage.png; sourceTree = "<group>"; };
+		7DE80C301D3F0F1F00D4171C /* tools.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tools.png; sourceTree = "<group>"; };
 		7DF257781D36657B0022FC37 /* ZCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLoginViewController.h; sourceTree = "<group>"; };
 		7DF257791D36657B0022FC37 /* ZCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLoginViewController.m; sourceTree = "<group>"; };
 		7DF2577B1D3665870022FC37 /* CZRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRegisterViewController.h; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 		7D415C501D34D4AF004E5E22 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7DE80C301D3F0F1F00D4171C /* tools.png */,
 				7DE7E69C1D37812100127B17 /* backgroundImage.png */,
 				7D415C3C1D34D2A7004E5E22 /* Assets.xcassets */,
 			);
@@ -747,6 +750,7 @@
 				C293EB6B1D363DB200A59101 /* 1.jpg in Resources */,
 				7D84386C1D3C7A7200AF2875 /* STError@2x.png in Resources */,
 				C273E3811D3E086500136884 /* chat.png in Resources */,
+				7DE80C311D3F0F1F00D4171C /* tools.png in Resources */,
 				7DE7E69D1D37812100127B17 /* backgroundImage.png in Resources */,
 				7D415C401D34D2A7004E5E22 /* LaunchScreen.storyboard in Resources */,
 				C255982C1D38904300A7ADED /* 14.png in Resources */,
