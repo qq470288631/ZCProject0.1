@@ -71,13 +71,19 @@
     
     self.navigationItem.titleView = titleLabel;
     
+    
+    
+    UIButton * toolsButton = [[UIButton alloc]initWithFrame:CGRectMake(WindownWidth-50, 10, 25, 25)];
+    [toolsButton setBackgroundImage:[UIImage imageNamed:@"tools.png"] forState:(UIControlStateNormal)];
+    [self.navigationController.navigationBar addSubview:toolsButton];
+    
+    
     UITableView * tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:(UITableViewStylePlain)];
     tableView.delegate = self;
     tableView.dataSource = self;
     [self.view addSubview:tableView];
+
     
-    
-//    self.navigationItem.
     
 }
 
