@@ -9,6 +9,7 @@
 #import "MemorailDayViewController.h"
 #import "MemorailDayTableViewCell.h"
 #import "AddMemorailViewController.h"
+#import "ZCMemorialDayManager.h"
 @interface MemorailDayViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong)UITableView *memorailTableView;
 @property(nonatomic, strong)NSMutableArray *dataArray;
@@ -46,7 +47,8 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MemorailDayTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
-    cell.titleLable.text = @"主题";
+    
+    cell.titleLable.text = @"标题";
     cell.dateLable.text = @"2016-07-15";
     cell.dayLable.text = @"365天";
     return cell;
