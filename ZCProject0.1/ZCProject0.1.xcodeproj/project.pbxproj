@@ -75,6 +75,7 @@
 		D64B79B61D3A17110075ADE0 /* ShopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B79B51D3A17110075ADE0 /* ShopTableViewCell.m */; };
 		D64B79B91D3A51560075ADE0 /* ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B79B81D3A51560075ADE0 /* ShopModel.m */; };
 		D6861E421D3C6B39004DED70 /* CXCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6861E411D3C6B39004DED70 /* CXCarouselView.m */; };
+		D69B63CC1D3F711A0026BAAB /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69B63CB1D3F711A0026BAAB /* 9.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -197,6 +198,7 @@
 		D64B79B81D3A51560075ADE0 /* ShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopModel.m; sourceTree = "<group>"; };
 		D6861E401D3C6B39004DED70 /* CXCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCarouselView.h; sourceTree = "<group>"; };
 		D6861E411D3C6B39004DED70 /* CXCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXCarouselView.m; sourceTree = "<group>"; };
+		D69B63CB1D3F711A0026BAAB /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -465,6 +467,7 @@
 		7D415C5D1D34D649004E5E22 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D69B63CB1D3F711A0026BAAB /* 9.jpg */,
 				D64B79A81D39C1CA0075ADE0 /* GoodsModel.h */,
 				D64B79A91D39C1CA0075ADE0 /* GoodsModel.m */,
 				D64B79B71D3A51560075ADE0 /* ShopModel.h */,
@@ -734,6 +737,7 @@
 				7D84386C1D3C7A7200AF2875 /* STError@2x.png in Resources */,
 				7DE7E69D1D37812100127B17 /* backgroundImage.png in Resources */,
 				7D415C401D34D2A7004E5E22 /* LaunchScreen.storyboard in Resources */,
+				D69B63CC1D3F711A0026BAAB /* 9.jpg in Resources */,
 				C255982C1D38904300A7ADED /* 14.png in Resources */,
 				C255985A1D39220300A7ADED /* bubbleSelf.png in Resources */,
 				7D415C3D1D34D2A7004E5E22 /* Assets.xcassets in Resources */,

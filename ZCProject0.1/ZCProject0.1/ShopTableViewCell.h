@@ -10,11 +10,13 @@
 
 @interface ShopTableViewCell : UITableViewCell
 
-@property(nonatomic,strong)UILabel *msgLabel;
+@property(nonatomic,strong)UILabel *titleLabel;
 
-@property(nonatomic,strong)UILabel *statusLabel;
+@property(nonatomic,strong)UILabel *descLabel;
 
-@property(nonatomic,strong)UILabel *tsLabel;
+@property(nonatomic,strong)UIImageView *imageV;
+
+
 
 
 @end

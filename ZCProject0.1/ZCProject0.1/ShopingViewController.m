@@ -20,13 +20,16 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
 
 @property(nonatomic,strong)NSMutableArray *mutaArray;
 
+@property(nonatomic,strong)NSMutableArray *picArray;
+
 @end
 
 @implementation ShopingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor greenColor];
+
+    self.ShopTableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:(UITableViewStylePlain)];
     
     self.ShopTableView.delegate = self;
     
@@ -44,56 +47,61 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     
     parameter[@"id"] = self.ID;
     
-   
-    
+    self.mutaArray = [NSMutableArray array];
+    self.picArray = [NSMutableArray array];
     [request getRequestWithUrl:kNewInfoPath parameters:parameter successResponse:^(NSDictionary *dic) {
         
         NSLog(@"%@",dic);
         
+        NSDictionary *dict = dic[@"data"];
         
         
+    
         
-//        for (NSDictionary *mutabelDic in dic[@"data"]) {
-//            
-//            ShopModel *model = [[ShopModel alloc]init];
-//            
-//            [model setValuesForKeysWithDictionary:mutabelDic];
-//            
-//            [self.mutaArray addObject:model];
-//            
-//            NSLog(@"%@",model);
-//            
-//        }
-        
-        
-        
-        
-       
-        
-        
+            for (NSDictionary *dic1 in dict[@"product"]) {
+                NSLog(@"%@",dic1);
+                ShopModel *model = [[ShopModel alloc]init];
+                
+                [model setValuesForKeysWithDictionary:dic1];
+                
+                [self.mutaArray addObject:model];
+                
+                for (NSDictionary *dic2 in model.likes_list) {
+                    [self.picArray addObject:dic2[@"a"]];
+                    
+                }
+              NSLog(@"%@",self.picArray);
 
+            }
         
-        
-        
-        
-        
-        
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+           
+            [self.ShopTableView reloadData];
+            
+        });
+
         
     } failureResponse:^(NSError *error) {
         
     }];
+    
+    [self.view addSubview:_ShopTableView];
     
     
     
     
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 500;
+    
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 10;
-    
+    return self.mutaArray.count;
     
     
 }
@@ -102,6 +110,44 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ShopTableViewCell *cell = [[ShopTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell"];
+    
+    ShopModel *shopM = self.mutaArray[indexPath.row];
+    
+    cell.titleLabel.text = shopM.title;
+    
+    cell.descLabel.text = shopM.desc;
+    
+    cell.descLabel.lineBreakMode = UILineBreakModeCharacterWrap;
+    
+    cell.descLabel.numberOfLines = 0;
+    
+    
+    
+    //属性传值过来的照片,从上一个页面用属性传值传过来
+    
+    for (NSDictionary * urlDic in shopM.pic) {
+        
+        NSString * imagePathString = [urlDic objectForKey:@"p"];
+        
+        NSString *imageURLString = [NSString stringWithFormat:@"http://bt.img.17gwx.com/%@", imagePathString];
+        [self.picArray addObject:imageURLString];
+    }
+    
+    for (NSString *imaString in self.picArray) {
+        
+        cell.imageV.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imaString]]];
+        
+        
+    }
+    
+    
+    
+    
+//    cell.imageV.image = [UIImage imageNamed:self.picArray[indexPath.row]];
+
+    
+    
+
     
     return cell;
     
