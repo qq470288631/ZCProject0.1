@@ -8,7 +8,6 @@
 
 #import "ProvingLoginStatus.h"
 
-#import "ZCLoginViewController.h"
 
 //单例存储静态变量
 static ProvingLoginStatus * provingLoginStatus = nil;
@@ -31,16 +30,16 @@ static ProvingLoginStatus * provingLoginStatus = nil;
 }
 
 - (void)checkoutLoginStatusShowLoginViewONController:(UIViewController *)controller{
+    
     if (![self checkoutLoginStatus]) {
         
         ZCLoginViewController * loginViewController = [ZCLoginViewController new];
-        [controller presentViewController:loginViewController animated:YES completion:^{
-            
-            
+        loginViewController.delegeta = controller;
+        [controller presentViewController:loginViewController animated:NO completion:^{
+           
         }];
-        
     }else{
-        return;
+        
     }
 }
 
@@ -51,7 +50,6 @@ static ProvingLoginStatus * provingLoginStatus = nil;
         
         
     }];
-    
 }
 
 @end

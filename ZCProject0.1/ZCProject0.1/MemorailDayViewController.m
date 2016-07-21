@@ -9,15 +9,31 @@
 #import "MemorailDayViewController.h"
 #import "MemorailDayTableViewCell.h"
 #import "AddMemorailViewController.h"
+#import "ZCMemorialDayManager.h"
 @interface MemorailDayViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong)UITableView *memorailTableView;
 @property(nonatomic, strong)NSMutableArray *dataArray;
+@property(nonatomic, strong)ZCMemorialDayManager *zcManager;
 @end
 
 @implementation MemorailDayViewController
+-(void)loadData
+{
+    
+    self.zcManager = [ZCMemorialDayManager new];
+    [_zcManager createMemorialDayTable];
+    _dataArray = [NSMutableArray array];
+   _dataArray =[_zcManager getAllMemorialDay];
+    NSLog(@"%@", _dataArray);
+    [self.memorailTableView reloadData];
 
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self loadData];
+    
     self.title = @"纪念日";
     self.view.backgroundColor = [UIColor whiteColor];
     self.dataArray = [[NSMutableArray alloc]init];
@@ -33,28 +49,35 @@
     [self.view addSubview:_memorailTableView];
     [self.memorailTableView registerClass:[MemorailDayTableViewCell class] forCellReuseIdentifier:@"CELL"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(addMemorial:)];
-    
+   
 }
 -(void)addMemorial:(UITabBarItem *)sender
 {
     AddMemorailViewController *addVC = [[AddMemorailViewController alloc]init];
+    addVC.ID = self.ID;
+    typeof(self) pSelf = self;
+    addVC.myBlock = ^() {
+        [pSelf loadData];
+    };
     
     [self.navigationController pushViewController:addVC animated:YES];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 100;
+    return _dataArray.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MemorailDayTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
-    cell.titleLable.text = @"主题";
-    cell.dateLable.text = @"2016-07-15";
-    cell.dayLable.text = @"365天";
+    ZCMemorialDayModel *model = _dataArray[indexPath.row];
+    cell.titleLable.text = model.title;
+    cell.dateLable.text = model.date;
+//    cell.dayLable.text = @"365天";
     return cell;
 }
-
+ 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return 80;
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -33,8 +33,14 @@
 		7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744B71D35CFD4004C534C /* BaseSqlite.m */; };
 		7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744BA1D35CFE7004C534C /* SqliteHelper.m */; };
 		7DB744BD1D35D27C004C534C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB744BC1D35D27C004C534C /* libsqlite3.tbd */; };
+		7DE3F9091D3DBD4C0038D2C0 /* ZCMeHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F9081D3DBD4C0038D2C0 /* ZCMeHomeViewController.m */; };
 		7DE7E6991D373B9500127B17 /* ProvingLoginStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7E6981D373B9500127B17 /* ProvingLoginStatus.m */; };
 		7DE7E69D1D37812100127B17 /* backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE7E69C1D37812100127B17 /* backgroundImage.png */; };
+		7DE80C311D3F0F1F00D4171C /* tools.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE80C301D3F0F1F00D4171C /* tools.png */; };
+		7DE80C341D3F2A6B00D4171C /* ZCTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE80C331D3F2A6B00D4171C /* ZCTopTableViewCell.m */; };
+		7DE80C361D3F604A00D4171C /* MeButtons.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE80C351D3F604A00D4171C /* MeButtons.png */; };
+		7DE80C381D3F7E2700D4171C /* NOMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE80C371D3F7E2700D4171C /* NOMessage.png */; };
+		7DE80C3B1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE80C3A1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m */; };
 		7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF257791D36657B0022FC37 /* ZCLoginViewController.m */; };
 		7DF2577D1D3665870022FC37 /* CZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */; };
 		C2431EF21D3CD63B0033A8C5 /* KeyboardStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EF11D3CD63B0033A8C5 /* KeyboardStyle.m */; };
@@ -49,14 +55,17 @@
 		C25598371D389F0700A7ADED /* MapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C25598361D389F0700A7ADED /* MapTableViewCell.m */; };
 		C255983A1D389F1E00A7ADED /* MemorailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C25598391D389F1E00A7ADED /* MemorailTableViewCell.m */; };
 		C25598481D38BF0100A7ADED /* AddLoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25598471D38BF0100A7ADED /* AddLoverViewController.m */; };
-		C255984A1D38BF4B00A7ADED /* memorail.png in Resources */ = {isa = PBXBuildFile; fileRef = C25598491D38BF4B00A7ADED /* memorail.png */; };
-		C255984E1D38BF5400A7ADED /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = C255984D1D38BF5400A7ADED /* map.png */; };
 		C25598501D38CCDD00A7ADED /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = C255984F1D38CCDD00A7ADED /* eye.png */; };
-		C25598521D38CE4400A7ADED /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = C25598511D38CE4400A7ADED /* chat.png */; };
 		C25598551D3912D000A7ADED /* AddChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C25598541D3912D000A7ADED /* AddChatTableViewCell.m */; };
 		C25598581D391E9C00A7ADED /* MessageObj.m in Sources */ = {isa = PBXBuildFile; fileRef = C25598571D391E9C00A7ADED /* MessageObj.m */; };
 		C255985A1D39220300A7ADED /* bubbleSelf.png in Resources */ = {isa = PBXBuildFile; fileRef = C25598591D39220300A7ADED /* bubbleSelf.png */; };
 		C255985C1D39220700A7ADED /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = C255985B1D39220700A7ADED /* bubble.png */; };
+		C273E37B1D3DFC9400136884 /* emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = C273E37A1D3DFC9400136884 /* emoji.png */; };
+		C273E37D1D3DFC9800136884 /* void.png in Resources */ = {isa = PBXBuildFile; fileRef = C273E37C1D3DFC9800136884 /* void.png */; };
+		C273E37F1D3DFC9C00136884 /* pluce.png in Resources */ = {isa = PBXBuildFile; fileRef = C273E37E1D3DFC9C00136884 /* pluce.png */; };
+		C273E3811D3E086500136884 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = C273E3801D3E086500136884 /* chat.png */; };
+		C273E3831D3E087000136884 /* memorail.png in Resources */ = {isa = PBXBuildFile; fileRef = C273E3821D3E087000136884 /* memorail.png */; };
+		C273E3851D3E087600136884 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = C273E3841D3E087600136884 /* map.png */; };
 		C2939C951D378B3400817651 /* FriendListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2939C941D378B3400817651 /* FriendListTableViewCell.m */; };
 		C293EB621D363DAA00A59101 /* LoverHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB571D363DAA00A59101 /* LoverHomePageViewController.m */; };
 		C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB5B1D363DAA00A59101 /* ChatViewController.m */; };
@@ -127,9 +136,18 @@
 		7DB744B91D35CFE7004C534C /* SqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteHelper.h; sourceTree = "<group>"; };
 		7DB744BA1D35CFE7004C534C /* SqliteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteHelper.m; sourceTree = "<group>"; };
 		7DB744BC1D35D27C004C534C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		7DE3F9071D3DBD4C0038D2C0 /* ZCMeHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCMeHomeViewController.h; sourceTree = "<group>"; };
+		7DE3F9081D3DBD4C0038D2C0 /* ZCMeHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMeHomeViewController.m; sourceTree = "<group>"; };
 		7DE7E6971D373B9500127B17 /* ProvingLoginStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvingLoginStatus.h; sourceTree = "<group>"; };
 		7DE7E6981D373B9500127B17 /* ProvingLoginStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvingLoginStatus.m; sourceTree = "<group>"; };
 		7DE7E69C1D37812100127B17 /* backgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundImage.png; sourceTree = "<group>"; };
+		7DE80C301D3F0F1F00D4171C /* tools.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tools.png; sourceTree = "<group>"; };
+		7DE80C321D3F2A6B00D4171C /* ZCTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTopTableViewCell.h; sourceTree = "<group>"; };
+		7DE80C331D3F2A6B00D4171C /* ZCTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTopTableViewCell.m; sourceTree = "<group>"; };
+		7DE80C351D3F604A00D4171C /* MeButtons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MeButtons.png; sourceTree = "<group>"; };
+		7DE80C371D3F7E2700D4171C /* NOMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NOMessage.png; sourceTree = "<group>"; };
+		7DE80C391D3F7E3800D4171C /* ZCNoMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCNoMessageTableViewCell.h; sourceTree = "<group>"; };
+		7DE80C3A1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCNoMessageTableViewCell.m; sourceTree = "<group>"; };
 		7DF257781D36657B0022FC37 /* ZCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLoginViewController.h; sourceTree = "<group>"; };
 		7DF257791D36657B0022FC37 /* ZCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLoginViewController.m; sourceTree = "<group>"; };
 		7DF2577B1D3665870022FC37 /* CZRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRegisterViewController.h; sourceTree = "<group>"; };
@@ -153,16 +171,19 @@
 		C25598381D389F1E00A7ADED /* MemorailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemorailTableViewCell.h; sourceTree = "<group>"; };
 		C25598391D389F1E00A7ADED /* MemorailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemorailTableViewCell.m; sourceTree = "<group>"; };
 		C25598471D38BF0100A7ADED /* AddLoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLoverViewController.m; sourceTree = "<group>"; };
-		C25598491D38BF4B00A7ADED /* memorail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memorail.png; sourceTree = "<group>"; };
-		C255984D1D38BF5400A7ADED /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		C255984F1D38CCDD00A7ADED /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye.png; sourceTree = "<group>"; };
-		C25598511D38CE4400A7ADED /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		C25598531D3912D000A7ADED /* AddChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddChatTableViewCell.h; sourceTree = "<group>"; };
 		C25598541D3912D000A7ADED /* AddChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddChatTableViewCell.m; sourceTree = "<group>"; };
 		C25598561D391E9C00A7ADED /* MessageObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageObj.h; sourceTree = "<group>"; };
 		C25598571D391E9C00A7ADED /* MessageObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageObj.m; sourceTree = "<group>"; };
 		C25598591D39220300A7ADED /* bubbleSelf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleSelf.png; sourceTree = "<group>"; };
 		C255985B1D39220700A7ADED /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
+		C273E37A1D3DFC9400136884 /* emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji.png; sourceTree = "<group>"; };
+		C273E37C1D3DFC9800136884 /* void.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = void.png; sourceTree = "<group>"; };
+		C273E37E1D3DFC9C00136884 /* pluce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluce.png; sourceTree = "<group>"; };
+		C273E3801D3E086500136884 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
+		C273E3821D3E087000136884 /* memorail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memorail.png; sourceTree = "<group>"; };
+		C273E3841D3E087600136884 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		C2939C931D378B3400817651 /* FriendListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListTableViewCell.h; sourceTree = "<group>"; };
 		C2939C941D378B3400817651 /* FriendListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewCell.m; sourceTree = "<group>"; };
 		C293EB561D363DAA00A59101 /* LoverHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoverHomePageViewController.h; sourceTree = "<group>"; };
@@ -365,6 +386,9 @@
 		7D415C501D34D4AF004E5E22 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7DE80C371D3F7E2700D4171C /* NOMessage.png */,
+				7DE80C351D3F604A00D4171C /* MeButtons.png */,
+				7DE80C301D3F0F1F00D4171C /* tools.png */,
 				7DE7E69C1D37812100127B17 /* backgroundImage.png */,
 				7D415C3C1D34D2A7004E5E22 /* Assets.xcassets */,
 			);
@@ -515,12 +539,15 @@
 				C25598291D38903400A7ADED /* 12.png */,
 				C255982D1D3890A200A7ADED /* 13.png */,
 				C255982B1D38904300A7ADED /* 14.png */,
-				C25598511D38CE4400A7ADED /* chat.png */,
-				C255984D1D38BF5400A7ADED /* map.png */,
-				C25598491D38BF4B00A7ADED /* memorail.png */,
+				C273E3801D3E086500136884 /* chat.png */,
+				C273E3841D3E087600136884 /* map.png */,
+				C273E3821D3E087000136884 /* memorail.png */,
 				C255984F1D38CCDD00A7ADED /* eye.png */,
 				C25598591D39220300A7ADED /* bubbleSelf.png */,
 				C255985B1D39220700A7ADED /* bubble.png */,
+				C273E37A1D3DFC9400136884 /* emoji.png */,
+				C273E37C1D3DFC9800136884 /* void.png */,
+				C273E37E1D3DFC9C00136884 /* pluce.png */,
 				C25598241D3883FF00A7ADED /* LoverTableViewCell.h */,
 				C25598251D3883FF00A7ADED /* LoverTableViewCell.m */,
 				C2939C931D378B3400817651 /* FriendListTableViewCell.h */,
@@ -562,6 +589,8 @@
 		7D415C631D34D66A004E5E22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7DE3F9071D3DBD4C0038D2C0 /* ZCMeHomeViewController.h */,
+				7DE3F9081D3DBD4C0038D2C0 /* ZCMeHomeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -569,6 +598,10 @@
 		7D415C641D34D671004E5E22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7DE80C321D3F2A6B00D4171C /* ZCTopTableViewCell.h */,
+				7DE80C331D3F2A6B00D4171C /* ZCTopTableViewCell.m */,
+				7DE80C391D3F7E3800D4171C /* ZCNoMessageTableViewCell.h */,
+				7DE80C3A1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -724,23 +757,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C255984E1D38BF5400A7ADED /* map.png in Resources */,
-				C25598521D38CE4400A7ADED /* chat.png in Resources */,
+				C273E37F1D3DFC9C00136884 /* pluce.png in Resources */,
+				C273E37D1D3DFC9800136884 /* void.png in Resources */,
 				C255985C1D39220700A7ADED /* bubble.png in Resources */,
 				C25598231D387B1100A7ADED /* 10.png in Resources */,
+				7DE80C381D3F7E2700D4171C /* NOMessage.png in Resources */,
+				C273E37B1D3DFC9400136884 /* emoji.png in Resources */,
 				C25598281D38903100A7ADED /* 11.png in Resources */,
 				C255982E1D3890A200A7ADED /* 13.png in Resources */,
-				C255984A1D38BF4B00A7ADED /* memorail.png in Resources */,
 				7D84386D1D3C7A7200AF2875 /* STSuccess@2x.png in Resources */,
 				C255982A1D38903400A7ADED /* 12.png in Resources */,
 				C293EB6B1D363DB200A59101 /* 1.jpg in Resources */,
 				7D84386C1D3C7A7200AF2875 /* STError@2x.png in Resources */,
+				C273E3811D3E086500136884 /* chat.png in Resources */,
+				7DE80C311D3F0F1F00D4171C /* tools.png in Resources */,
 				7DE7E69D1D37812100127B17 /* backgroundImage.png in Resources */,
 				7D415C401D34D2A7004E5E22 /* LaunchScreen.storyboard in Resources */,
 				D69B63CC1D3F711A0026BAAB /* 9.jpg in Resources */,
 				C255982C1D38904300A7ADED /* 14.png in Resources */,
 				C255985A1D39220300A7ADED /* bubbleSelf.png in Resources */,
+				7DE80C361D3F604A00D4171C /* MeButtons.png in Resources */,
+				C273E3851D3E087600136884 /* map.png in Resources */,
 				7D415C3D1D34D2A7004E5E22 /* Assets.xcassets in Resources */,
+				C273E3831D3E087000136884 /* memorail.png in Resources */,
 				C25598501D38CCDD00A7ADED /* eye.png in Resources */,
 				7D8438691D3C7A7200AF2875 /* angle-mask@3x.png in Resources */,
 				7D84386F1D3C7A7200AF2875 /* STTextHud.xib in Resources */,
@@ -822,8 +861,10 @@
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
 				D64B79B21D39C1E70075ADE0 /* GoodsViewController.m in Sources */,
 				D64B79AA1D39C1CA0075ADE0 /* GoodsModel.m in Sources */,
+				7DE80C341D3F2A6B00D4171C /* ZCTopTableViewCell.m in Sources */,
 				C25598551D3912D000A7ADED /* AddChatTableViewCell.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
+				7DE3F9091D3DBD4C0038D2C0 /* ZCMeHomeViewController.m in Sources */,
 				C25598311D3895C000A7ADED /* LoverZoneHeaderTableViewCell.m in Sources */,
 				C2939C951D378B3400817651 /* FriendListTableViewCell.m in Sources */,
 				7D415C8D1D34F81E004E5E22 /* RootViewController.m in Sources */,
@@ -839,6 +880,7 @@
 				7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */,
 				7D415C841D34F53A004E5E22 /* BaseModel.m in Sources */,
 				C293EB661D363DAA00A59101 /* MemorailDayViewController.m in Sources */,
+				7DE80C3B1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m in Sources */,
 				7D8438731D3CB91700AF2875 /* ZCMemorialDayManager.m in Sources */,
 				C25598261D3883FF00A7ADED /* LoverTableViewCell.m in Sources */,
 				C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */,

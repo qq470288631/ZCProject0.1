@@ -13,12 +13,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.visiteImage = [[UIImageView alloc]initWithFrame:CGRectMake(240, 250, 50, 50)];
-        [self.contentView addSubview:_visiteImage];
-        self.visiteLable = [[UILabel alloc]initWithFrame:CGRectMake(300, 250, 200, 50)];
-        self.visiteLable.backgroundColor = [UIColor whiteColor];
-        [self.contentView addSubview:_visiteLable];
-        
+               
     }
     
     return self;

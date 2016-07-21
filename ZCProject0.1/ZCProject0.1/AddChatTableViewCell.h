@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AddChatTableViewCell : UITableViewCell
+//头像
+@property(nonatomic, strong)UIImageView *headImage;
+//聊天信息
+@property(nonatomic, strong)UILabel *messageLable;
 
 
 

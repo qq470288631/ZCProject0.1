@@ -9,11 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LoverZoneHeaderTableViewCell : UITableViewCell
-//访问标识
-@property(nonatomic, strong)UIImageView *visiteImage;
-
-//访问人数
-@property(nonatomic, strong)UILabel *visiteLable;
 
 
 @end

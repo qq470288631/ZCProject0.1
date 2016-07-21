@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "ZCTabBar.h"
 #import "GoodsViewController.h"
+#import "ZCMeHomeViewController.h"
 
 @interface RootViewController ()
 
@@ -77,10 +78,9 @@
     UIViewController * v3 = [UIViewController new];
     v3.view.backgroundColor = [UIColor cyanColor];
     
-    UIViewController * v4 = [UIViewController new];
-    v4.view.backgroundColor = [UIColor blueColor];
-    
-    self.viewControllers = @[v1,nav2,v3,v4];
+    ZCMeHomeViewController * meHomeViewController = [ZCMeHomeViewController new];
+    UINavigationController * meHomeNav = [[UINavigationController alloc] initWithRootViewController:meHomeViewController];
+    self.viewControllers = @[v1,nav2,v3,meHomeNav];
     
 }
 

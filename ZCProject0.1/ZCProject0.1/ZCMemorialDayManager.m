@@ -34,7 +34,7 @@
 
 - (BOOL)createMemorialDayTable{
 
-    NSString * sql = @"CREATE TABLE IF NOT EXISTS ZC_MemorialDay (id INTEGER PRIMARY KEY AUTOINCREMENT,username TEXT NOT NULL UNIQUE,title TEXT NOT NULL UNIQUE,memorialDayDate TEXT NOT NULL)";
+    NSString * sql = @"CREATE TABLE IF NOT EXISTS ZC_MemorialDay (id INTEGER PRIMARY KEY AUTOINCREMENT,username TEXT NOT NULL,title TEXT NOT NULL UNIQUE,memorialDayDate TEXT NOT NULL)";
     BOOL result = [self.helper executeUpdate:sql];
     return result;
 }
@@ -67,6 +67,22 @@
     BOOL result = [self.helper executeUpdate:sql];
     return result;
     
+}
+
+- (NSMutableArray *)getAllMemorialDay{
+    NSMutableArray * dataArray = [NSMutableArray array];
+    NSString * sql = [NSString stringWithFormat:@"SELECT id,title,memorialDayDate FROM ZC_MemorialDay"];
+    FMResultSet * set = [self.helper executeQuery:sql];
+    while ([set next]) {
+        
+        ZCMemorialDayModel * model = [ZCMemorialDayModel new];
+        int ID = [set intForColumn:@"id"];
+        NSString * title = [set stringForColumn:@"title"];
+        NSString * date = [set stringForColumn:@"memorialDayDate"];
+        model = [[ZCMemorialDayModel alloc] initWithID:ID title:title date:date];
+        [dataArray addObject:model];
+    }
+    return dataArray;
 }
 
 

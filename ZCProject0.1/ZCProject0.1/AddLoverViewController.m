@@ -22,6 +22,12 @@
 @property(nonatomic, strong)UIImageView *backgroundImage;
 
 @property(nonatomic, strong)UITableView *backgroundTableView;
+//访问标识
+@property(nonatomic, strong)UIImageView *visiteImage;
+
+//访问人数
+@property(nonatomic, strong)UILabel *visiteLable;
+
 @end
 
 @implementation AddLoverViewController
@@ -36,8 +42,16 @@
 //    self.backgroundTableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.backgroundTableView];
     self.backgroundImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, WindownWidth, 364)];
-    
+    self.backgroundImage.image = [UIImage imageNamed:@"13"];
     [self.view addSubview:_backgroundImage];
+    self.visiteImage = [[UIImageView alloc]initWithFrame:CGRectMake(240, 314, 50, 50)];
+    self.visiteImage.image = [UIImage imageNamed:@"eye.png"];
+    [self.backgroundImage addSubview:_visiteImage];
+    self.visiteLable = [[UILabel alloc]initWithFrame:CGRectMake(300, 314, 200, 50)];
+    self.visiteLable.text = @"访问人数:1000";
+    self.visiteLable.backgroundColor = [UIColor clearColor];
+    [self.backgroundImage addSubview:_visiteLable];
+
     //header注册
     [self.backgroundTableView registerClass:[LoverZoneHeaderTableViewCell class] forCellReuseIdentifier:@"cell"];
     //other cell
@@ -69,8 +83,6 @@
    
     if (indexPath.row == 0) {
         LoverZoneHeaderTableViewCell *cell = [[LoverZoneHeaderTableViewCell alloc]init];
-        cell.visiteLable.text = @"访问人数:1000";
-        cell.visiteImage.image = [UIImage imageNamed:@"eye.png"];
         cell.backgroundColor = [UIColor colorWithPatternImage:_backgroundImage.image];
         
         return cell;
@@ -155,7 +167,7 @@
         return 300;
     }else
         
-        return 100;
+        return 70;
         
 }
 - (void)didReceiveMemoryWarning {
