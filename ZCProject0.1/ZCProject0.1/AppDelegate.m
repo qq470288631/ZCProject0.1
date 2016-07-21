@@ -31,14 +31,14 @@
     
     //AppKey:注册的AppKey，详细见下面注释。
     //apnsCertName:推送证书名（不需要加后缀），详细见下面注释。
-//    EMOptions *options = [EMOptions optionsWithAppkey:@"tangxu#zc"];
-//    options.apnsCertName = @"istore_dev";
-//    [[EMClient sharedClient] initializeSDKWithOptions:options];
-//    
-//    ProvingLoginStatus * proving = [ProvingLoginStatus shareProvingLoginStatus];
-//    [proving checkoutLoginStatusShowLoginViewONController:self.window.rootViewController];
-//    
-//    [[EMClient sharedClient].options setIsAutoLogin:NO];
+    EMOptions *options = [EMOptions optionsWithAppkey:@"tangxu#zc"];
+    options.apnsCertName = @"istore_dev";
+    [[EMClient sharedClient] initializeSDKWithOptions:options];
+    
+    ProvingLoginStatus * proving = [ProvingLoginStatus shareProvingLoginStatus];
+    [proving checkoutLoginStatusShowLoginViewONController:self.window.rootViewController];
+    
+    [[EMClient sharedClient].options setIsAutoLogin:NO];
     
     return YES;
 }
