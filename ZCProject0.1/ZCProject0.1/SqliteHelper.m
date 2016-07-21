@@ -27,7 +27,7 @@ static SqliteHelper * helper = nil;
         
         NSString * personPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)firstObject];
         NSString * dbPath = [personPath stringByAppendingPathComponent:@"zcDatabase.sqlite"];
-        
+        NSLog(@"s = %@",dbPath);
         helper.database = [FMDatabase databaseWithPath:dbPath];
     }
     return helper;

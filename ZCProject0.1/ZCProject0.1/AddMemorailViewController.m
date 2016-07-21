@@ -8,6 +8,7 @@
 
 #import "AddMemorailViewController.h"
 #import "ZCMemorialDayManager.h"
+
 @interface AddMemorailViewController ()
 @property(nonatomic, strong)UITextField *titleTextField;
 //显示天数
@@ -40,7 +41,7 @@
     
     [self.view addSubview:_datePickerView];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"保存" style:(UIBarButtonItemStylePlain) target:self action:@selector(saveClicked:)];
-    
+   
 
 }
 -(void)saveClicked:(UIBarButtonItem *)sender
@@ -56,19 +57,17 @@
     NSInteger day = [comp1 day];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:[NSString stringWithFormat:@"%ld-%ld-%ld",year,month,day]];
-    
+
     self.ZCMemorialDatManager = [[ZCMemorialDayManager alloc]init];
     [_ZCMemorialDatManager createMemorialDayTable];
     [_ZCMemorialDatManager addMemorialDayWithTitle:_titleTextField.text date:formatter.dateFormat];
-
-    
+    self.myBlock();
+    [self.navigationController popViewControllerAnimated:YES];
    
 }
 -(void)dateClicked:(UIDatePicker *)picker
 {
-  
-    
-    //    当前日期为结束日期
+      //    当前日期为结束日期
     NSDate *date = [NSDate date];
     
     //日历类型为公历
@@ -76,19 +75,13 @@
     NSDateComponents *dayComponents = [calendar components:NSCalendarUnitDay fromDate:picker.date toDate:date options:0];
     _dateLable.text = [NSString stringWithFormat:@"%ld天",dayComponents.day];
     
-    unsigned units  = NSMonthCalendarUnit|NSDayCalendarUnit|NSYearCalendarUnit;
-    NSDateComponents *comp1 = [calendar components:units fromDate:picker.date];
-    NSInteger month = [comp1 month];
-    NSInteger year = [comp1 year];
-    NSInteger day = [comp1 day];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:[NSString stringWithFormat:@"%ld-%ld-%ld",year,month,day]];
     
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  
 }
 
 /*

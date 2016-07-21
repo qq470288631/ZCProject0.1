@@ -42,6 +42,7 @@
 //    self.backgroundTableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.backgroundTableView];
     self.backgroundImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, WindownWidth, 364)];
+    self.backgroundImage.image = [UIImage imageNamed:@"13"];
     [self.view addSubview:_backgroundImage];
     self.visiteImage = [[UIImageView alloc]initWithFrame:CGRectMake(240, 314, 50, 50)];
     self.visiteImage.image = [UIImage imageNamed:@"eye.png"];
