@@ -37,6 +37,10 @@
 		7DE7E6991D373B9500127B17 /* ProvingLoginStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7E6981D373B9500127B17 /* ProvingLoginStatus.m */; };
 		7DE7E69D1D37812100127B17 /* backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE7E69C1D37812100127B17 /* backgroundImage.png */; };
 		7DE80C311D3F0F1F00D4171C /* tools.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE80C301D3F0F1F00D4171C /* tools.png */; };
+		7DE80C341D3F2A6B00D4171C /* ZCTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE80C331D3F2A6B00D4171C /* ZCTopTableViewCell.m */; };
+		7DE80C361D3F604A00D4171C /* MeButtons.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE80C351D3F604A00D4171C /* MeButtons.png */; };
+		7DE80C381D3F7E2700D4171C /* NOMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE80C371D3F7E2700D4171C /* NOMessage.png */; };
+		7DE80C3B1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE80C3A1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m */; };
 		7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF257791D36657B0022FC37 /* ZCLoginViewController.m */; };
 		7DF2577D1D3665870022FC37 /* CZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */; };
 		C2431EF21D3CD63B0033A8C5 /* KeyboardStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EF11D3CD63B0033A8C5 /* KeyboardStyle.m */; };
@@ -137,6 +141,12 @@
 		7DE7E6981D373B9500127B17 /* ProvingLoginStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvingLoginStatus.m; sourceTree = "<group>"; };
 		7DE7E69C1D37812100127B17 /* backgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundImage.png; sourceTree = "<group>"; };
 		7DE80C301D3F0F1F00D4171C /* tools.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tools.png; sourceTree = "<group>"; };
+		7DE80C321D3F2A6B00D4171C /* ZCTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTopTableViewCell.h; sourceTree = "<group>"; };
+		7DE80C331D3F2A6B00D4171C /* ZCTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTopTableViewCell.m; sourceTree = "<group>"; };
+		7DE80C351D3F604A00D4171C /* MeButtons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MeButtons.png; sourceTree = "<group>"; };
+		7DE80C371D3F7E2700D4171C /* NOMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NOMessage.png; sourceTree = "<group>"; };
+		7DE80C391D3F7E3800D4171C /* ZCNoMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCNoMessageTableViewCell.h; sourceTree = "<group>"; };
+		7DE80C3A1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCNoMessageTableViewCell.m; sourceTree = "<group>"; };
 		7DF257781D36657B0022FC37 /* ZCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLoginViewController.h; sourceTree = "<group>"; };
 		7DF257791D36657B0022FC37 /* ZCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLoginViewController.m; sourceTree = "<group>"; };
 		7DF2577B1D3665870022FC37 /* CZRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRegisterViewController.h; sourceTree = "<group>"; };
@@ -374,6 +384,8 @@
 		7D415C501D34D4AF004E5E22 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7DE80C371D3F7E2700D4171C /* NOMessage.png */,
+				7DE80C351D3F604A00D4171C /* MeButtons.png */,
 				7DE80C301D3F0F1F00D4171C /* tools.png */,
 				7DE7E69C1D37812100127B17 /* backgroundImage.png */,
 				7D415C3C1D34D2A7004E5E22 /* Assets.xcassets */,
@@ -583,6 +595,10 @@
 		7D415C641D34D671004E5E22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7DE80C321D3F2A6B00D4171C /* ZCTopTableViewCell.h */,
+				7DE80C331D3F2A6B00D4171C /* ZCTopTableViewCell.m */,
+				7DE80C391D3F7E3800D4171C /* ZCNoMessageTableViewCell.h */,
+				7DE80C3A1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -742,6 +758,7 @@
 				C273E37D1D3DFC9800136884 /* void.png in Resources */,
 				C255985C1D39220700A7ADED /* bubble.png in Resources */,
 				C25598231D387B1100A7ADED /* 10.png in Resources */,
+				7DE80C381D3F7E2700D4171C /* NOMessage.png in Resources */,
 				C273E37B1D3DFC9400136884 /* emoji.png in Resources */,
 				C25598281D38903100A7ADED /* 11.png in Resources */,
 				C255982E1D3890A200A7ADED /* 13.png in Resources */,
@@ -755,6 +772,7 @@
 				7D415C401D34D2A7004E5E22 /* LaunchScreen.storyboard in Resources */,
 				C255982C1D38904300A7ADED /* 14.png in Resources */,
 				C255985A1D39220300A7ADED /* bubbleSelf.png in Resources */,
+				7DE80C361D3F604A00D4171C /* MeButtons.png in Resources */,
 				C273E3851D3E087600136884 /* map.png in Resources */,
 				7D415C3D1D34D2A7004E5E22 /* Assets.xcassets in Resources */,
 				C273E3831D3E087000136884 /* memorail.png in Resources */,
@@ -839,6 +857,7 @@
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
 				D64B79B21D39C1E70075ADE0 /* GoodsViewController.m in Sources */,
 				D64B79AA1D39C1CA0075ADE0 /* GoodsModel.m in Sources */,
+				7DE80C341D3F2A6B00D4171C /* ZCTopTableViewCell.m in Sources */,
 				C25598551D3912D000A7ADED /* AddChatTableViewCell.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
 				7DE3F9091D3DBD4C0038D2C0 /* ZCMeHomeViewController.m in Sources */,
@@ -857,6 +876,7 @@
 				7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */,
 				7D415C841D34F53A004E5E22 /* BaseModel.m in Sources */,
 				C293EB661D363DAA00A59101 /* MemorailDayViewController.m in Sources */,
+				7DE80C3B1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m in Sources */,
 				7D8438731D3CB91700AF2875 /* ZCMemorialDayManager.m in Sources */,
 				C25598261D3883FF00A7ADED /* LoverTableViewCell.m in Sources */,
 				C293EB641D363DAA00A59101 /* ChatViewController.m in Sources */,
