@@ -10,17 +10,23 @@
 #import "ShopTableViewCell.h"
 #import "GoodsRequest.h"
 #import "ShopModel.h"
+#import "WebViewController.h"
 
 static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
 
 
-@interface ShopingViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ShopingViewController ()<UITableViewDataSource,UITableViewDelegate,ShopTableViewCelldelegate>
 
 @property(nonatomic,strong)UITableView *ShopTableView;
 
 @property(nonatomic,strong)NSMutableArray *mutaArray;
 
 @property(nonatomic,strong)NSMutableArray *picArray;
+
+@property(nonatomic,copy)NSString *url;
+
+
+
 
 @end
 
@@ -30,6 +36,8 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     [super viewDidLoad];
 
     self.ShopTableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:(UITableViewStylePlain)];
+    
+    
     
     self.ShopTableView.delegate = self;
     
@@ -111,8 +119,19 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ShopTableViewCell *cell = [[ShopTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell"];
     
+    
+    cell.delegate = self;
+    
+    cell.indexPath = indexPath;
+    
+    
+    
+    
+    
     ShopModel *shopM = self.mutaArray[indexPath.row];
     
+    self.url = shopM.url;
+    self.ID = shopM.ID;
     cell.titleLabel.text = shopM.title;
     
     cell.descLabel.text = shopM.desc;
@@ -120,6 +139,30 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     cell.descLabel.lineBreakMode = UILineBreakModeCharacterWrap;
     
     cell.descLabel.numberOfLines = 0;
+    
+    NSString *string = shopM.likes;
+    
+    cell.loveLabel.text = [NSString stringWithFormat:@"❤️%@",string];
+    
+    NSString *priceStr = shopM.price;
+    
+    cell.priceLabel.text = [NSString stringWithFormat:@"参考价 %@元",priceStr];
+    
+    [cell.commentBtn setTitle:@"评论" forState:(UIControlStateNormal)];
+    
+    [cell.commentBtn setTitleColor:[UIColor cyanColor] forState:(UIControlStateNormal)];
+    
+    
+    
+    
+    [cell.purBtn setTitle:@"购买" forState:(UIControlStateNormal)];
+    
+    [cell.purBtn setTitleColor:[UIColor cyanColor] forState:(UIControlStateNormal)];
+    
+   
+    
+    
+    
     
     
     
@@ -143,8 +186,6 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     
     
     
-//    cell.imageV.image = [UIImage imageNamed:self.picArray[indexPath.row]];
-
     
     
 
@@ -153,6 +194,23 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     
     
 }
+
+-(void)dlickpurBtn:(NSIndexPath *)indexPath{
+    
+    ShopModel *shopMD = self.mutaArray[indexPath.row];
+    
+    WebViewController *webVC = [[WebViewController alloc]init];
+    
+    [self.navigationController pushViewController:webVC animated:YES];
+    
+    webVC.jumpUrl = shopMD.url;
+    
+    
+    
+    
+    
+}
+
 
 
 

@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ShopTableViewCelldelegate <NSObject>
+
+-(void)dlickpurBtn:(NSIndexPath *)indexPath;
+
+@end
+
+
+
 @interface ShopTableViewCell : UITableViewCell
+
+@property(nonatomic,weak)id<ShopTableViewCelldelegate>delegate;
 
 @property(nonatomic,strong)UILabel *titleLabel;
 
@@ -16,7 +26,15 @@
 
 @property(nonatomic,strong)UIImageView *imageV;
 
+@property(nonatomic,strong)UILabel *loveLabel;
 
+@property(nonatomic,strong)UIButton *commentBtn;
+
+@property(nonatomic,strong)UIButton *purBtn;
+
+@property(nonatomic,strong)UILabel *priceLabel;
+
+@property(nonatomic,strong)NSIndexPath *indexPath;
 
 
 @end
