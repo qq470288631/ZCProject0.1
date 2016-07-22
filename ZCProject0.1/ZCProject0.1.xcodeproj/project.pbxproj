@@ -35,6 +35,7 @@
 		7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744BA1D35CFE7004C534C /* SqliteHelper.m */; };
 		7DB744BD1D35D27C004C534C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB744BC1D35D27C004C534C /* libsqlite3.tbd */; };
 		7DE3F9091D3DBD4C0038D2C0 /* ZCMeHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F9081D3DBD4C0038D2C0 /* ZCMeHomeViewController.m */; };
+		7DE7DC6E1D41C4EE00935DB4 /* ZCMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7DC6D1D41C4EE00935DB4 /* ZCMessageHelper.m */; };
 		7DE7E6991D373B9500127B17 /* ProvingLoginStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7E6981D373B9500127B17 /* ProvingLoginStatus.m */; };
 		7DE7E69D1D37812100127B17 /* backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE7E69C1D37812100127B17 /* backgroundImage.png */; };
 		7DE80C311D3F0F1F00D4171C /* tools.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE80C301D3F0F1F00D4171C /* tools.png */; };
@@ -140,6 +141,8 @@
 		7DB744BC1D35D27C004C534C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7DE3F9071D3DBD4C0038D2C0 /* ZCMeHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCMeHomeViewController.h; sourceTree = "<group>"; };
 		7DE3F9081D3DBD4C0038D2C0 /* ZCMeHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMeHomeViewController.m; sourceTree = "<group>"; };
+		7DE7DC6C1D41C4EE00935DB4 /* ZCMessageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCMessageHelper.h; sourceTree = "<group>"; };
+		7DE7DC6D1D41C4EE00935DB4 /* ZCMessageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMessageHelper.m; sourceTree = "<group>"; };
 		7DE7E6971D373B9500127B17 /* ProvingLoginStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvingLoginStatus.h; sourceTree = "<group>"; };
 		7DE7E6981D373B9500127B17 /* ProvingLoginStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvingLoginStatus.m; sourceTree = "<group>"; };
 		7DE7E69C1D37812100127B17 /* backgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundImage.png; sourceTree = "<group>"; };
@@ -508,6 +511,8 @@
 			children = (
 				7D8438711D3CB91700AF2875 /* ZCMemorialDayManager.h */,
 				7D8438721D3CB91700AF2875 /* ZCMemorialDayManager.m */,
+				7DE7DC6C1D41C4EE00935DB4 /* ZCMessageHelper.h */,
+				7DE7DC6D1D41C4EE00935DB4 /* ZCMessageHelper.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -859,6 +864,7 @@
 				7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */,
 				D64B79A71D39C1C20075ADE0 /* GoodsRequest.m in Sources */,
 				D64B79B31D39C1E70075ADE0 /* ShopingViewController.m in Sources */,
+				7DE7DC6E1D41C4EE00935DB4 /* ZCMessageHelper.m in Sources */,
 				C293EB751D365A6B00A59101 /* AddMemorailViewController.m in Sources */,
 				C25598481D38BF0100A7ADED /* AddLoverViewController.m in Sources */,
 				C293EB621D363DAA00A59101 /* LoverHomePageViewController.m in Sources */,
