@@ -34,7 +34,7 @@
 
 - (BOOL)createMemorialDayTable{
 
-    NSString * sql = @"CREATE TABLE IF NOT EXISTS ZC_MemorialDay (id INTEGER PRIMARY KEY AUTOINCREMENT,username TEXT NOT NULL UNIQUE,title TEXT NOT NULL UNIQUE,memorialDayDate TEXT NOT NULL)";
+    NSString * sql = @"CREATE TABLE IF NOT EXISTS ZC_MemorialDay (id INTEGER PRIMARY KEY AUTOINCREMENT,username TEXT NOT NULL,title TEXT NOT NULL UNIQUE,memorialDayDate TEXT NOT NULL)";
     BOOL result = [self.helper executeUpdate:sql];
     return result;
 }

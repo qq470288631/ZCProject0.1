@@ -40,6 +40,8 @@
 
 -(void)layoutSubviews{
     
+    [super layoutSubviews];
+    
     self.ComImageV.frame = CGRectMake(0, 0, KWidth, Kheight*0.8);
     
     self.explaLabel.frame = CGRectMake(KWidth * 0.2, Kheight *0.8, KWidth * 0.6, Kheight *0.1);

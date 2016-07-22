@@ -168,9 +168,7 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
     
     
     
-//    NSString *ImaStr = model.pic;
-//    
-//    cell.ComImageV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:ImaStr]];
+
     
     
     
@@ -204,6 +202,8 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
     
     
     shopingVC.ID = medol.Id;
+    
+    shopingVC.imageName = medol.pic;
     
     [self.navigationController pushViewController:shopingVC animated:YES];
     

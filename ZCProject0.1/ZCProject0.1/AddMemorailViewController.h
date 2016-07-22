@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZCMemorialDayModel.h"
+typedef void(^block)();
 @interface AddMemorailViewController : UIViewController
 
+@property (nonatomic, copy) block myBlock;
+@property (nonatomic, assign) int ID;
 
 
 
