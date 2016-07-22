@@ -20,10 +20,6 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[LoverHomePageViewController new]];
-//    RootViewController *rootVC = [[RootViewController alloc]init];
-//    self.window.rootViewController = rootVC;
-    self.window.rootViewController = [RootViewController new];
     [self.window makeKeyAndVisible];
     
     
