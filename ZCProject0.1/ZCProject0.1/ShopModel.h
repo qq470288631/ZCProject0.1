@@ -33,7 +33,7 @@
 @property (nonatomic, copy) NSString *desc;
 @property (nonatomic, strong) NSDictionary *activity;
 @property (nonatomic, strong) NSArray *product;
-
+@property(nonatomic,strong)NSString *price;
 @property (nonatomic,strong)NSString *url;
 
 

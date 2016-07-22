@@ -48,7 +48,7 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
     
     [request getRequestWithUrl:kHomeDataPath parameters:parameters successResponse:^(NSDictionary *dic) {
         
-//        NSLog(@"%@",dic);
+
          NSMutableDictionary *dataDIC = [dic objectForKey:@"data"];
         
         
@@ -70,10 +70,10 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
             [weakSelf.dataArray addObject:GDmodel];
         }
         
-        [mutaArray addObject:[self.dataArray[0] pic]];
-        [mutaArray addObject:[self.dataArray[1] pic]];
-        [mutaArray addObject:[self.dataArray[2] pic]];
-        [mutaArray addObject:[self.dataArray[3] pic]];
+        [mutaArray addObject:[self.dataArray[arc4random()%5] pic]];
+        [mutaArray addObject:[self.dataArray[arc4random()%5+5] pic]];
+        [mutaArray addObject:[self.dataArray[arc4random()%5+10] pic]];
+        [mutaArray addObject:[self.dataArray[arc4random()%5+15] pic]];
         
 
         // 创建轮播图
