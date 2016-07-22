@@ -44,6 +44,9 @@
 		7DE80C3B1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE80C3A1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m */; };
 		7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF257791D36657B0022FC37 /* ZCLoginViewController.m */; };
 		7DF2577D1D3665870022FC37 /* CZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */; };
+		C2196CB41D42230B008EDF56 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2196CB31D42230B008EDF56 /* InviteViewController.m */; };
+		C2196CB61D42257D008EDF56 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = C2196CB51D42257D008EDF56 /* 6.png */; };
+		C2196CB81D4241F4008EDF56 /* 樱花瓣2.png in Resources */ = {isa = PBXBuildFile; fileRef = C2196CB71D4241F4008EDF56 /* 樱花瓣2.png */; };
 		C2431EF21D3CD63B0033A8C5 /* KeyboardStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EF11D3CD63B0033A8C5 /* KeyboardStyle.m */; };
 		C25598231D387B1100A7ADED /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = C25598221D387B1100A7ADED /* 10.png */; };
 		C25598261D3883FF00A7ADED /* LoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C25598251D3883FF00A7ADED /* LoverTableViewCell.m */; };
@@ -155,6 +158,10 @@
 		7DF2577B1D3665870022FC37 /* CZRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRegisterViewController.h; sourceTree = "<group>"; };
 		7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRegisterViewController.m; sourceTree = "<group>"; };
 		A0474E7ABB2ABC50A760EBC0 /* Pods-ZCProject0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.release.xcconfig"; sourceTree = "<group>"; };
+		C2196CB21D42230B008EDF56 /* InviteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteViewController.h; sourceTree = "<group>"; };
+		C2196CB31D42230B008EDF56 /* InviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
+		C2196CB51D42257D008EDF56 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		C2196CB71D4241F4008EDF56 /* 樱花瓣2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "樱花瓣2.png"; sourceTree = "<group>"; };
 		C2431EF01D3CD63B0033A8C5 /* KeyboardStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardStyle.h; sourceTree = "<group>"; };
 		C2431EF11D3CD63B0033A8C5 /* KeyboardStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardStyle.m; sourceTree = "<group>"; };
 		C25598221D387B1100A7ADED /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
@@ -515,6 +522,8 @@
 		7D415C5F1D34D655004E5E22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2196CB21D42230B008EDF56 /* InviteViewController.h */,
+				C2196CB31D42230B008EDF56 /* InviteViewController.m */,
 				C293EB561D363DAA00A59101 /* LoverHomePageViewController.h */,
 				C293EB571D363DAA00A59101 /* LoverHomePageViewController.m */,
 				C293EB581D363DAA00A59101 /* AddLoverViewController.h */,
@@ -536,6 +545,7 @@
 		7D415C601D34D65A004E5E22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2196CB51D42257D008EDF56 /* 6.png */,
 				C293EB681D363DB200A59101 /* 1.jpg */,
 				C25598221D387B1100A7ADED /* 10.png */,
 				C25598271D38903100A7ADED /* 11.png */,
@@ -551,6 +561,7 @@
 				C273E37A1D3DFC9400136884 /* emoji.png */,
 				C273E37C1D3DFC9800136884 /* void.png */,
 				C273E37E1D3DFC9C00136884 /* pluce.png */,
+				C2196CB71D4241F4008EDF56 /* 樱花瓣2.png */,
 				C25598241D3883FF00A7ADED /* LoverTableViewCell.h */,
 				C25598251D3883FF00A7ADED /* LoverTableViewCell.m */,
 				C2939C931D378B3400817651 /* FriendListTableViewCell.h */,
@@ -774,10 +785,12 @@
 				C293EB6B1D363DB200A59101 /* 1.jpg in Resources */,
 				7D84386C1D3C7A7200AF2875 /* STError@2x.png in Resources */,
 				C273E3811D3E086500136884 /* chat.png in Resources */,
+				C2196CB61D42257D008EDF56 /* 6.png in Resources */,
 				7DE80C311D3F0F1F00D4171C /* tools.png in Resources */,
 				7DE7E69D1D37812100127B17 /* backgroundImage.png in Resources */,
 				7D415C401D34D2A7004E5E22 /* LaunchScreen.storyboard in Resources */,
 				D69B63CC1D3F711A0026BAAB /* 9.jpg in Resources */,
+				C2196CB81D4241F4008EDF56 /* 樱花瓣2.png in Resources */,
 				C255982C1D38904300A7ADED /* 14.png in Resources */,
 				C255985A1D39220300A7ADED /* bubbleSelf.png in Resources */,
 				7DE80C361D3F604A00D4171C /* MeButtons.png in Resources */,
@@ -877,6 +890,7 @@
 				7D84386A1D3C7A7200AF2875 /* GCLoadingView.m in Sources */,
 				C293EB721D36441300A59101 /* MemorailDayTableViewCell.m in Sources */,
 				7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */,
+				C2196CB41D42230B008EDF56 /* InviteViewController.m in Sources */,
 				D64B79B61D3A17110075ADE0 /* ShopTableViewCell.m in Sources */,
 				D64B79AD1D39C1DB0075ADE0 /* MainTableViewCell.m in Sources */,
 				7DE7E6991D373B9500127B17 /* ProvingLoginStatus.m in Sources */,
