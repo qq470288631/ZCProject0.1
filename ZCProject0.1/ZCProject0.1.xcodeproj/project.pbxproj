@@ -30,6 +30,7 @@
 		7D8438731D3CB91700AF2875 /* ZCMemorialDayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8438721D3CB91700AF2875 /* ZCMemorialDayManager.m */; };
 		7D8438761D3CCD5F00AF2875 /* ZCMemorialDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8438751D3CCD5F00AF2875 /* ZCMemorialDayModel.m */; };
 		7D93DCCA1D388B3F00F5542A /* ZCLoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D93DCC91D388B3F00F5542A /* ZCLoginHelper.m */; };
+		7D9857FD1D405B0000E0C507 /* icon-cat-reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9857FC1D405B0000E0C507 /* icon-cat-reload@2x.png */; };
 		7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744B71D35CFD4004C534C /* BaseSqlite.m */; };
 		7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744BA1D35CFE7004C534C /* SqliteHelper.m */; };
 		7DB744BD1D35D27C004C534C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB744BC1D35D27C004C534C /* libsqlite3.tbd */; };
@@ -43,6 +44,9 @@
 		7DE80C3B1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE80C3A1D3F7E3800D4171C /* ZCNoMessageTableViewCell.m */; };
 		7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF257791D36657B0022FC37 /* ZCLoginViewController.m */; };
 		7DF2577D1D3665870022FC37 /* CZRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */; };
+		C2196CB41D42230B008EDF56 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2196CB31D42230B008EDF56 /* InviteViewController.m */; };
+		C2196CB61D42257D008EDF56 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = C2196CB51D42257D008EDF56 /* 6.png */; };
+		C2196CB81D4241F4008EDF56 /* 樱花瓣2.png in Resources */ = {isa = PBXBuildFile; fileRef = C2196CB71D4241F4008EDF56 /* 樱花瓣2.png */; };
 		C2431EF21D3CD63B0033A8C5 /* KeyboardStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EF11D3CD63B0033A8C5 /* KeyboardStyle.m */; };
 		C25598231D387B1100A7ADED /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = C25598221D387B1100A7ADED /* 10.png */; };
 		C25598261D3883FF00A7ADED /* LoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C25598251D3883FF00A7ADED /* LoverTableViewCell.m */; };
@@ -132,6 +136,7 @@
 		7D8438751D3CCD5F00AF2875 /* ZCMemorialDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMemorialDayModel.m; sourceTree = "<group>"; };
 		7D93DCC81D388B3F00F5542A /* ZCLoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLoginHelper.h; sourceTree = "<group>"; };
 		7D93DCC91D388B3F00F5542A /* ZCLoginHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLoginHelper.m; sourceTree = "<group>"; };
+		7D9857FC1D405B0000E0C507 /* icon-cat-reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cat-reload@2x.png"; sourceTree = "<group>"; };
 		7DB744B61D35CFD4004C534C /* BaseSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSqlite.h; sourceTree = "<group>"; };
 		7DB744B71D35CFD4004C534C /* BaseSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSqlite.m; sourceTree = "<group>"; };
 		7DB744B91D35CFE7004C534C /* SqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteHelper.h; sourceTree = "<group>"; };
@@ -154,6 +159,10 @@
 		7DF2577B1D3665870022FC37 /* CZRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZRegisterViewController.h; sourceTree = "<group>"; };
 		7DF2577C1D3665870022FC37 /* CZRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZRegisterViewController.m; sourceTree = "<group>"; };
 		A0474E7ABB2ABC50A760EBC0 /* Pods-ZCProject0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.release.xcconfig"; sourceTree = "<group>"; };
+		C2196CB21D42230B008EDF56 /* InviteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteViewController.h; sourceTree = "<group>"; };
+		C2196CB31D42230B008EDF56 /* InviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
+		C2196CB51D42257D008EDF56 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		C2196CB71D4241F4008EDF56 /* 樱花瓣2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "樱花瓣2.png"; sourceTree = "<group>"; };
 		C2431EF01D3CD63B0033A8C5 /* KeyboardStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardStyle.h; sourceTree = "<group>"; };
 		C2431EF11D3CD63B0033A8C5 /* KeyboardStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardStyle.m; sourceTree = "<group>"; };
 		C25598221D387B1100A7ADED /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
@@ -389,6 +398,7 @@
 		7D415C501D34D4AF004E5E22 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7D9857FC1D405B0000E0C507 /* icon-cat-reload@2x.png */,
 				7DE80C371D3F7E2700D4171C /* NOMessage.png */,
 				7DE80C351D3F604A00D4171C /* MeButtons.png */,
 				7DE80C301D3F0F1F00D4171C /* tools.png */,
@@ -517,6 +527,8 @@
 		7D415C5F1D34D655004E5E22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2196CB21D42230B008EDF56 /* InviteViewController.h */,
+				C2196CB31D42230B008EDF56 /* InviteViewController.m */,
 				C293EB561D363DAA00A59101 /* LoverHomePageViewController.h */,
 				C293EB571D363DAA00A59101 /* LoverHomePageViewController.m */,
 				C293EB581D363DAA00A59101 /* AddLoverViewController.h */,
@@ -538,6 +550,7 @@
 		7D415C601D34D65A004E5E22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2196CB51D42257D008EDF56 /* 6.png */,
 				C293EB681D363DB200A59101 /* 1.jpg */,
 				C25598221D387B1100A7ADED /* 10.png */,
 				C25598271D38903100A7ADED /* 11.png */,
@@ -553,6 +566,7 @@
 				C273E37A1D3DFC9400136884 /* emoji.png */,
 				C273E37C1D3DFC9800136884 /* void.png */,
 				C273E37E1D3DFC9C00136884 /* pluce.png */,
+				C2196CB71D4241F4008EDF56 /* 樱花瓣2.png */,
 				C25598241D3883FF00A7ADED /* LoverTableViewCell.h */,
 				C25598251D3883FF00A7ADED /* LoverTableViewCell.m */,
 				C2939C931D378B3400817651 /* FriendListTableViewCell.h */,
@@ -765,6 +779,7 @@
 				C273E37F1D3DFC9C00136884 /* pluce.png in Resources */,
 				C273E37D1D3DFC9800136884 /* void.png in Resources */,
 				C255985C1D39220700A7ADED /* bubble.png in Resources */,
+				7D9857FD1D405B0000E0C507 /* icon-cat-reload@2x.png in Resources */,
 				C25598231D387B1100A7ADED /* 10.png in Resources */,
 				7DE80C381D3F7E2700D4171C /* NOMessage.png in Resources */,
 				C273E37B1D3DFC9400136884 /* emoji.png in Resources */,
@@ -775,10 +790,12 @@
 				C293EB6B1D363DB200A59101 /* 1.jpg in Resources */,
 				7D84386C1D3C7A7200AF2875 /* STError@2x.png in Resources */,
 				C273E3811D3E086500136884 /* chat.png in Resources */,
+				C2196CB61D42257D008EDF56 /* 6.png in Resources */,
 				7DE80C311D3F0F1F00D4171C /* tools.png in Resources */,
 				7DE7E69D1D37812100127B17 /* backgroundImage.png in Resources */,
 				7D415C401D34D2A7004E5E22 /* LaunchScreen.storyboard in Resources */,
 				D69B63CC1D3F711A0026BAAB /* 9.jpg in Resources */,
+				C2196CB81D4241F4008EDF56 /* 樱花瓣2.png in Resources */,
 				C255982C1D38904300A7ADED /* 14.png in Resources */,
 				C255985A1D39220300A7ADED /* bubbleSelf.png in Resources */,
 				7DE80C361D3F604A00D4171C /* MeButtons.png in Resources */,
@@ -879,6 +896,7 @@
 				7D84386A1D3C7A7200AF2875 /* GCLoadingView.m in Sources */,
 				C293EB721D36441300A59101 /* MemorailDayTableViewCell.m in Sources */,
 				7D415C8A1D34F612004E5E22 /* ZCTabBar.m in Sources */,
+				C2196CB41D42230B008EDF56 /* InviteViewController.m in Sources */,
 				D64B79B61D3A17110075ADE0 /* ShopTableViewCell.m in Sources */,
 				D64B79AD1D39C1DB0075ADE0 /* MainTableViewCell.m in Sources */,
 				7DE7E6991D373B9500127B17 /* ProvingLoginStatus.m in Sources */,

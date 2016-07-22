@@ -21,19 +21,19 @@
 
 - (void)showView{
     
-    UILabel * addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, 0, 150, 40)];
-    addressLabel.backgroundColor = [UIColor yellowColor];
+    UILabel * addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, 0, 200, 40)];
+    addressLabel.text = @"北京·海淀";
     
     [self.contentView addSubview:addressLabel];
     
     UILabel * followLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(addressLabel.frame), CGRectGetMaxY(addressLabel.frame), addressLabel.frame.size.width, addressLabel.frame.size.height)];
-    followLabel.backgroundColor = [UIColor cyanColor];
-    
+    followLabel.text = @"0 你关注 / 0 关注你";
     [self.contentView addSubview:followLabel];
     
     
-    UILabel * descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(followLabel.frame) + 5, WindowHeight, 60)];
-    descriptionLabel.backgroundColor = [UIColor orangeColor];
+    UILabel * descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(followLabel.frame) + 5, WindowHeight - 30, 60)];
+    descriptionLabel.textColor = [UIColor grayColor];
+    descriptionLabel.text = @"这个家伙很懒什么都没有留下。";
     
     [self.contentView addSubview:descriptionLabel];
     
@@ -64,19 +64,21 @@
     
     
     UIButton * collectionButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, WindownWidth/4, 70)];
-    
+    [collectionButton addTarget:self action:@selector(collectionButtonClicked:) forControlEvents:(UIControlEventTouchUpInside)];
     [buttonView addSubview:collectionButton];
     
     UIButton * albumButton = [[UIButton alloc] initWithFrame:CGRectMake(WindownWidth/4, 0, WindownWidth/4, 70)];
-    
+    [albumButton addTarget:self action:@selector(albumButtonClicked:) forControlEvents:(UIControlEventTouchUpInside)];
     [buttonView addSubview:albumButton];
     
     UIButton * messageButton = [[UIButton alloc] initWithFrame:CGRectMake(WindownWidth/2 , 0, WindownWidth/4, 70)];
     
+    [messageButton addTarget:self action:@selector(messageButtonClicked:) forControlEvents:(UIControlEventTouchUpInside)];
     [buttonView addSubview:messageButton];
     
     UIButton * remindButton = [[UIButton alloc] initWithFrame:CGRectMake((WindownWidth/4) * 3, 0, WindownWidth/4, 70)];
     
+    [remindButton addTarget:self action:@selector(remindButtonClicked:) forControlEvents:(UIControlEventTouchUpInside)];
     [buttonView addSubview:remindButton];
     
     [self.contentView addSubview:buttonView];
@@ -88,23 +90,36 @@
     [self.contentView addSubview:bigLineView];
     
     
-    UILabel * trendsLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(bigLineView.frame), CGRectGetMaxY(bigLineView.frame), WindownWidth,50)];
-    trendsLabel.backgroundColor = [UIColor cyanColor];
+    UILabel * trendsLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(bigLineView.frame) + 15, CGRectGetMaxY(bigLineView.frame), WindownWidth - 30,50)];
     trendsLabel.text = @"你关注的朋友动态";
     
     [self.contentView addSubview:trendsLabel];
     
     
     UIImageView * smallUserImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(trendsLabel.frame) +10, 50, 50)];
-    smallUserImageView.backgroundColor = [UIColor yellowColor];
     smallUserImageView.layer.cornerRadius = 25;  // 将图层的边框设置为圆脚 （值为对象宽一半为圆形）
     smallUserImageView.layer.masksToBounds = YES; // 隐藏边界
+    smallUserImageView.image = [UIImage imageNamed:@"icon-cat-reload@2x.png"];
+    
     [self.contentView addSubview:smallUserImageView];
     
-    UILabel * publishDynamicLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(smallUserImageView.frame) + 10, CGRectGetMinY(smallUserImageView.frame), WindownWidth - CGRectGetMaxX(smallUserImageView.frame) - 10, smallUserImageView.frame.size.height)];
-    publishDynamicLabel.backgroundColor = [UIColor purpleColor];
     
-    [self.contentView addSubview:publishDynamicLabel];
+    
+    UITextField * publishDynamicTextFeild = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(smallUserImageView.frame) + 10, CGRectGetMinY(smallUserImageView.frame) + 5 , WindownWidth - CGRectGetMaxX(smallUserImageView.frame) - 30, smallUserImageView.frame.size.height -10 )];
+    //人工增加内边距
+    UIView * publishDynamicPlaceHolderPaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, publishDynamicTextFeild.bounds.size.height)];
+    
+    //将Padding视图添加到用户名文本框左视图
+    publishDynamicTextFeild.leftView = publishDynamicPlaceHolderPaddingView;
+    publishDynamicTextFeild.leftViewMode = UITextFieldViewModeAlways;
+    
+    publishDynamicTextFeild.placeholder = @"说点什么，发个动态吧？";
+    [publishDynamicTextFeild setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];//文本颜色
+    
+    
+    publishDynamicTextFeild.background = [UIImage imageNamed:@"PublishDynamicTextFeild"];
+    
+    [self.contentView addSubview:publishDynamicTextFeild];
     
 }
 
@@ -121,7 +136,30 @@
 
 }
 
+- (void)collectionButtonClicked:(UIButton *)sender{
 
+    NSLog(@"1");
+    
+}
+
+- (void)albumButtonClicked:(UIButton *)sender{
+    
+       NSLog(@"2");
+    
+    
+}
+
+- (void)messageButtonClicked:(UIButton *)sender{
+    
+    
+       NSLog(@"3");
+}
+
+- (void)remindButtonClicked:(UIButton *)sender{
+    
+       NSLog(@"4");
+    
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

@@ -51,12 +51,16 @@ static SqliteHelper * helper = nil;
     if ([_database open]) {
         
         FMResultSet * resultSet = [self.database executeQuery:sqlString];
-         [_database close];
+//         [_database close];
         return resultSet;
     }else{
         [_database close];
         return nil;
     }
+}
+
+-(void)dealloc{
+    [_database close];
 }
 
 
