@@ -21,19 +21,19 @@
 
 - (void)showView{
     
-    UILabel * addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, 0, 150, 40)];
-    addressLabel.backgroundColor = [UIColor yellowColor];
+    UILabel * addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, 0, 200, 40)];
+    addressLabel.text = @"北京·海淀";
     
     [self.contentView addSubview:addressLabel];
     
     UILabel * followLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(addressLabel.frame), CGRectGetMaxY(addressLabel.frame), addressLabel.frame.size.width, addressLabel.frame.size.height)];
-    followLabel.backgroundColor = [UIColor cyanColor];
-    
+    followLabel.text = @"0 你关注 / 0 关注你";
     [self.contentView addSubview:followLabel];
     
     
-    UILabel * descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(followLabel.frame) + 5, WindowHeight, 60)];
-    descriptionLabel.backgroundColor = [UIColor orangeColor];
+    UILabel * descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(followLabel.frame) + 5, WindowHeight - 30, 60)];
+    descriptionLabel.textColor = [UIColor grayColor];
+    descriptionLabel.text = @"这个家伙很懒什么都没有留下。";
     
     [self.contentView addSubview:descriptionLabel];
     
@@ -88,17 +88,17 @@
     [self.contentView addSubview:bigLineView];
     
     
-    UILabel * trendsLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(bigLineView.frame), CGRectGetMaxY(bigLineView.frame), WindownWidth,50)];
-    trendsLabel.backgroundColor = [UIColor cyanColor];
+    UILabel * trendsLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(bigLineView.frame) + 15, CGRectGetMaxY(bigLineView.frame), WindownWidth - 30,50)];
     trendsLabel.text = @"你关注的朋友动态";
     
     [self.contentView addSubview:trendsLabel];
     
     
     UIImageView * smallUserImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(trendsLabel.frame) +10, 50, 50)];
-    smallUserImageView.backgroundColor = [UIColor yellowColor];
     smallUserImageView.layer.cornerRadius = 25;  // 将图层的边框设置为圆脚 （值为对象宽一半为圆形）
     smallUserImageView.layer.masksToBounds = YES; // 隐藏边界
+    smallUserImageView.image = [UIImage imageNamed:@"icon-cat-reload@2x.png"];
+    
     [self.contentView addSubview:smallUserImageView];
     
     UILabel * publishDynamicLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(smallUserImageView.frame) + 10, CGRectGetMinY(smallUserImageView.frame), WindownWidth - CGRectGetMaxX(smallUserImageView.frame) - 10, smallUserImageView.frame.size.height)];

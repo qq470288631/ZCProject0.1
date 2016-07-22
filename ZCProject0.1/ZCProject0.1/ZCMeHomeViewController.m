@@ -49,13 +49,13 @@
 - (void)createView{
     
     UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(-10, -50, 94, 94)];
-    imageView.backgroundColor = [UIColor blackColor];
+    imageView.backgroundColor = [UIColor whiteColor];
     imageView.layer.cornerRadius = 47;  // 将图层的边框设置为圆脚 （值为对象宽一半为圆形）
     imageView.layer.masksToBounds = YES; // 隐藏边界
     imageView.layer.anchorPoint = CGPointMake(0.25, 0);//锚点为原点
     imageView.layer.borderWidth = 1;  // 给图层添加一个有色边框
     imageView.layer.borderColor = [UIColor whiteColor].CGColor;   //边框颜色
-    
+    imageView.image = [UIImage imageNamed:@"icon-cat-reload@2x.png"];
     
     self.userImageView = imageView;
     
@@ -136,7 +136,7 @@
     
     switch (indexPath.row) {
         case 0:
-            return 350;
+            return 360;
             break;
     
         case 1:

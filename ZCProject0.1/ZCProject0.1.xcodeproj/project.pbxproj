@@ -30,6 +30,7 @@
 		7D8438731D3CB91700AF2875 /* ZCMemorialDayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8438721D3CB91700AF2875 /* ZCMemorialDayManager.m */; };
 		7D8438761D3CCD5F00AF2875 /* ZCMemorialDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8438751D3CCD5F00AF2875 /* ZCMemorialDayModel.m */; };
 		7D93DCCA1D388B3F00F5542A /* ZCLoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D93DCC91D388B3F00F5542A /* ZCLoginHelper.m */; };
+		7D9857FD1D405B0000E0C507 /* icon-cat-reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9857FC1D405B0000E0C507 /* icon-cat-reload@2x.png */; };
 		7DB744B81D35CFD4004C534C /* BaseSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744B71D35CFD4004C534C /* BaseSqlite.m */; };
 		7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB744BA1D35CFE7004C534C /* SqliteHelper.m */; };
 		7DB744BD1D35D27C004C534C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB744BC1D35D27C004C534C /* libsqlite3.tbd */; };
@@ -130,6 +131,7 @@
 		7D8438751D3CCD5F00AF2875 /* ZCMemorialDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMemorialDayModel.m; sourceTree = "<group>"; };
 		7D93DCC81D388B3F00F5542A /* ZCLoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLoginHelper.h; sourceTree = "<group>"; };
 		7D93DCC91D388B3F00F5542A /* ZCLoginHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLoginHelper.m; sourceTree = "<group>"; };
+		7D9857FC1D405B0000E0C507 /* icon-cat-reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cat-reload@2x.png"; sourceTree = "<group>"; };
 		7DB744B61D35CFD4004C534C /* BaseSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSqlite.h; sourceTree = "<group>"; };
 		7DB744B71D35CFD4004C534C /* BaseSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSqlite.m; sourceTree = "<group>"; };
 		7DB744B91D35CFE7004C534C /* SqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteHelper.h; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 		7D415C501D34D4AF004E5E22 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7D9857FC1D405B0000E0C507 /* icon-cat-reload@2x.png */,
 				7DE80C371D3F7E2700D4171C /* NOMessage.png */,
 				7DE80C351D3F604A00D4171C /* MeButtons.png */,
 				7DE80C301D3F0F1F00D4171C /* tools.png */,
@@ -757,6 +760,7 @@
 				C273E37F1D3DFC9C00136884 /* pluce.png in Resources */,
 				C273E37D1D3DFC9800136884 /* void.png in Resources */,
 				C255985C1D39220700A7ADED /* bubble.png in Resources */,
+				7D9857FD1D405B0000E0C507 /* icon-cat-reload@2x.png in Resources */,
 				C25598231D387B1100A7ADED /* 10.png in Resources */,
 				7DE80C381D3F7E2700D4171C /* NOMessage.png in Resources */,
 				C273E37B1D3DFC9400136884 /* emoji.png in Resources */,
