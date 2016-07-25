@@ -57,11 +57,11 @@
     NSInteger day = [comp1 day];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:[NSString stringWithFormat:@"%ld-%ld-%ld",year,month,day]];
-
     self.ZCMemorialDatManager = [[ZCMemorialDayManager alloc]init];
     [_ZCMemorialDatManager createMemorialDayTable];
-    [_ZCMemorialDatManager addMemorialDayWithTitle:_titleTextField.text date:formatter.dateFormat];
+    [_ZCMemorialDatManager addMemorialDayWithTitle:_titleTextField.text date:formatter.dateFormat day:_dateLable.text];
     self.myBlock();
+    NSLog(@"%@", formatter);
     [self.navigationController popViewControllerAnimated:YES];
    
 }
@@ -74,7 +74,6 @@
     NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *dayComponents = [calendar components:NSCalendarUnitDay fromDate:picker.date toDate:date options:0];
     _dateLable.text = [NSString stringWithFormat:@"%ld天",dayComponents.day];
-    
     
 }
 

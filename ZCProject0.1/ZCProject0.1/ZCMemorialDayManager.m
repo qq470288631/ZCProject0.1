@@ -34,14 +34,14 @@
 
 - (BOOL)createMemorialDayTable{
 
-    NSString * sql = @"CREATE TABLE IF NOT EXISTS ZC_MemorialDay (id INTEGER PRIMARY KEY AUTOINCREMENT,username TEXT NOT NULL,title TEXT NOT NULL UNIQUE,memorialDayDate TEXT NOT NULL)";
+    NSString * sql = @"CREATE TABLE IF NOT EXISTS ZC_MemorialDay (id INTEGER PRIMARY KEY AUTOINCREMENT,username TEXT NOT NULL,title TEXT NOT NULL UNIQUE,memorialDayDate TEXT NOT NULL,memorialDay TEXT NOT NULL)";
     BOOL result = [self.helper executeUpdate:sql];
     return result;
 }
 
--(BOOL)addMemorialDayWithTitle:(NSString *)title date:(NSString *)date{
+-(BOOL)addMemorialDayWithTitle:(NSString *)title date:(NSString *)date day:(NSString *)day{
 
-    NSString * sql = [NSString stringWithFormat:@"INSERT INTO ZC_MemorialDay(title,memorialDayDate,username) VALUES ('%@','%@','%@')",title,date,[self.loginHelper getNSUserDefaultsUsername]];
+    NSString * sql = [NSString stringWithFormat:@"INSERT INTO ZC_MemorialDay(title,memorialDayDate,memorialDay,username) VALUES ('%@','%@','%@','%@')",title,date,day,[self.loginHelper getNSUserDefaultsUsername]];
     BOOL result = [self.helper executeUpdate:sql];
     return result;
     
@@ -49,21 +49,22 @@
 
 - (ZCMemorialDayModel *)getMemorialDayDateWithTitle:(NSString *)title{
 
-    NSString * sql = [NSString stringWithFormat:@"SELECT id,title,memorialDayDate FROM ZC_MemorialDay WHERE title = '%@' AND memorialDayDate = '%@'",title,[self.loginHelper getNSUserDefaultsUsername]];
+    NSString * sql = [NSString stringWithFormat:@"SELECT id,title,memorialDayDate,memorialDay FROM ZC_MemorialDay WHERE title = '%@' AND memorialDayDate = '%@'",title,[self.loginHelper getNSUserDefaultsUsername]];
     FMResultSet * set = [self.helper executeQuery:sql];
     ZCMemorialDayModel * model = [ZCMemorialDayModel new];
     while ([set next]) {
         int ID = [set intForColumn:@"id"];
         NSString * title = [set stringForColumn:@"title"];
         NSString * date = [set stringForColumn:@"memorialDayDate"];
-        model = [[ZCMemorialDayModel alloc] initWithID:ID title:title date:date];
+        NSString * day = [set stringForColumn:@"memorialDay"];
+        model = [[ZCMemorialDayModel alloc] initWithID:ID title:title date:date day:day];
     }
     return model;
 }
 
-- (BOOL)updateMemorialDayWithTitle:(NSString *)title forDate:(NSString *)date{
+- (BOOL)updateMemorialDayWithTitle:(NSString *)title forDate:(NSString *)date andDay:(NSString *)day{
 
-    NSString * sql = [NSString stringWithFormat:@"UPDATE ZC_MemorialDay SET memorialDayDate = '%@' WHERE title = '%@' AND memorialDayDate = '%@' ;",date,title,[self.loginHelper getNSUserDefaultsUsername]];
+    NSString * sql = [NSString stringWithFormat:@"UPDATE ZC_MemorialDay SET memorialDayDate = '%@' WHERE title = '%@' AND memorialDayDate = '%@' memorialDay = '%@';",date,title,day,[self.loginHelper getNSUserDefaultsUsername]];
     BOOL result = [self.helper executeUpdate:sql];
     return result;
     
@@ -71,7 +72,7 @@
 
 - (NSMutableArray *)getAllMemorialDay{
     NSMutableArray * dataArray = [NSMutableArray array];
-    NSString * sql = [NSString stringWithFormat:@"SELECT id,title,memorialDayDate FROM ZC_MemorialDay"];
+    NSString * sql = [NSString stringWithFormat:@"SELECT id,title,memorialDayDate,memorialDay FROM ZC_MemorialDay"];
     FMResultSet * set = [self.helper executeQuery:sql];
     while ([set next]) {
         
@@ -79,7 +80,8 @@
         int ID = [set intForColumn:@"id"];
         NSString * title = [set stringForColumn:@"title"];
         NSString * date = [set stringForColumn:@"memorialDayDate"];
-        model = [[ZCMemorialDayModel alloc] initWithID:ID title:title date:date];
+        NSString * day = [set stringForColumn:@"memorialDay"];
+        model = [[ZCMemorialDayModel alloc] initWithID:ID title:title date:date day:day];
         [dataArray addObject:model];
     }
     return dataArray;

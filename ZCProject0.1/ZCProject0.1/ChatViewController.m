@@ -88,10 +88,6 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    
-    
 }
 
 /*

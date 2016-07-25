@@ -14,6 +14,7 @@
 @property(nonatomic, strong)UITableView *memorailTableView;
 @property(nonatomic, strong)NSMutableArray *dataArray;
 @property(nonatomic, strong)ZCMemorialDayManager *zcManager;
+
 @end
 
 @implementation MemorailDayViewController
@@ -40,21 +41,14 @@
     self.memorailTableView                                                                                                                                                                                                  = [[UITableView alloc]initWithFrame:self.view.frame];
     self.memorailTableView.delegate = self;
     self.memorailTableView.dataSource = self;
-    //    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"1.jpg"]];
-    //    [self.memorailTableView setBackgroundView:imageView];
-    //    //去掉cell的下划线
-    //    self.memorailTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    //隐藏掉多余的cell
-    //     self.memorailTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:_memorailTableView];
     [self.memorailTableView registerClass:[MemorailDayTableViewCell class] forCellReuseIdentifier:@"CELL"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(addMemorial:)];
-   
+    
 }
 -(void)addMemorial:(UITabBarItem *)sender
 {
     AddMemorailViewController *addVC = [[AddMemorailViewController alloc]init];
-    addVC.ID = self.ID;
     typeof(self) pSelf = self;
     addVC.myBlock = ^() {
         [pSelf loadData];
@@ -70,7 +64,7 @@
     ZCMemorialDayModel *model = _dataArray[indexPath.row];
     cell.titleLable.text = model.title;
     cell.dateLable.text = model.date;
-//    cell.dayLable.text = @"365天";
+    cell.dayLable.text = model.day;
     return cell;
 }
  

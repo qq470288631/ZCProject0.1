@@ -10,13 +10,14 @@
 
 @implementation ZCMemorialDayModel
 
-- (instancetype)initWithID:(int)ID title:(NSString *)title date:(NSString *)date
+- (instancetype)initWithID:(int)ID title:(NSString *)title date:(NSString *)date day:(NSString *)day
 {
     self = [super init];
     if (self) {
         _ID = ID;
         _title = title;
         _date = date;
+        _day = day;
     }
     return self;
 }
