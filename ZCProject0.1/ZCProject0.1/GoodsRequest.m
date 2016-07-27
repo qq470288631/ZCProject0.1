@@ -23,8 +23,15 @@
     
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     
+    
+    
+    
     //添加数据模式类型
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    
+    
+    
+    
     //以GET方式 通过AFNetworking 发送请求
     [manager GET:url parameters:parametersDic progress:nil
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -34,7 +41,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         failure(error);
-        
+         
     }];
     
 }

@@ -26,14 +26,14 @@
     
     self.tabBar.hidden = YES;
     
-    UIButton * acitivityButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [acitivityButton setBackgroundImage:[UIImage imageNamed:@"paper.png"] forState:(UIControlStateNormal)];
-    [acitivityButton setBackgroundImage:[UIImage imageNamed:@"paperH.png"] forState:(UIControlStateSelected)];
-    [acitivityButton setTitle:@"推荐" forState:(UIControlStateNormal)];
-    acitivityButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-    acitivityButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, -40, 0);
-    acitivityButton.titleLabel.font = [UIFont systemFontOfSize:12];
-    [acitivityButton setTitleColor:[UIColor colorWithRed:38.0/255 green:217.0/255 blue:165.0/255 alpha:1] forState:UIControlStateSelected];
+//    UIButton * acitivityButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+//    [acitivityButton setBackgroundImage:[UIImage imageNamed:@"paper.png"] forState:(UIControlStateNormal)];
+//    [acitivityButton setBackgroundImage:[UIImage imageNamed:@"paperH.png"] forState:(UIControlStateSelected)];
+//    [acitivityButton setTitle:@"推荐" forState:(UIControlStateNormal)];
+//    acitivityButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+//    acitivityButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, -40, 0);
+//    acitivityButton.titleLabel.font = [UIFont systemFontOfSize:12];
+//    [acitivityButton setTitleColor:[UIColor colorWithRed:38.0/255 green:217.0/255 blue:165.0/255 alpha:1] forState:UIControlStateSelected];
     
     UIButton * movieButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [movieButton setBackgroundImage:[UIImage imageNamed:@"video.png"] forState:(UIControlStateNormal)];
@@ -43,6 +43,12 @@
     movieButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, -40, 0);
     movieButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [movieButton setTitleColor:[UIColor colorWithRed:38.0/255 green:217.0/255 blue:165.0/255 alpha:1] forState:UIControlStateSelected];
+    [movieButton setTitleColor:[UIColor cyanColor] forState:(UIControlStateNormal)];
+    
+   
+    
+    
+    
     
     UIButton * theaterButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [theaterButton setBackgroundImage:[UIImage imageNamed:@"2image.png"] forState:(UIControlStateNormal)];
@@ -53,6 +59,11 @@
     theaterButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [theaterButton setTitleColor:[UIColor colorWithRed:38.0/255 green:217.0/255 blue:165.0/255 alpha:1] forState:UIControlStateSelected];
     
+    [theaterButton setTitleColor:[UIColor cyanColor] forState:(UIControlStateNormal)];
+    
+    
+    
+    
     UIButton * mineButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [mineButton setBackgroundImage:[UIImage imageNamed:@"person.png"] forState:(UIControlStateNormal)];
     [mineButton setBackgroundImage:[UIImage imageNamed:@"personH.png"] forState:(UIControlStateSelected)];
@@ -61,14 +72,18 @@
     mineButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, -40, 0);
     mineButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [mineButton setTitleColor:[UIColor colorWithRed:38.0/255 green:217.0/255 blue:165.0/255 alpha:1] forState:UIControlStateSelected];
+    [mineButton setTitleColor:[UIColor cyanColor] forState:(UIControlStateNormal)];
     
-    self.zcTabBar = [[ZCTabBar alloc] initWithItems:@[acitivityButton,movieButton,theaterButton,mineButton] frame:CGRectMake(0, self.view.bounds.size.height - 49, self.view.bounds.size.width, 49)];
+    
+    
+    
+    self.zcTabBar = [[ZCTabBar alloc] initWithItems:@[movieButton,theaterButton,mineButton] frame:CGRectMake(0, self.view.bounds.size.height - 49, self.view.bounds.size.width, 49)];
     self.zcTabBar.zcDelegate = self;
     
     [self.view addSubview:self.zcTabBar];
     
-    UIViewController * v1 = [UIViewController new];
-    v1.view.backgroundColor = [UIColor redColor];
+//    UIViewController * v1 = [UIViewController new];
+//    v1.view.backgroundColor = [UIColor redColor];
     
     GoodsViewController * Goods = [[GoodsViewController alloc]init];
     UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:Goods];
@@ -80,7 +95,7 @@
     
     ZCMeHomeViewController * meHomeViewController = [ZCMeHomeViewController new];
     UINavigationController * meHomeNav = [[UINavigationController alloc] initWithRootViewController:meHomeViewController];
-    self.viewControllers = @[v1,nav2,v3,meHomeNav];
+    self.viewControllers = @[nav2,v3,meHomeNav];
     
 }
 
