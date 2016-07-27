@@ -8,17 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol ShopTableViewCelldelegate <NSObject>
+@protocol ShopTableViewCellDelegate <NSObject>
 
--(void)dlickpurBtn:(NSIndexPath *)indexPath;
+-(void)didSelectedBuyButtonWithCellIndexPath:(NSIndexPath *)indexPath;
+
 
 @end
 
-
-
 @interface ShopTableViewCell : UITableViewCell
 
-@property(nonatomic,weak)id<ShopTableViewCelldelegate>delegate;
+@property (nonatomic,weak)id<ShopTableViewCellDelegate>delegate;
 
 @property(nonatomic,strong)UILabel *titleLabel;
 
@@ -35,6 +34,8 @@
 @property(nonatomic,strong)UILabel *priceLabel;
 
 @property(nonatomic,strong)NSIndexPath *indexPath;
+
+
 
 
 @end

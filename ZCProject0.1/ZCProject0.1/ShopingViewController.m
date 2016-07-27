@@ -10,12 +10,16 @@
 #import "ShopTableViewCell.h"
 #import "GoodsRequest.h"
 #import "ShopModel.h"
+
 #import "WebViewController.h"
+
+#define Kwidth self.view.frame.size.width
+#define KHeith self.view.frame.size.height
 
 static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
 
 
-@interface ShopingViewController ()<UITableViewDataSource,UITableViewDelegate,ShopTableViewCelldelegate>
+@interface ShopingViewController ()<UITableViewDataSource,UITableViewDelegate,ShopTableViewCellDelegate>
 
 @property(nonatomic,strong)UITableView *ShopTableView;
 
@@ -23,10 +27,11 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
 
 @property(nonatomic,strong)NSMutableArray *picArray;
 
-@property(nonatomic,copy)NSString *url;
+@property(nonatomic,copy)NSMutableArray *urlArray;
 
+//@property(nonatomic,strong)UIWebView *webView;
 
-
+@property(nonatomic,strong)ShopModel *shopM;
 
 @end
 
@@ -36,8 +41,6 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     [super viewDidLoad];
 
     self.ShopTableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:(UITableViewStylePlain)];
-    
-    
     
     self.ShopTableView.delegate = self;
     
@@ -100,9 +103,30 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     
 }
 
+//计算文本所占大小,并返回高度
+-(CGFloat)textHeight:(NSString *)test{
+    
+    //计算内容所占高度
+    CGRect rect = [test boundingRectWithSize:CGSizeMake(Kwidth *0.8, 1000) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil];
+    
+    return rect.size.height;
+    
+    
+    
+    
+}
+
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 500;
+     ShopModel *str = _mutaArray[indexPath.row];
+    
+    //计算字符串高度
+    CGFloat height = [self textHeight:str.desc];
+    
+    //返回字符串高度+空白区域的高度
+    
+    return height + 350;
     
 }
 
@@ -119,32 +143,30 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ShopTableViewCell *cell = [[ShopTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell"];
     
+    _shopM = self.mutaArray[indexPath.row];
     
     cell.delegate = self;
     
     cell.indexPath = indexPath;
     
     
+    self.ID = _shopM.ID;
     
     
     
-    ShopModel *shopM = self.mutaArray[indexPath.row];
+    cell.titleLabel.text = _shopM.title;
     
-    self.url = shopM.url;
-    self.ID = shopM.ID;
-    cell.titleLabel.text = shopM.title;
-    
-    cell.descLabel.text = shopM.desc;
+    cell.descLabel.text = _shopM.desc;
     
     cell.descLabel.lineBreakMode = UILineBreakModeCharacterWrap;
     
     cell.descLabel.numberOfLines = 0;
     
-    NSString *string = shopM.likes;
+    NSString *string = _shopM.likes;
     
     cell.loveLabel.text = [NSString stringWithFormat:@"❤️%@",string];
     
-    NSString *priceStr = shopM.price;
+    NSString *priceStr = _shopM.price;
     
     cell.priceLabel.text = [NSString stringWithFormat:@"参考价 %@元",priceStr];
     
@@ -152,23 +174,16 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     
     [cell.commentBtn setTitleColor:[UIColor cyanColor] forState:(UIControlStateNormal)];
     
+    //自适应高度descLabel
+    NSString *descStr = cell.descLabel.text;
     
+    CGFloat height = [self textHeight:descStr];
     
+    cell.descLabel.frame = CGRectMake(Kwidth *0.1, KHeith *0.12, Kwidth *0.8, height);
     
-    [cell.purBtn setTitle:@"购买" forState:(UIControlStateNormal)];
+  
     
-    [cell.purBtn setTitleColor:[UIColor cyanColor] forState:(UIControlStateNormal)];
-    
-   
-    
-    
-    
-    
-    
-    
-    //属性传值过来的照片,从上一个页面用属性传值传过来
-    
-    for (NSDictionary * urlDic in shopM.pic) {
+    for (NSDictionary * urlDic in _shopM.pic) {
         
         NSString * imagePathString = [urlDic objectForKey:@"p"];
         
@@ -195,21 +210,30 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     
 }
 
--(void)dlickpurBtn:(NSIndexPath *)indexPath{
+
+
+
+
+
+
+
+
+
+
+-(void)didSelectedBuyButtonWithCellIndexPath:(NSIndexPath *)indexPath{
     
     ShopModel *shopMD = self.mutaArray[indexPath.row];
     
-    WebViewController *webVC = [[WebViewController alloc]init];
+    WebViewController *wedVC = [[WebViewController alloc]init];
     
-    [self.navigationController pushViewController:webVC animated:YES];
+    [self.navigationController pushViewController:wedVC animated:YES];
     
-    webVC.jumpUrl = shopMD.url;
-    
-    
+    wedVC.jumpUrl = shopMD.url;
     
     
     
 }
+
 
 
 

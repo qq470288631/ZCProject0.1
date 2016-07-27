@@ -10,7 +10,7 @@
 
 @interface WebViewController ()
 
-@property(nonatomic,strong)UIWebView *webView;
+@property(nonatomic,strong)UIWebView *webVC;
 
 @end
 
@@ -18,26 +18,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.webView = [[UIWebView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.webView.scalesPageToFit = YES;
+    self.webVC = [[UIWebView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.webVC.scalesPageToFit = YES;
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:_jumpUrl]];
     
-    [_webView loadRequest:request];
+    [_webVC loadRequest:request];
     
-    [self.view addSubview:_webView];
+    
+    
+    
+    
+    [self.view addSubview:self.webVC];
     
     
     
     
 }
 
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-   
+    // Dispose of any resources that can be recreated.
 }
 
 /*
