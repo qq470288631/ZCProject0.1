@@ -10,7 +10,7 @@
 #import "ZCTabBar.h"
 #import "GoodsViewController.h"
 #import "ZCMeHomeViewController.h"
-
+#import "LoverHomePageViewController.h"
 @interface RootViewController ()
 
 
@@ -90,7 +90,7 @@
     
     Goods.view.backgroundColor = [UIColor yellowColor];
     
-    UIViewController * v3 = [UIViewController new];
+    LoverHomePageViewController * v3 = [[LoverHomePageViewController alloc]init];;
     v3.view.backgroundColor = [UIColor cyanColor];
     
     ZCMeHomeViewController * meHomeViewController = [ZCMeHomeViewController new];
