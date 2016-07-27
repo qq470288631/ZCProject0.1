@@ -11,7 +11,7 @@
 #import "GoodsViewController.h"
 #import "ZCMeHomeViewController.h"
 #import "LoverHomePageViewController.h"
-@interface RootViewController ()
+@interface RootViewController ()<ZCDelegate>
 
 
 @property(nonatomic,strong)ZCTabBar * zcTabBar;
@@ -25,15 +25,6 @@
     
     
     self.tabBar.hidden = YES;
-    
-//    UIButton * acitivityButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-//    [acitivityButton setBackgroundImage:[UIImage imageNamed:@"paper.png"] forState:(UIControlStateNormal)];
-//    [acitivityButton setBackgroundImage:[UIImage imageNamed:@"paperH.png"] forState:(UIControlStateSelected)];
-//    [acitivityButton setTitle:@"推荐" forState:(UIControlStateNormal)];
-//    acitivityButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-//    acitivityButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, -40, 0);
-//    acitivityButton.titleLabel.font = [UIFont systemFontOfSize:12];
-//    [acitivityButton setTitleColor:[UIColor colorWithRed:38.0/255 green:217.0/255 blue:165.0/255 alpha:1] forState:UIControlStateSelected];
     
     UIButton * movieButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [movieButton setBackgroundImage:[UIImage imageNamed:@"video.png"] forState:(UIControlStateNormal)];
@@ -82,20 +73,19 @@
     
     [self.view addSubview:self.zcTabBar];
     
-//    UIViewController * v1 = [UIViewController new];
-//    v1.view.backgroundColor = [UIColor redColor];
-    
     GoodsViewController * Goods = [[GoodsViewController alloc]init];
     UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:Goods];
     
     Goods.view.backgroundColor = [UIColor yellowColor];
     
-    LoverHomePageViewController * v3 = [[LoverHomePageViewController alloc]init];;
+    LoverHomePageViewController * v3 = [[LoverHomePageViewController alloc]init];
+    UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:v3];
+
     v3.view.backgroundColor = [UIColor cyanColor];
     
     ZCMeHomeViewController * meHomeViewController = [ZCMeHomeViewController new];
     UINavigationController * meHomeNav = [[UINavigationController alloc] initWithRootViewController:meHomeViewController];
-    self.viewControllers = @[nav2,v3,meHomeNav];
+    self.viewControllers = @[nav2,nav3,meHomeNav];
     
 }
 
