@@ -18,7 +18,7 @@
         for (int i=0; i<items.count; i++) {
             
             UIButton * btn = (UIButton *)items[i];
-            CGFloat width = self.bounds.size.width / 4;
+            CGFloat width = self.bounds.size.width / 3;
             CGFloat heigth = self.bounds.size.height;
             
             btn.frame = CGRectMake(i*width+20, 0, width-50, heigth-10);
