@@ -39,7 +39,6 @@
     self.backgroundTableView = [[UITableView alloc]initWithFrame:self.view.frame];
     self.backgroundTableView.dataSource = self;
     self.backgroundTableView.delegate = self;
-//    self.backgroundTableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.backgroundTableView];
     self.backgroundImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, WindownWidth, 364)];
     self.backgroundImage.image = [UIImage imageNamed:@"13"];
@@ -52,7 +51,7 @@
     self.visiteLable.backgroundColor = [UIColor clearColor];
     [self.backgroundImage addSubview:_visiteLable];
 
-    //header注册
+//    header注册
     [self.backgroundTableView registerClass:[LoverZoneHeaderTableViewCell class] forCellReuseIdentifier:@"cell"];
     //other cell
 //    [self.backgroundTableView registerClass:[AddLoverTableViewCell class] forCellReuseIdentifier:@"cell"];
@@ -66,6 +65,7 @@
     self.backgroundTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
 }
+
 //实现代理方法
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
@@ -85,6 +85,7 @@
         LoverZoneHeaderTableViewCell *cell = [[LoverZoneHeaderTableViewCell alloc]init];
         cell.backgroundColor = [UIColor colorWithPatternImage:_backgroundImage.image];
         
+        
         return cell;
         
     }else if (indexPath.row == 1){
@@ -92,6 +93,7 @@
         cell.chatLable.text = @"聊天";
         cell.chatImage.image = [UIImage imageNamed:@"chat.png"];
         cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
+
         return cell;
     
     }else if (indexPath.row == 2){

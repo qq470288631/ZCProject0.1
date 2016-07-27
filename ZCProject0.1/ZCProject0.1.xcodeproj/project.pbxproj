@@ -48,7 +48,6 @@
 		C2196CB41D42230B008EDF56 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2196CB31D42230B008EDF56 /* InviteViewController.m */; };
 		C2196CB61D42257D008EDF56 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = C2196CB51D42257D008EDF56 /* 6.png */; };
 		C2196CB81D4241F4008EDF56 /* 樱花瓣2.png in Resources */ = {isa = PBXBuildFile; fileRef = C2196CB71D4241F4008EDF56 /* 樱花瓣2.png */; };
-		C2431EF21D3CD63B0033A8C5 /* KeyboardStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EF11D3CD63B0033A8C5 /* KeyboardStyle.m */; };
 		C25598231D387B1100A7ADED /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = C25598221D387B1100A7ADED /* 10.png */; };
 		C25598261D3883FF00A7ADED /* LoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C25598251D3883FF00A7ADED /* LoverTableViewCell.m */; };
 		C25598281D38903100A7ADED /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = C25598271D38903100A7ADED /* 11.png */; };
@@ -166,8 +165,6 @@
 		C2196CB31D42230B008EDF56 /* InviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
 		C2196CB51D42257D008EDF56 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 		C2196CB71D4241F4008EDF56 /* 樱花瓣2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "樱花瓣2.png"; sourceTree = "<group>"; };
-		C2431EF01D3CD63B0033A8C5 /* KeyboardStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardStyle.h; sourceTree = "<group>"; };
-		C2431EF11D3CD63B0033A8C5 /* KeyboardStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardStyle.m; sourceTree = "<group>"; };
 		C25598221D387B1100A7ADED /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		C25598241D3883FF00A7ADED /* LoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoverTableViewCell.h; sourceTree = "<group>"; };
 		C25598251D3883FF00A7ADED /* LoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoverTableViewCell.m; sourceTree = "<group>"; };
@@ -540,8 +537,6 @@
 				C25598471D38BF0100A7ADED /* AddLoverViewController.m */,
 				C293EB5A1D363DAA00A59101 /* ChatViewController.h */,
 				C293EB5B1D363DAA00A59101 /* ChatViewController.m */,
-				C2431EF01D3CD63B0033A8C5 /* KeyboardStyle.h */,
-				C2431EF11D3CD63B0033A8C5 /* KeyboardStyle.m */,
 				C293EB5C1D363DAA00A59101 /* MapViewController.h */,
 				C293EB5D1D363DAA00A59101 /* MapViewController.m */,
 				C293EB5E1D363DAA00A59101 /* MemorailDayViewController.h */,
@@ -877,7 +872,6 @@
 				7D84386E1D3C7A7200AF2875 /* STTextHud.m in Sources */,
 				C25598341D389EE100A7ADED /* ChatTableViewCell.m in Sources */,
 				C25598581D391E9C00A7ADED /* MessageObj.m in Sources */,
-				C2431EF21D3CD63B0033A8C5 /* KeyboardStyle.m in Sources */,
 				7DF2577A1D36657B0022FC37 /* ZCLoginViewController.m in Sources */,
 				7D8438761D3CCD5F00AF2875 /* ZCMemorialDayModel.m in Sources */,
 				7DB744BB1D35CFE7004C534C /* SqliteHelper.m in Sources */,

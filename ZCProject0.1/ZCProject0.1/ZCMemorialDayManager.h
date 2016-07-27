@@ -18,7 +18,8 @@
 
 //为当前用户添加纪念日
 -(BOOL)addMemorialDayWithTitle:(NSString *)title date:(NSString *)date day:(NSString *)day;
-
+//删除纪念日
+-(BOOL)deleteMemorialDayWithTitle:(NSString *)title;
 //根据纪念日标题获取日期
 - (ZCMemorialDayModel *)getMemorialDayDateWithTitle:(NSString *)title;
 

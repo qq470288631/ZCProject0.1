@@ -30,10 +30,17 @@
 
 
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    [self loadData];
+
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self loadData];
+    
     
     self.title = @"纪念日";
     self.view.backgroundColor = [UIColor whiteColor];
@@ -67,12 +74,37 @@
     cell.dayLable.text = model.day;
     return cell;
 }
- 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        ZCMemorialDayModel *model = self.dataArray[indexPath.row];
+        ZCMemorialDayManager *manager = [ZCMemorialDayManager new];
+        [manager deleteMemorialDayWithTitle:model
+         .title];
+        [self.dataArray removeObjectAtIndex:indexPath.row];
+        [self.memorailTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:(UITableViewRowAnimationLeft)];
+    }
+
+
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AddMemorailViewController *addVC = [[AddMemorailViewController alloc]init];
+    [self.navigationController pushViewController:addVC animated:YES];
+    ZCMemorialDayModel *model = self.dataArray[indexPath.row];
+    ZCMemorialDayManager *manager = [ZCMemorialDayManager new];
+    [manager updateMemorialDayWithTitle:model.title forDate:model.date andDay:model.day];
+    
+    
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return 80;
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -46,10 +46,18 @@
     return result;
     
 }
+//删除纪念日
+-(BOOL)deleteMemorialDayWithTitle:(NSString *)title{
+    NSString * sql = [NSString stringWithFormat:@"DELETE FROM ZC_MemorialDay WHERE title = '%@' AND username = '%@'",title,[self.loginHelper getNSUserDefaultsUsername]];
+    BOOL result = [self.helper executeUpdate:sql];
+    return result;
 
+
+
+}
 - (ZCMemorialDayModel *)getMemorialDayDateWithTitle:(NSString *)title{
 
-    NSString * sql = [NSString stringWithFormat:@"SELECT id,title,memorialDayDate,memorialDay FROM ZC_MemorialDay WHERE title = '%@' AND memorialDayDate = '%@'",title,[self.loginHelper getNSUserDefaultsUsername]];
+    NSString * sql = [NSString stringWithFormat:@"SELECT id,title,memorialDayDate,memorialDay FROM ZC_MemorialDay WHERE title = '%@' AND username = '%@'",title,[self.loginHelper getNSUserDefaultsUsername]];
     FMResultSet * set = [self.helper executeQuery:sql];
     ZCMemorialDayModel * model = [ZCMemorialDayModel new];
     while ([set next]) {
@@ -64,7 +72,7 @@
 
 - (BOOL)updateMemorialDayWithTitle:(NSString *)title forDate:(NSString *)date andDay:(NSString *)day{
 
-    NSString * sql = [NSString stringWithFormat:@"UPDATE ZC_MemorialDay SET memorialDayDate = '%@' WHERE title = '%@' AND memorialDayDate = '%@' memorialDay = '%@';",date,title,day,[self.loginHelper getNSUserDefaultsUsername]];
+    NSString * sql = [NSString stringWithFormat:@"UPDATE ZC_MemorialDay SET memorialDayDate = '%@' memorialDay = '%@' WHERE title = '%@'  AND username = '%@'",date,day,title,[self.loginHelper getNSUserDefaultsUsername]];
     BOOL result = [self.helper executeUpdate:sql];
     return result;
     
