@@ -16,7 +16,8 @@
         self.headImage.layer.cornerRadius = self.headImage.frame.size.width / 2;
         self.headImage.layer.masksToBounds = YES;
         [self.contentView addSubview:_headImage];
-        self.messageLable = [[UILabel alloc]init];
+        self.messageLable = [[UILabel alloc]initWithFrame:CGRectMake(60, 0, 100, 40)];
+        self.messageLable.backgroundColor = [UIColor orangeColor];
         self.messageLable.backgroundColor = [UIColor orangeColor];
         [self.contentView addSubview:_messageLable];
         

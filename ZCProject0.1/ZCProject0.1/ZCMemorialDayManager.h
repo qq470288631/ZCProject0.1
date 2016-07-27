@@ -17,13 +17,14 @@
 - (BOOL)createMemorialDayTable;
 
 //为当前用户添加纪念日
--(BOOL)addMemorialDayWithTitle:(NSString *)title date:(NSString *)date;
-
+-(BOOL)addMemorialDayWithTitle:(NSString *)title date:(NSString *)date day:(NSString *)day;
+//删除纪念日
+-(BOOL)deleteMemorialDayWithTitle:(NSString *)title;
 //根据纪念日标题获取日期
 - (ZCMemorialDayModel *)getMemorialDayDateWithTitle:(NSString *)title;
 
 //根据纪念日标题更新纪念日
-- (BOOL)updateMemorialDayWithTitle:(NSString *)title forDate:(NSString *)date;
+- (BOOL)updateMemorialDayWithTitle:(NSString *)title forDate:(NSString *)date andDay:(NSString *)day;
 
 //读取全部纪念日
 - (NSMutableArray *)getAllMemorialDay;

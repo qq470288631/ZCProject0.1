@@ -19,8 +19,11 @@
 //日期
 @property(nonatomic,strong)NSString * date;
 
+//第几天
+@property(nonatomic,strong)NSString * day;
+
 
 //初始化方法
-- (instancetype)initWithID:(int)ID title:(NSString *)title date:(NSString *)date;
+- (instancetype)initWithID:(int)ID title:(NSString *)title date:(NSString *)date day:(NSString *)day;
 
 @end
