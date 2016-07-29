@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"6.png"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"6.jpg"]];
     _upView = [[UIView alloc]initWithFrame:CGRectMake(50, 200, WindownWidth - 100, WindowHeight - 400)];
     _upView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_upView];

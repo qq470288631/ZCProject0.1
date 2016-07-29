@@ -10,7 +10,7 @@
 #import "ZCLoginViewController.h"
 #import "CZRegisterViewController.h"
 
-@interface ZCLoginViewController ()
+@interface ZCLoginViewController ()<UITextFieldDelegate>
 
 @property(nonatomic,strong)UIActivityIndicatorView * loginActivityIndicatorView;
 
@@ -47,7 +47,7 @@
      */
     UITextField * usernameTextFeild = [[UITextField alloc]initWithFrame:CGRectMake(50, 350, 320, 40)];
     usernameTextFeild.background = [UIImage imageNamed:@"textFeild.png"];
-    
+    usernameTextFeild.delegate = self;
     //人工增加内边距
     UIView * usernamePlaceHolderPaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 44, usernameTextFeild.bounds.size.height)];
     
@@ -74,7 +74,7 @@
      */
     UITextField * passwordTextFeild = [[UITextField alloc]initWithFrame:CGRectMake(50, CGRectGetMaxY(usernameTextFeild.frame)+20, 320, 40)];
     passwordTextFeild.background = [UIImage imageNamed:@"textFeild.png"];
-    
+    passwordTextFeild.delegate = self;
     //人工增加内边距
     UIView * passwordPlaceHolderPaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 44, passwordTextFeild.bounds.size.height)];
     
@@ -215,7 +215,45 @@
         
     }
 }
+//跟着键盘上移
+-(void)textFieldDidBeginEditing:(UITextField *)textField
 
+{
+    
+    CGRect frame = _loginButton.frame;
+    
+    int offset = frame.origin.y + 70  - (self.view.frame.size.height - 216.0);//iPhone键盘高度216，iPad的为352
+    
+    
+    
+    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+    
+    [UIView setAnimationDuration:0.5f];
+    //将视图的Y坐标向上移动offset个单位，以使下面腾出地方用于软键盘的显示
+    
+    if(offset > 0)
+        
+        self.view.frame = CGRectMake(0.0f, - offset, self.view.frame.size.width, self.view.frame.size.height);
+    
+    [UIView commitAnimations];
+    
+}
+//输入框编辑完成以后，将视图恢复到原始状态
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+
+{
+    
+    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [_passwordTextField resignFirstResponder];
+    return YES;
+
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

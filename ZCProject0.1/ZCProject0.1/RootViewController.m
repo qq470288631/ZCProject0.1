@@ -36,11 +36,6 @@
     [movieButton setTitleColor:[UIColor colorWithRed:38.0/255 green:217.0/255 blue:165.0/255 alpha:1] forState:UIControlStateSelected];
     [movieButton setTitleColor:[UIColor cyanColor] forState:(UIControlStateNormal)];
     
-   
-    
-    
-    
-    
     UIButton * theaterButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [theaterButton setBackgroundImage:[UIImage imageNamed:@"2image.png"] forState:(UIControlStateNormal)];
     [theaterButton setBackgroundImage:[UIImage imageNamed:@"2imageH.png"] forState:(UIControlStateSelected)];
@@ -80,7 +75,6 @@
     
     LoverHomePageViewController * v3 = [[LoverHomePageViewController alloc]init];
     UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:v3];
-
     v3.view.backgroundColor = [UIColor cyanColor];
     
     ZCMeHomeViewController * meHomeViewController = [ZCMeHomeViewController new];
@@ -102,9 +96,15 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    
+    
 }
 
+- (void)LoginDone
+{
+    
+}
 
 /*
 #pragma mark - Navigation

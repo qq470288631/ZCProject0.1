@@ -30,12 +30,13 @@
     [self.view addSubview:_chatTableView];
     [self.chatTableView registerClass:[AddChatTableViewCell class] forCellReuseIdentifier:@"cell"];
     //输入框
-    self.chatTextField = [[UITextField alloc]initWithFrame:CGRectMake(5, ChatHight + 5, 340, 40)];
+    self.chatTextField = [[UITextField alloc]initWithFrame:CGRectMake(5, ChatHight - 44, 340, 40)];
+    self.chatTextField.backgroundColor = [UIColor whiteColor];
     self.chatTextField.placeholder = @"点击输入";
     self.chatTextField.delegate = self;
     [self.view addSubview:_chatTextField];
     _sendButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    _sendButton.frame = CGRectMake(340, ChatHight + 5, self.view.frame.size.width - 5 - 340, 40);
+    _sendButton.frame = CGRectMake(340, ChatHight - 44, self.view.frame.size.width - 5 - 340, 40);
     _sendButton.backgroundColor = [UIColor blueColor];
     [_sendButton setTitle:@"发送" forState:(UIControlStateNormal)];
     [_sendButton addTarget:self action:@selector(sendAction:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -94,7 +95,7 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     AddChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.headImage.image = [UIImage imageNamed:@"10.png"];
+    cell.headImage.image = [UIImage imageNamed:@"10.jpg"];
     cell.messageLable.text = @"sdasds";
     return cell;
 

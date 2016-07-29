@@ -11,6 +11,7 @@
 #import "LoverTableViewCell.h"
 #import "AddLoverViewController.h"
 #import "ChatViewController.h"
+#import "AddViewController.h"
 @interface LoverHomePageViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong)UITableView *friendsListTableView;
 
@@ -25,16 +26,21 @@
     self.friendsListTableView.dataSource = self;
     self.friendsListTableView.delegate = self;
     [self.view addSubview:_friendsListTableView];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemCompose) target:self action:@selector(homePageClicked:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(homePageClicked:)];
     //情侣注册
     [self.friendsListTableView registerClass:[LoverTableViewCell class] forCellReuseIdentifier:@"CEll"];
     //好友注册
     [self.friendsListTableView registerClass:[FriendListTableViewCell class] forCellReuseIdentifier:@"CEll"];
+   // [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
     
+}
+-(void)getFriendsList{
+//    [[EMClient sharedClient].contactManager getContactsFromServerWithError:]
 }
 //点击事件
 -(void)homePageClicked:(UIBarButtonItem *)sender
 {
+    [self.navigationController pushViewController:[[AddViewController alloc]init] animated:YES];
 
 
 }
@@ -45,16 +51,16 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         LoverTableViewCell *cell = [[LoverTableViewCell alloc]init];
-        cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"14.png"]];
+        cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"14.jpg"]];
         cell.loverLable.text = @"情侣";
         cell.loverLable.font = [UIFont systemFontOfSize:30];
-        cell.loverImage.image = [UIImage imageNamed:@"10.png"];
+        cell.loverImage.image = [UIImage imageNamed:@"10.jpg"];
         return cell;
     
     }else{
         FriendListTableViewCell *cell = [[FriendListTableViewCell alloc]init];
         cell.friendsLable.text = @"好友";
-        cell.friendsImage.image = [UIImage imageNamed:@"10.png"];
+        cell.friendsImage.image = [UIImage imageNamed:@"10.jpg"];
         return cell;
     
     }
