@@ -91,6 +91,7 @@
 		D604B3011D431EEA008522BA /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D604B2FC1D431EEA008522BA /* GoodsViewController.m */; };
 		D604B3021D431EEA008522BA /* ShopingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D604B2FE1D431EEA008522BA /* ShopingViewController.m */; };
 		D604B3031D431EEA008522BA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D604B3001D431EEA008522BA /* WebViewController.m */; };
+		D6C3708D1D4EDD1E001A280C /* WheelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C3708C1D4EDD1E001A280C /* WheelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -234,6 +235,8 @@
 		D604B2FE1D431EEA008522BA /* ShopingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopingViewController.m; sourceTree = "<group>"; };
 		D604B2FF1D431EEA008522BA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		D604B3001D431EEA008522BA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		D6C3708B1D4EDD1E001A280C /* WheelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WheelViewController.h; sourceTree = "<group>"; };
+		D6C3708C1D4EDD1E001A280C /* WheelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WheelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -706,6 +709,8 @@
 				D604B2FE1D431EEA008522BA /* ShopingViewController.m */,
 				D604B2FF1D431EEA008522BA /* WebViewController.h */,
 				D604B3001D431EEA008522BA /* WebViewController.m */,
+				D6C3708B1D4EDD1E001A280C /* WheelViewController.h */,
+				D6C3708C1D4EDD1E001A280C /* WheelViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -753,6 +758,8 @@
 					7D415C2C1D34D2A7004E5E22 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 6Y23BFEU5R;
+
+
 					};
 				};
 			};
@@ -890,6 +897,7 @@
 				7DE80C341D3F2A6B00D4171C /* ZCTopTableViewCell.m in Sources */,
 				C25598551D3912D000A7ADED /* AddChatTableViewCell.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,
+				D6C3708D1D4EDD1E001A280C /* WheelViewController.m in Sources */,
 				7DE3F9091D3DBD4C0038D2C0 /* ZCMeHomeViewController.m in Sources */,
 				D604B3031D431EEA008522BA /* WebViewController.m in Sources */,
 				C25598311D3895C000A7ADED /* LoverZoneHeaderTableViewCell.m in Sources */,
@@ -1027,6 +1035,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TangXu.ZCProject001;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1039,12 +1048,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+
 				ENABLE_BITCODE = NO;
+
 				GCC_PREFIX_HEADER = "$(ROOTSRC)ZCProject0.1/PrefixHeader.pch";
 				INFOPLIST_FILE = ZCProject0.1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TangXu.ZCProject001;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

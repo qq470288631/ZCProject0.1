@@ -12,9 +12,10 @@
 #import "GoodsModel.h"
 #import "MainTableViewCell.h"
 #import "CXCarouselView.h"
+#import "WheelViewController.h"
 
 static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?";
-@interface GoodsViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface GoodsViewController ()<UITableViewDataSource,UITableViewDelegate,CXCarouseViewDelegate>
 
 
 @property(strong,nonatomic)UITableView *MaintableView;
@@ -22,6 +23,8 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
 @property(strong,nonatomic)NSMutableArray *dataArray;
 
 @property(strong,nonatomic)CXCarouselView *carousel;
+
+@property(strong,nonatomic)UIImageView *imageV;
 
 @end
 
@@ -32,7 +35,7 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"搜索" style:(UIBarButtonItemStylePlain) target:self action:@selector(sousuo)];
+    self.navigationController.navigationBarHidden = YES;
     
     
     self.dataArray = [[NSMutableArray alloc]init];
@@ -48,41 +51,35 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
     
     [request getRequestWithUrl:kHomeDataPath parameters:parameters successResponse:^(NSDictionary *dic) {
         
-
          NSMutableDictionary *dataDIC = [dic objectForKey:@"data"];
-        
-        
         
         NSMutableArray *mutaArray = [NSMutableArray array];
 
         
         for (NSDictionary *dict in dataDIC[@"topic"]) {
-            
            
-
             GoodsModel *GDmodel = [[GoodsModel alloc]init];
-            
-            
             [GDmodel setValuesForKeysWithDictionary:dict];
-            
-            
-            
             [weakSelf.dataArray addObject:GDmodel];
+            
         }
         
-        [mutaArray addObject:[self.dataArray[arc4random()%5] pic]];
-        [mutaArray addObject:[self.dataArray[arc4random()%5+5] pic]];
-        [mutaArray addObject:[self.dataArray[arc4random()%5+10] pic]];
-        [mutaArray addObject:[self.dataArray[arc4random()%5+15] pic]];
+        // 把轮播图图片的   ####  URL数组  ####  传进轮播图
+        [mutaArray addObjectsFromArray:@[[weakSelf.dataArray[0] pic],
+                                         [weakSelf.dataArray[1] pic],
+                                         [weakSelf.dataArray[2] pic],
+                                         [weakSelf.dataArray[3] pic]
+                                        ]];
+        
         
 
         // 创建轮播图
-        self.carousel = [CXCarouselView initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height*0.3) hasTimer:YES interval:3 placeHolder:nil];
-        
-        self.MaintableView.tableHeaderView = self.carousel;
-        
-        [self.carousel setupWithArray:mutaArray];
-
+        weakSelf.carousel = [CXCarouselView initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, weakSelf.view.frame.size.height*0.3) hasTimer:YES interval:3 placeHolder:nil];
+        weakSelf.carousel.delegate = weakSelf;
+        weakSelf.MaintableView.tableHeaderView = weakSelf.carousel;
+        // ##### 传一个放好  URL 的数组 ########
+        [weakSelf.carousel setupWithArray:mutaArray];
+    
         dispatch_async(dispatch_get_main_queue(), ^{
             //刷新UI
             [weakSelf.MaintableView reloadData];
@@ -113,14 +110,25 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
     [self.view addSubview:_MaintableView];
     
 
+    _carousel.delegate = self;
     
+
     
+        
+   }
+
+
+- (void) carouselTouch:(CXCarouselView*)carousel atIndex:(NSUInteger)index{
+    NSLog(@"%ld",index);
     
+    WheelViewController *wheelVC = [[WheelViewController alloc]init];
     
+    wheelVC.modelWH = self.dataArray[index];
     
-    
-    
-    
+    [self.navigationController presentViewController:wheelVC animated:YES completion:^{
+        
+    }];
+
     
     
     
@@ -130,9 +138,7 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
     
 }
 
--(void)sousuo{
-    
-}
+
 
 //行高
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
