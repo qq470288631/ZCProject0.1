@@ -8,23 +8,9 @@
 
 #import "CXCarouselView.h"
 //#import "UIImageView+WebCache.h"
-@interface CXCarouselView()<UIScrollViewDelegate>
+@interface CXCarouselView()<UIScrollViewDelegate,CXCarouseViewDelegate,UIGestureRecognizerDelegate>
 
-@property BOOL hasTimer;
-@property (assign, nonatomic) NSUInteger interval;
 
-@property (strong, nonatomic) UIImage *placeHolder;
-@property (strong, nonatomic) NSArray * imageArray;
-@property (strong, nonatomic) UIScrollView *wheelScrollView;
-@property (strong, nonatomic) UIPageControl *wheelPageControl;
-@property (strong, nonatomic) NSTimer *timer;
-@property (assign, nonatomic) NSUInteger currentImageIndex;
-@property (strong, nonatomic) UIImageView *image1;
-@property (strong, nonatomic) UIImageView *image2;
-@property (strong, nonatomic) UIImageView *image3;
-@property (assign, nonatomic) NSUInteger imageNum;
-@property (strong, nonatomic) UIImageView *mask;
-@property (assign, nonatomic) BOOL isLocal;
 @end
 
 @implementation CXCarouselView
@@ -36,8 +22,14 @@
     carousel.hasTimer = hastimer;
     carousel.interval = inter;
     carousel.mask.image = image;
+    
+    
     return carousel;
+    
+    
 }
+
+
 
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -186,6 +178,7 @@
         [_wheelScrollView addGestureRecognizer:tap];
         
         _image1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+
         _image2 = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
         _image3 = [[UIImageView alloc] initWithFrame:CGRectMake(2*self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
         _image2.image = self.placeHolder;

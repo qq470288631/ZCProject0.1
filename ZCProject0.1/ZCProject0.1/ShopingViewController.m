@@ -39,6 +39,8 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBarHidden = NO;
 
     self.ShopTableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:(UITableViewStylePlain)];
     
@@ -62,7 +64,7 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     self.picArray = [NSMutableArray array];
     [request getRequestWithUrl:kNewInfoPath parameters:parameter successResponse:^(NSDictionary *dic) {
         
-        NSLog(@"%@",dic);
+       
         
         NSDictionary *dict = dic[@"data"];
         
@@ -81,7 +83,7 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
                     [self.picArray addObject:dic2[@"a"]];
                     
                 }
-              NSLog(@"%@",self.picArray);
+//              NSLog(@"%@",self.picArray);
 
             }
         
@@ -139,7 +141,7 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
 }
 
 
-
+//给cell赋值
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ShopTableViewCell *cell = [[ShopTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell"];
     
@@ -149,7 +151,7 @@ static NSString *kNewInfoPath = @"http://open3.bantangapp.com/topic/newInfo?";
     
     cell.indexPath = indexPath;
     
-    
+    //*********************
     self.ID = _shopM.ID;
     
     
