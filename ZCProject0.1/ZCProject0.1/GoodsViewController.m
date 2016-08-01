@@ -57,7 +57,7 @@ static NSString *kHomeDataPath = @"http://open3.bantangapp.com/recommend/index?"
 
         
         for (NSDictionary *dict in dataDIC[@"topic"]) {
-           
+            NSLog(@"%@",dict);
             GoodsModel *GDmodel = [[GoodsModel alloc]init];
             [GDmodel setValuesForKeysWithDictionary:dict];
             [weakSelf.dataArray addObject:GDmodel];
