@@ -9,15 +9,13 @@
 #import "ChatViewController.h"
 #import "MessageObj.h"
 #import "AddChatTableViewCell.h"
+#import "ZCMessageHelper.h"
 #define ChatHight self.chatTableView.frame.size.height
-@interface ChatViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface ChatViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 @property(nonatomic, strong)UITableView *chatTableView;
 //聊天输入框
 @property(nonatomic, strong)UITextField *chatTextField;
-@property(nonatomic, strong)UIButton *emojButton;
-@property(nonatomic, strong)UIButton *addbutton;
-@property(nonatomic, strong)UIButton *voidButton;
-@property(nonatomic, strong)UIButton *keyButton;
+@property(nonatomic, strong)UIButton *sendButton;
 @end
 
 @implementation ChatViewController
@@ -31,53 +29,73 @@
     self.chatTableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, self.chatTableView.frame.size.height, WindownWidth, 60)];
     [self.view addSubview:_chatTableView];
     [self.chatTableView registerClass:[AddChatTableViewCell class] forCellReuseIdentifier:@"cell"];
-    //语音
-    self.voidButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    self.voidButton.frame = CGRectMake(0, ChatHight + 5, 40, 40);
-    [self.voidButton setBackgroundImage:[UIImage imageNamed:@"void.png"] forState:(UIControlStateNormal)];
-    [self.voidButton addTarget:self action:@selector(voidButtonClicked:) forControlEvents:(UIControlEventTouchUpInside)];
-    [self.view addSubview:_voidButton];
     //输入框
-    self.chatTextField = [[UITextField alloc]initWithFrame:CGRectMake(40, ChatHight + 5, 290, 40)];
+    self.chatTextField = [[UITextField alloc]initWithFrame:CGRectMake(5, ChatHight - 44, 340, 40)];
+    self.chatTextField.backgroundColor = [UIColor whiteColor];
     self.chatTextField.placeholder = @"点击输入";
+    self.chatTextField.delegate = self;
     [self.view addSubview:_chatTextField];
-    //emoji表情
-    self.emojButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    self.emojButton.frame = CGRectMake(330, ChatHight, 40, 40);
-    [self.emojButton setBackgroundImage:[UIImage imageNamed:@"emoji.png"] forState:(UIControlStateNormal)];
-    [self.emojButton addTarget:self action:@selector(emojButtonClicked:) forControlEvents:(UIControlEventTouchUpInside)];
-    [self.view addSubview:_emojButton];
-    //plus加号
-    self.addbutton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    self.addbutton.frame = CGRectMake(370, ChatHight, 40, 40);
-    [self.addbutton setBackgroundImage:[UIImage imageNamed:@"pluce.png"] forState:(UIControlStateNormal)];
-    [self.addbutton addTarget:self action:@selector(addbuttonClicked:) forControlEvents:(UIControlEventTouchUpInside)];
-    [self.view addSubview:_addbutton];
+    _sendButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    _sendButton.frame = CGRectMake(340, ChatHight - 44, self.view.frame.size.width - 5 - 340, 40);
+    _sendButton.backgroundColor = [UIColor blueColor];
+    [_sendButton setTitle:@"发送" forState:(UIControlStateNormal)];
+    [_sendButton addTarget:self action:@selector(sendAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:_sendButton];
+     _chatTableView.separatorStyle = UITableViewCellSelectionStyleNone;
     
     
 }
--(void)addbuttonClicked:(UIButton *)sender{
+//发送
+-(void)sendAction:(UIButton *)sender
+{
+    if (self.chatTextField.text.length > 0) {
+        ZCMessageHelper *msgHelper = [[ZCMessageHelper alloc]init];
+//        [msgHelper sendTextMessageWithMessage:<#(NSString *)#> To:<#(NSString *)#>]
+       
+    }
 
+
+}
+//跟着键盘上移
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+
+{
     
-
+    CGRect frame = textField.frame;
+    
+    int offset = frame.origin.y + 70  - (self.view.frame.size.height - 216.0);//iPhone键盘高度216，iPad的为352
+    
+    
+    
+    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+    
+    [UIView setAnimationDuration:0.5f];
+  //将视图的Y坐标向上移动offset个单位，以使下面腾出地方用于软键盘的显示
+    
+    if(offset > 0)
+        
+        self.view.frame = CGRectMake(0.0f, - offset, self.view.frame.size.width, self.view.frame.size.height);
+    
+    [UIView commitAnimations];
+    
 }
--(void)emojButtonClicked:(UIButton *)sender{
+//输入框编辑完成以后，将视图恢复到原始状态
 
+-(void)textFieldDidEndEditing:(UITextField *)textField
 
-
+{
+    
+    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    
 }
--(void)voidButtonClicked:(UIButton *)sender{
 
-
-
-}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 10;
 
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     AddChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.headImage.image = [UIImage imageNamed:@"10.png"];
+    cell.headImage.image = [UIImage imageNamed:@"10.jpg"];
     cell.messageLable.text = @"sdasds";
     return cell;
 

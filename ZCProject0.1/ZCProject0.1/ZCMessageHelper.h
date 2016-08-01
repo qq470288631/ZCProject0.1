@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface ZCMessageHelper : NSObject
-
+-(void)sendMessage:(EMMessage *)message;
+- (void)sendTextMessageWithMessage:(NSString *)messageText To:(NSString *)ausername;
+- (void)sendImageMessageWithImage:(UIImage *)aimage To:(NSString *)ausername;
+- (void)sendAudioMessageWithAudioPath:(NSString * )path To:(NSString *)ausername;
+- (NSArray *)getAllFriends;
 @end
