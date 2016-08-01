@@ -238,15 +238,7 @@
     [UIView commitAnimations];
     
 }
-//输入框编辑完成以后，将视图恢复到原始状态
 
--(void)textFieldDidEndEditing:(UITextField *)textField
-
-{
-    
-    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    
-}
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [_passwordTextField resignFirstResponder];

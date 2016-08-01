@@ -64,7 +64,6 @@
 		C25598581D391E9C00A7ADED /* MessageObj.m in Sources */ = {isa = PBXBuildFile; fileRef = C25598571D391E9C00A7ADED /* MessageObj.m */; };
 		C255985A1D39220300A7ADED /* bubbleSelf.png in Resources */ = {isa = PBXBuildFile; fileRef = C25598591D39220300A7ADED /* bubbleSelf.png */; };
 		C255985C1D39220700A7ADED /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = C255985B1D39220700A7ADED /* bubble.png */; };
-		C25EC1401D49F7D20052CF38 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25EC13F1D49F7D20052CF38 /* AddViewController.m */; };
 		C273E37B1D3DFC9400136884 /* emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = C273E37A1D3DFC9400136884 /* emoji.png */; };
 		C273E37D1D3DFC9800136884 /* void.png in Resources */ = {isa = PBXBuildFile; fileRef = C273E37C1D3DFC9800136884 /* void.png */; };
 		C273E37F1D3DFC9C00136884 /* pluce.png in Resources */ = {isa = PBXBuildFile; fileRef = C273E37E1D3DFC9C00136884 /* pluce.png */; };
@@ -81,6 +80,7 @@
 		C293EB751D365A6B00A59101 /* AddMemorailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C293EB741D365A6B00A59101 /* AddMemorailViewController.m */; };
 		C293EB771D366EDE00A59101 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293EB761D366EDE00A59101 /* MapKit.framework */; };
 		C293EB791D366F0200A59101 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293EB781D366F0200A59101 /* CoreLocation.framework */; };
+		C2A2676E1D4EFA7E00610E0B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A2676D1D4EFA7E00610E0B /* icon.png */; };
 		D604B2E91D431EBA008522BA /* GoodsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D604B2E81D431EBA008522BA /* GoodsRequest.m */; };
 		D604B2EF1D431EC7008522BA /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D604B2EA1D431EC7008522BA /* 9.jpg */; };
 		D604B2F01D431EC7008522BA /* GoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D604B2EC1D431EC7008522BA /* GoodsModel.m */; };
@@ -190,8 +190,6 @@
 		C25598571D391E9C00A7ADED /* MessageObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageObj.m; sourceTree = "<group>"; };
 		C25598591D39220300A7ADED /* bubbleSelf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleSelf.png; sourceTree = "<group>"; };
 		C255985B1D39220700A7ADED /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
-		C25EC13E1D49F7D20052CF38 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
-		C25EC13F1D49F7D20052CF38 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		C273E37A1D3DFC9400136884 /* emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji.png; sourceTree = "<group>"; };
 		C273E37C1D3DFC9800136884 /* void.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = void.png; sourceTree = "<group>"; };
 		C273E37E1D3DFC9C00136884 /* pluce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluce.png; sourceTree = "<group>"; };
@@ -216,6 +214,7 @@
 		C293EB741D365A6B00A59101 /* AddMemorailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMemorailViewController.m; sourceTree = "<group>"; };
 		C293EB761D366EDE00A59101 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C293EB781D366F0200A59101 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C2A2676D1D4EFA7E00610E0B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		CD0F71700DC7A2B658662DB2 /* Pods-ZCProject0.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCProject0.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCProject0.1/Pods-ZCProject0.1.debug.xcconfig"; sourceTree = "<group>"; };
 		D604B2E71D431EBA008522BA /* GoodsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsRequest.h; sourceTree = "<group>"; };
 		D604B2E81D431EBA008522BA /* GoodsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsRequest.m; sourceTree = "<group>"; };
@@ -516,6 +515,7 @@
 				C273E37C1D3DFC9800136884 /* void.png */,
 				C273E37E1D3DFC9C00136884 /* pluce.png */,
 				C2196CB71D4241F4008EDF56 /* 樱花瓣2.png */,
+				C2A2676D1D4EFA7E00610E0B /* icon.png */,
 				C25598241D3883FF00A7ADED /* LoverTableViewCell.h */,
 				C25598251D3883FF00A7ADED /* LoverTableViewCell.m */,
 				C2939C931D378B3400817651 /* FriendListTableViewCell.h */,
@@ -524,8 +524,6 @@
 				C25598301D3895C000A7ADED /* LoverZoneHeaderTableViewCell.m */,
 				C25598321D389EE100A7ADED /* ChatTableViewCell.h */,
 				C25598331D389EE100A7ADED /* ChatTableViewCell.m */,
-				C25EC13E1D49F7D20052CF38 /* AddViewController.h */,
-				C25EC13F1D49F7D20052CF38 /* AddViewController.m */,
 				C25598351D389F0700A7ADED /* MapTableViewCell.h */,
 				C25598361D389F0700A7ADED /* MapTableViewCell.m */,
 				C25598381D389F1E00A7ADED /* MemorailTableViewCell.h */,
@@ -759,8 +757,8 @@
 				TargetAttributes = {
 					7D415C2C1D34D2A7004E5E22 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 6Y23BFEU5R;
 
-						DevelopmentTeam = BB98N95SE8;
 
 					};
 				};
@@ -814,6 +812,7 @@
 				7D415C3D1D34D2A7004E5E22 /* Assets.xcassets in Resources */,
 				C273E3831D3E087000136884 /* memorail.png in Resources */,
 				C25598501D38CCDD00A7ADED /* eye.png in Resources */,
+				C2A2676E1D4EFA7E00610E0B /* icon.png in Resources */,
 				D604B2EF1D431EC7008522BA /* 9.jpg in Resources */,
 				7D8438691D3C7A7200AF2875 /* angle-mask@3x.png in Resources */,
 				7D84386F1D3C7A7200AF2875 /* STTextHud.xib in Resources */,
@@ -895,7 +894,6 @@
 				C25598481D38BF0100A7ADED /* AddLoverViewController.m in Sources */,
 				C293EB621D363DAA00A59101 /* LoverHomePageViewController.m in Sources */,
 				7D415C7D1D34F516004E5E22 /* BaseViewController.m in Sources */,
-				C25EC1401D49F7D20052CF38 /* AddViewController.m in Sources */,
 				7DE80C341D3F2A6B00D4171C /* ZCTopTableViewCell.m in Sources */,
 				C25598551D3912D000A7ADED /* AddChatTableViewCell.m in Sources */,
 				7D415C961D35123B004E5E22 /* CZRequestHelper.m in Sources */,

@@ -42,17 +42,15 @@
     [_sendButton addTarget:self action:@selector(sendAction:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:_sendButton];
      _chatTableView.separatorStyle = UITableViewCellSelectionStyleNone;
+
     
+
     
 }
 //发送
 -(void)sendAction:(UIButton *)sender
 {
-    if (self.chatTextField.text.length > 0) {
-        ZCMessageHelper *msgHelper = [[ZCMessageHelper alloc]init];
-//        [msgHelper sendTextMessageWithMessage:<#(NSString *)#> To:<#(NSString *)#>]
-       
-    }
+
 
 
 }
@@ -61,7 +59,7 @@
 
 {
     
-    CGRect frame = textField.frame;
+    CGRect frame = _chatTextField.frame;
     
     int offset = frame.origin.y + 70  - (self.view.frame.size.height - 216.0);//iPhone键盘高度216，iPad的为352
     
@@ -79,14 +77,18 @@
     [UIView commitAnimations];
     
 }
-//输入框编辑完成以后，将视图恢复到原始状态
-
--(void)textFieldDidEndEditing:(UITextField *)textField
-
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    [_chatTextField resignFirstResponder];
+    return YES;
     
-    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+
+
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
