@@ -9,7 +9,7 @@
 #import "AddMemorailViewController.h"
 #import "ZCMemorialDayManager.h"
 
-@interface AddMemorailViewController ()
+@interface AddMemorailViewController ()<UITextFieldDelegate>
 @property(nonatomic, strong)UITextField *titleTextField;
 //显示天数
 @property(nonatomic, strong)UILabel *dateLable;
@@ -27,6 +27,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"12.jpg"]];
     self.titleTextField = [[UITextField alloc]initWithFrame:CGRectMake(10, 65, self.view.frame.size.width - 20, 50)];
+    _titleTextField.delegate = self;
     self.titleTextField.backgroundColor = [UIColor whiteColor];
     self.titleTextField.placeholder = @"请输入标题";
     [self.view addSubview:_titleTextField];
@@ -77,6 +78,36 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:[NSString stringWithFormat:@"%ld-%ld-%ld",year,month,day]];
     _pickerDate.text = formatter.dateFormat;
+}
+//跟着键盘上移
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+
+{
+    
+    CGRect frame = _titleTextField.frame;
+    
+    int offset = frame.origin.y + 70  - (self.view.frame.size.height - 216.0);//iPhone键盘高度216，iPad的为352
+    
+    
+    
+    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+    
+    [UIView setAnimationDuration:0.5f];
+    //将视图的Y坐标向上移动offset个单位，以使下面腾出地方用于软键盘的显示
+    
+    if(offset > 0)
+        
+        self.view.frame = CGRectMake(0.0f, - offset, self.view.frame.size.width, self.view.frame.size.height);
+    
+    [UIView commitAnimations];
+    
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [_titleTextField resignFirstResponder];
+    return YES;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
